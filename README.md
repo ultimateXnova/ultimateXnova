@@ -6,7 +6,7 @@ ultimateXnova is an open-source browser-based space exploration and conquest gam
 
 * Introducing a brand new design called "Office". This Design is based on Teams to blend more fluidly into an office environment. By reducing visual clutter to a minimum and using a similiar styling, it is easier to play in public without other people noticing.
  
-![Screenshot](screenshots/office.png)
+![Screenshot](screenshots/office-v1.png)
 
 This game is based on SteemNova 1.8.
 
