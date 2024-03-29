@@ -81,6 +81,7 @@
 					<option {if $theme == 'nova'}selected{/if} value="nova">Nova</option>
 					<option {if $theme == 'gow'}selected{/if} value="gow">Galaxy of Wars</option>
 					<option {if $theme == 'EpicBlueXIII'}selected{/if} value="EpicBlueXIII">Epic Blue</option>
+					<option {if $theme == 'office'}selected{/if} value="office">Office</option>
 				</select>
 			</td>
 		</tr>
