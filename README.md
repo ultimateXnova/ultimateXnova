@@ -1,3 +1,17 @@
+# Welcome to ultimateXnova
+
+ultimateXnova is an open-source browser-based space exploration and conquest game. It provides a platform for players to build and manage their own interstellar empires, engage in diplomacy and warfare with other players, and explore the vastness of space.
+
+#New Theme
+
+* Introducing a brand new design called "Office". This Design is based on Teams to blend more fluidly into an office environment. By reducing visual clutter to a minimum and using a similiar styling, it is easier to play in public without other people noticing.
+ 
+![Screenshot](screenshot/office.png)
+
+This game is based on SteemNova 1.8.
+
+For more information about SteemNova 1.8, you can visit the official repository on GitHub: [SteemNova 1.8 Repository](https://github.com/koraykarakus/steemnova-1.8-x)
+
 What is done so far ?
 
 GENERAL
