@@ -52,6 +52,10 @@ a:hover{
 	background-color: #1b4c6ec4;
 }
 
+#navbar.bg-dark {
+	background-color: rgba(0,0,0,0.5) !important;
+  }
+
 .hover-color-yellow:hover{
 	color: #ffe493;
 }
