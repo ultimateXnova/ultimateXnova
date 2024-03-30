@@ -21,7 +21,11 @@
 	<link rel="stylesheet" type="text/css" href="styles/resource/css/base/jquery.fancybox.css?v={$REV}">
 	<link rel="stylesheet" type="text/css" href="styles/resource/css/login/icon-font/style.css?v={$REV}">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" type="text/css">
-	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/styles/resource/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="/styles/resource/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/styles/resource/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/styles/resource/favicon/favicon-16x16.png">
+<link rel="manifest" href="/styles/resource/favicon/site.webmanifest">
 	<title>{block name="title"} - {$gameName}{/block}</title>
 	<meta name="keywords" content="SteemNova, Steem, Browsergame, MMOSG, MMOG, Strategy, XNova, 2Moons, Space">
 	<meta name="description" content="Massively Multiplayer Online Strategy Game (MMOSG) for Steemians. Space Browsergame with competition between Alliances for Steem cryptocurrency. Free-to-play, win-to-pay style.">
