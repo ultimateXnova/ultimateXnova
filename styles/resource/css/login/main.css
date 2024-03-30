@@ -30,7 +30,7 @@ table, tr, td, th {
 }
 
 h1 {
-  color: red;
+  color: #15bcd6;
 }
 
 footer, .small{
@@ -165,7 +165,8 @@ ul#rules {
 /** page.login.default.tpl **/
 
 .contentbox {
-	background: #1b4c6ec4;
+	background: rgba(0,0,0,0.5);
+	padding: 15px 25px;
 }
 
 /** BUTTONS **/

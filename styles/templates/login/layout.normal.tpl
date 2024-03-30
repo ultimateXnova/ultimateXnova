@@ -14,7 +14,7 @@
 				<table class="box-inner">
 					<tr class="box-inner-header">
 						<td class="box-inner-header-left"></td>
-						<td class="box-inner-header-center"><h1>{block name=title}{/block}</h1></td>
+						<td class="box-inner-header-center"><img class="img-fluid px-1" src="styles/resource/images/ultimatexnova.svg" width="400px"/><h1>{block name=title}{/block}</h1></td>
 						<td class="box-inner-header-right"></td>
 					</tr>
 					<tr class="box-inner-content">
