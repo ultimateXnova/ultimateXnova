@@ -66,7 +66,7 @@ $LNG['user_level_2']						= 'Operator';
 $LNG['user_level_3']                       			= 'Administrator';
 
 // GAME.PHP
-$LNG['page_doesnt_exist']					= 'Die Aufgerufene Seite existiert nicht';
+$LNG['page_doesnt_exist']					= 'Die aufgerufene Seite existiert nicht';
 $LNG['bad_forum_url']				    		= 'Keine Foren-URL definiert!';
 $LNG['admin_access_1']				    		= 'Sie haben temporären Zugriff auf administrative Funktionen.';
 $LNG['admin_access_link']				    	= 'Deaktivieren Sie diesen Zugriff';
@@ -164,7 +164,7 @@ $LNG['ov_fields']						= 'Felder';
 $LNG['ov_developed_fields']					= 'bebaute Felder';
 $LNG['ov_max_developed_fields']					= 'max. bebaubare Felder';
 $LNG['ov_fleet']						= 'Flotten';
-$LNG['ov_admins_online']					= 'Admins(Online):';
+$LNG['ov_admins_online']					= 'Admins (Online):';
 $LNG['ov_no_admins_online']					= 'Zurzeit kein Admin online!';
 $LNG['ov_userbanner']						= 'Statistiken-Banner';
 $LNG['ov_userrank_info']					= '%s (%s <a href="game.php?page=statistics&amp;range=%d">%d</a> %s %s)';
@@ -442,7 +442,7 @@ $LNG['bd_ready']						= 'Fertig';
 $LNG['bd_finished']						= 'Fertig';
 $LNG['bd_maxlevel']						= 'Maximale Stufe erreicht';
 $LNG['bd_on']							= 'auf';
-$LNG['bd_max_builds']						= 'Sie können max. %d Aufträge versenden!';
+$LNG['bd_max_builds']						= 'Sie können max. %d Aufträge starten!';
 $LNG['bd_next_level']						= 'Next Level:';
 $LNG['bd_need_engine']						= 'Verbraucht <span style="color:#FF0000">%s</span> %s mehr';
 $LNG['bd_more_engine']						= 'Produziert <span style="color:#00FF00">%s</span> %s mehr';
@@ -451,13 +451,13 @@ $LNG['bd_cancel_warning']					= 'Bei Abbruch werden nur 60% der Ressourcen wiede
 $LNG['bd_cancel_send']						= 'Markierte - Löschen';
 $LNG['bd_destroy_time'] 					= 'Dauer';
 $LNG['bd_max_ships'] 						= 'max';
-$LNG['bd_max_ships_long'] 					= 'Maximal baubare Einheiten';
+$LNG['bd_max_ships_long'] 					= 'Maximale Anzahl baubarer Einheiten';
 $LNG['sys_notenough_money'] 					= 'Sie verfügen auf Planet %s <a href="?page=buildings&amp;cp=%d&amp;re=0">[%d:%d:%d]</a> nicht über genügend Ressourcen, um mit dem Bau von %s zu beginnen. <br>Sie verfügen über %s %s , %s %s und %s %s. <br>Die Baukosten betragen %s %s , %s %s und %s %s.';
 $LNG['sys_nomore_level'] 					= 'Sie versuchen, ein Gebäude zu zerstören, was sie nicht mehr besitzen( %s ).';
 $LNG['sys_buildlist'] 						= 'Bauliste';
 $LNG['sys_techlist'] 						= 'Forschungsliste';
 $LNG['sys_buildlist_fail'] 					= 'Bau nicht möglich';
-$LNG['tech_not_satisfied'] = "Technologie ist nicht zufrieden!";
+$LNG['tech_not_satisfied']                  = "Technologie ist weit genug entwickelt!";
 
 
 //----------------------------------------------------------------------------//
@@ -1091,7 +1091,7 @@ $LNG['market_p_msg_resources_error']  = 'Nicht genug Ressourcen vorhanden.';
 $LNG['market_p_msg_sent']  = 'Sende %s Kleine Transporter, %s Große Transporter';
 $LNG['market_p_ratio']							= 'Wechselkurs';
 $LNG['market_msg_trade_topic'] = "Handelsstatus";
-$LNG['market_msg_trade_from'] = "SteemNova Marktplatz";
+$LNG['market_msg_trade_from'] = "UltimateXnova Marktplatz";
 $LNG['market_msg_trade_bought'] 					= 'Deine Flotte fliegt zu %s mit %s %s, %s %s, %s %s und es kostet %s %s';
 $LNG['market_msg_trade_sold'] 					= 'Deine Flotte fliegt zu %s mit %s %s, %s %s, %s %s.';
 $LNG['lm_marketplace']						= 'Marktplatz';
