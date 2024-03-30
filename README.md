@@ -1,123 +1,73 @@
+<center><img src="styles/resource/images/ultimatexnova.svg" width="50%" style="margin: 0 auto;"></center>
+
 # Welcome to ultimateXnova
 
 ultimateXnova is an open-source browser-based space exploration and conquest game. It provides a platform for players to build and manage their own interstellar empires, engage in diplomacy and warfare with other players, and explore the vastness of space.
 
-#New Theme
+## How to play
 
-* Introducing a brand new design called "Office". This Design is based on Teams to blend more fluidly into an office environment. By reducing visual clutter to a minimum and using a similiar styling, it is easier to play in public without other people noticing.
+You can either play on an existing server or you can host your own server.
+
+Official server: [game.ultimatexnova.de](https://game.ultimatexnova.de)
+
+*If you want your server added here, feel free to send open a new discussion [here](https://github.com/Pfahli/ultimatexnova/discussions)*
+
+## How to install your own server
+
+To install ultimateXnova, copy all the files onto you webserver via FTP.
+Afterwards you can open https://*yourserver.tld*/install and follow the install wizard step by step. After you are finished, make sure to remove the file "ENABLE_INSTALL_TOOL" from the "/includes/" folder via FTP.
+
+### Requirements
+* PHP 8.0, 8.1, 8.2 or 8.3
+* MySQL Database
+* SMTP credentials for sending of e-mails (optional)
+
+## UI-Updates
+### Brand new "Office"-Theme
+<img style="float: right; padding-left: 25px;" src="screenshots/office-v1.png" width="30%">
+Introducing a brand new design called "Office". This design is based on Teams to blend more fluidly into an office environment. By reducing visual clutter to a minimum and using a similiar styling, it is easier to play in public without other people noticing. It is still a work in progress as it is based on the old "Nova" theme which doesn't fully support all dependencies in buildings etc.
  
-![Screenshot](screenshots/office-v1.png)
 
-This game is based on SteemNova 1.8.
+### Update of the "Galaxy of Wars"-Theme
+
+<img style="float: right; padding-left: 25px;" src="screenshots/screenshot-gow.png" width="30%">
+
+The "Galaxy of Wars" theme has been updated with a new background and some small UI changes to make it more modern and simple. In the future, this theme will be further improved, as it is has the most functionality.
+ 
+### New login screen
+<img style="float: right; padding-left: 25px;" src="screenshots/screenshot-login.png" width="30%">
+
+The login screen has also received a minor makeover by adding the logo to the top by default and changing the background.
+
+
+
+
+## Roadmap
+
+### Top priority
+
+* Adding more responsive optimizations for mobile devices to the login and the themes
+* More UI improvements
+* Fixing major bugs
+
+### Medium priority
+
+* Adding new configuration settings to the administration panel
+* Adding option to upload custom logos for administrators
+* Adding optional 2-Factor-Authentification for users
+* Adding more login options with third party services
+
+### Low priority
+
+* Adding support for predefined custom color schemes for users in the settings
+* Adding new isometric, sprite based visual representations of buildings and the hangar
+* Adding new pictures for planets, buildings, fleet etc.
+* Discord-Bot
+
+
+## Contributions
+
+This game is based on SteemNova 1.8-x.
 
 For more information about SteemNova 1.8, you can visit the official repository on GitHub: [SteemNova 1.8 Repository](https://github.com/koraykarakus/steemnova-1.8-x)
 
-What is done so far ?
-
-GENERAL
-
-* Updated for PHP 8.2
-
-* Smarty 4.3.0 version update
-
-INSTALL ISSUES
-
-* BBCodeParser2 was causing problems at the stage of install, wrong url links of BBCodeParser2 is corrected
-
-* BBCodeParser2 problems on Tickets page corrected, tickets working efficiently
-
-LOGIN & REGISTER
-
-* Login system changed, now users login with email instead of username
-
-* Recaptcha is updated to new version
-
-* Login and register systems now uses recaptcha if captcha is activated from admin panel
-
-* Register links on Index page corrected
-
-* Some visual corrections for register page
-
-* Manual stats page on admin panel was not reporting stats update time for languages Tr and Fr, these language files corrected
-
-* new javascript added for login and register pages to avoid form submit on page refresh
-
-* login and systems are changed to support AJAX submit
-
-* Bootstrap 5 - responsive login & register pages are generated
-
-* csrf token is added for login & register forms
-
-* added remember me option for login
-
-
-
-ADMIN
-
-* steem connect removed from admin login page
-
-* includes/pages/adm converted from mysqli (old database) to new database ( PDO )
-
-* bug fix: ShowAccountEditorPage - removing buildings from planets, avoid negative level for buildings
-
-* bug fix: ShowAccountEditorPage - removing buildings from planets, avoid negative level for planet fields
-
-* bug fix: ShowAccountEditorPage - removing ships from planets, avoid negative number of ships
-
-* bug fix: ShowAccountEditorPage - removing defence units from planets, avoid negative number of defences units
-
-* bug fix: ShowAccountEditorPage - removing research levels from planets, avoid negative number of research
-
-* bug fix: ShowAccountEditorPage - removing resources from planets, avoid negative number of resources
-
-* bug fix: ShowAccountEditorPage - removing darkmatter from users, avoid negative number of dark matter
-
-* Added an option to activate and deactivate recaptcha for login and register pages separately
-
-* Added an ability to chose current theme from admin panel , nova, gow, epic blue, DEFAULT_THEME constant removed, theme class changed
-
-* Added a search bar for admin panel
-
-* added options whether to show buildings, research, and ships if technology is not accessible
-(unlearned ships, buildings and research can be made visible from admin panel)
-
-
-INGAME
-
-* A bug in alliance page is fixed caused by BBCode
-
-* bugs caused by page.error.default.tpl fixed
-
-* Theme update: Epic Blue XIII buildings page is updated and visual problems solved
-
-* Theme update: Epic Blue XIII research page is updated and visual problems solved
-
-* Theme update: Epic Blue XIII shipyard page is updated and visual problems solved
-
-* Theme update:Epic Blue XIII technologies page is updated and visual problems solved
-
-* forum and discord pages now can be removed from admin panel / modules page
-
-* Theme update: Galaxy of Wars overview page is updated and visual problems solved
-
-* Theme update: Galaxy of Wars buildings page is updated and visual problems solved
-
-* Theme update: Galaxy of Wars research page is updated and visual problems solved
-
-* Theme update: Galaxy of Wars shipyard page is updated and visual problems solved
-
-* Theme update:Galaxy of Wars technologies page is updated and visual problems solved
-
-* Galaxy page change with keyboard stroke is possible, Galaxy page refresh does not show form submit alert
-
-* Bug fix : MissionCaseSpy can be used in all themes
-
-* visual bug fixed related to body length for Epic Blue XIII Theme
-
-* StatBanner problems solved
-
-* A limit is set for number of notes of a user, this limit can be changed from admin panel
-
-* Fixed a bug which prevents displaying alliance applications
-
-* active color for current page on menu, GOW theme
