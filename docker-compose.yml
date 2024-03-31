@@ -1,12 +1,12 @@
 # Author: Pfahli
-# Version: 0.1
+# Version: 0.2
 # Project: ultimateXnova
 
 version: '3.8'
 
 services:
   web:
-    image: php:8.3-apache
+    build: .
     ports:
       - "3838:80"
     volumes:
