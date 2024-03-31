@@ -16,14 +16,28 @@ services:
     # This service serves the PHP application via Apache
 
   db:
-    image: mysql:latest
+    image: mysql:5.7
+    ports:
+    - 3308:3306
     environment:
-      MYSQL_ROOT_PASSWORD: "uxn_3QhZD26%s"
-      MYSQL_DATABASE: ultimateXnova
-      MYSQL_USER: uXn_user
-      MYSQL_PASSWORD: uXn_password
+      MYSQL_ROOT_PASSWORD: uxn_root_password
+      MYSQL_DATABASE: ultimatexnova
+      MYSQL_USER: uxn_user
+      MYSQL_PASSWORD: uxn_password
     volumes:
       - dbdata:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 3839:80
     # MySQL database service with persistent storage
 
 volumes:

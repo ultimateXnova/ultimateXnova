@@ -10,6 +10,7 @@
  * @author Jan-Otto Kröpke <slaver7@gmail.com>
  * @copyright 2009 Lucky
  * @copyright 2016 Jan-Otto Kröpke <slaver7@gmail.com>
+ * @copyright 2024 Pfahli 
  * @licence MIT
  * @version 1.8.0
  * @link https://github.com/jkroepke/2Moons
