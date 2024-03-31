@@ -1,0 +1,31 @@
+# Author: Pfahli
+# Version: 0.1
+# Project: ultimateXnova
+
+version: '3.8'
+
+services:
+  web:
+    image: php:8.3-apache
+    ports:
+      - "3838:80"
+    volumes:
+      - .:/var/www/html/
+    depends_on:
+      - db
+    # This service serves the PHP application via Apache
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: "uxn_3QhZD26%s"
+      MYSQL_DATABASE: ultimateXnova
+      MYSQL_USER: uXn_user
+      MYSQL_PASSWORD: uXn_password
+    volumes:
+      - dbdata:/var/lib/mysql
+    # MySQL database service with persistent storage
+
+volumes:
+  dbdata:
+    # Persistent volume for MySQL database

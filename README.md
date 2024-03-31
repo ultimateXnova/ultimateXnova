@@ -10,17 +10,24 @@ You can either play on an existing server or you can host your own server.
 
 Official server: [game.ultimatexnova.de](https://game.ultimatexnova.de)
 
-*If you want your server added here, feel free to send open a new discussion [here](https://github.com/Pfahli/ultimatexnova/discussions)*
+*If you want your server added here, feel free to open a new discussion [here](https://github.com/ultimatexnova/ultimatexnova/discussions)*
 
 ## How to install your own server
 
+### Custom webserver
 To install ultimateXnova, copy all the files onto you webserver via FTP.
 Afterwards you can open https://*yourserver.tld*/install and follow the install wizard step by step. After you are finished, make sure to remove the file "ENABLE_INSTALL_TOOL" from the "/includes/" folder via FTP.
 
-### Requirements
+#### Requirements
 * PHP 8.0, 8.1, 8.2 or 8.3
 * MySQL Database
 * SMTP credentials for sending of e-mails (optional)
+
+
+### Docker
+If you have docker installed, you can run ultimateXnova by opening the docker-compose.yml in the root folder of this repository. Make sure to change the MySQL user, root-password and password if you running it in a public environment.
+
+The default port is set to 3838. To access the installer, just open http://localhost:3838. After you are finished, make sure to remove the file "ENABLE_INSTALL_TOOL" from the "/includes/" folder.
 
 ## UI-Updates
 ### Brand new "Office"-Theme
@@ -49,6 +56,7 @@ The login screen has also received a minor makeover by adding the logo to the to
 * Adding more responsive optimizations for mobile devices to the login and the themes
 * More UI improvements
 * Fixing major bugs
+* New version numbering
 
 ### Medium priority
 
