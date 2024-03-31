@@ -2,3 +2,4 @@ includes/config.php
 includes/error.log
 cache
 includes/libs/opbe/errors
+includes/ENABLE_INSTALL_TOOL
