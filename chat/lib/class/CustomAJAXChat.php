@@ -13,7 +13,7 @@
  * @copyright 2016 Jan-Otto Kröpke <slaver7@gmail.com>
  * @licence MIT
  * @version 1.8.0
- * @link https://github.com/jkroepke/2Moons
+ * @link https://github.com/ultimateXnova/ultimateXnova
  */
 
 class CustomAJAXChat extends AJAXChat

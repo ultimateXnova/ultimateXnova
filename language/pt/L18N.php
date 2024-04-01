@@ -11,7 +11,7 @@
  * @copyright 2016 Jan-Otto Kröpke <slaver7@gmail.com>
  * @licence MIT
  * @version 1.8.x Koray Karakuş <koraykarakus@yahoo.com>
- * @link https://github.com/jkroepke/2Moons
+ * @link https://github.com/ultimateXnova/ultimateXnova
  */
 
 setlocale(LC_ALL, 'de_DE', 'german'); // http://msdn.microsoft.com/en-us/library/39cwe7zf%28vs.71%29.aspx

@@ -12,7 +12,7 @@
  * @copyright 2016 Jan-Otto Kröpke <slaver7@gmail.com>
  * @licence MIT
  * @version 1.8.x Koray Karakuş <koraykarakus@yahoo.com>
- * @link https://github.com/jkroepke/2Moons
+ * @link https://github.com/ultimateXnova/ultimateXnova
  */
 
 function calculateMIPAttack($TargetDefTech, $OwnerAttTech, $missiles, $targetDefensive, $firstTarget, $defenseMissles)

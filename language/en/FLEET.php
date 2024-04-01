@@ -11,7 +11,7 @@
  * @copyright 2016 Jan-Otto Kröpke <slaver7@gmail.com>
  * @licence MIT
  * @version 1.8.x Koray Karakuş <koraykarakus@yahoo.com>
- * @link https://github.com/jkroepke/2Moons
+ * @link https://github.com/ultimateXnova/ultimateXnova
  */
 
 // Translated into English by QwataKayean . All rights reversed (C) 2012

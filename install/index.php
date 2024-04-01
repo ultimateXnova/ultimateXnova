@@ -13,7 +13,7 @@
  * @copyright 2024 Pfahli 
  * @licence MIT
  * @version 1.8.0
- * @link https://github.com/jkroepke/2Moons
+ * @link https://github.com/ultimateXnova/ultimateXnova
  */
 
 define('MODE', 'INSTALL');
