@@ -1,5 +1,5 @@
 <footer class="position-fixed bottom-0 left-0 d-flex align-items-center m-0 w-100">
-<a class="fs-6 bg-dark m-0 rounded px-2 mb-1 color-yellow" href="https://github.com/koraykarakus/steemnova-1.8-x" title="SteemNova" target="copy">SteemNova1.8x 2023</a>
+<a class="fs-6 m-0 rounded px-2 mb-1" href="https://github.com/ultimateXnova/ultimateXnova/" title="ultimateXnova" target="copy">ultimateXnova</a>
 </footer>
 </div>
 <div id="dialog" style="display:none;"></div>

@@ -59,7 +59,7 @@
 
    </ul>
 <div id="disclamer" class="no-mobile">
-    {if $commit != ''}<a href="https://github.com/steemnova/steemnova/tree/{$commit}" target="copy">SteemNova engine {$commitShort}</a>{/if}
+    {if $commit != ''}<a href="https://github.com/ultimateXnova/ultimateXnova/commit/{$commit}" target="copy">ultimateXnova {$commitShort}</a>{/if}
 </div>
 </div>
 	</menu>

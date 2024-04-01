@@ -60,7 +60,7 @@ function loginSubmit(activeRecaptcha,use_recaptcha_on_login){
 
 </script>
 
-	<h1 class="fs-3 my-4 w-100">{sprintf($LNG.loginWelcome, $gameName)}</h1>
+	<img class="img-fluid px-1" src="styles/resource/images/ultimatexnova.svg" width="400px"/><h1 class="fs-3 my-4 w-100">{sprintf($LNG.loginWelcome, $gameName)}</h1>
 	<p style="max-width:600px;" class="fs-6 my-2 w-100 mx-auto">{sprintf($LNG.loginServerDesc, $gameName)}</p>
 	<div style="max-width:300px;" class="form-group contentbox container rounded mx-auto">
 

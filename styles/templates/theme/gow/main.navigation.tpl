@@ -76,7 +76,7 @@
     {/if}
     {if $commit != ''}
     <li class="d-flex w-50  menu-button">
-      <a href="https://github.com/koraykarakus/steemnova-1.8-x/tree/{$commit}"  class="w-100 d-flex align-items-center fs-10 fw-bold justify-content-center p-0 text-decoration-none" target="copy">SteemNova engine {$commitShort}</a>
+      <a href="https://github.com/ultimateXnova/ultimateXnova/commit/{$commit}"  class="w-100 d-flex align-items-center fs-10 fw-bold justify-content-center p-0 text-decoration-none" target="copy">ultimateXnova {$commitShort}</a>
     </li>
     {/if}
 </ul>
