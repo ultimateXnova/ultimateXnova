@@ -6,7 +6,7 @@
 FROM php:8.3-apache
 
 # Install PDO MySQL extension
-RUN docker-php-ext-install pdo_mysql
+RUN docker-php-ext-install pdo_mysql mysqli
 
 # Install GD library
 RUN apt-get update && apt-get install -y \
