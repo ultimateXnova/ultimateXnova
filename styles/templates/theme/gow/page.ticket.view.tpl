@@ -6,32 +6,36 @@
 	{foreach $answerList as $answerID => $answerRow}
 	{if $answerRow@first}
 	<tr>
-		<th colspan="2">{$LNG.ti_read} :: {$answerRow.subject}</th>
+		<th colspan="2">
+			<span class="color-blue fs-14">{$LNG.ti_read}:{$answerRow.subject}</span>
+		</th>
 	</tr>
 	{/if}
 	<tr>
-		<td class="left" colspan="2">
-			{$LNG.ti_msgtime} <b>{$answerRow.time}</b> {$LNG.ti_from} <b>{$answerRow.ownerName}</b>
+		<td colspan="2">
+			<span class="fs-14 color-blue fw-bold">
+				{$LNG.ti_msgtime} {$answerRow.time} {$LNG.ti_from} {$answerRow.ownerName}
+			</span>
+			<br>
 			{if $answerRow@first}
-				<br>{$LNG.ti_category}: {$categoryList[$answerRow.categoryID]}
+			<span class="fs-14 color-blue fw-bold">
+				{$LNG.ti_category}: {$categoryList[$answerRow.categoryID]}
+			</span>
+			<br>
 			{/if}
 			<hr>
-			<p>
+			<p class="fs-14 text-white">
 				{$answerRow.message}
 			</p>
 		</td>
-	</tr>
-	{/foreach}
-	{if $status < 2}
-	<tr>
-		<th colspan="2">{$LNG.ti_answer}</th>
+@@ -28,10 +36,10 @@
 	</tr>
 	<tr>
 		<td style="width:30%"><label for="message">{$LNG.ti_message}</label></td>
-		<td style="width:70%"><textarea class="validate[required]" id="message" name="message" rows="60" cols="8" style="height:100px;"></textarea></td>
+		<td style="width:70%"><textarea class="validate[required] form-control bg-dark text-white" id="message" name="message" rows="60" cols="8" style="height:100px;"></textarea></td>
 	</tr>
 	<tr>
-		<td colspan="2"><input type="submit" value="{$LNG.ti_submit}"></td>
+		<td colspan="2"><input class="btn btn-primary text-white btn-block w-100 p-0 m-0" type="submit" value="{$LNG.ti_submit}"></td>
 	</tr>
 	{/if}
 </table>
