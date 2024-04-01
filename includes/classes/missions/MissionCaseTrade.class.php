@@ -1,8 +1,8 @@
 <?php
 
 /**
- *  2Moons / Steemnova
- *   by Jan-Otto Kröpke 2009-2016
+*  ultimateXnova / Steemnova
+*  based on 2moons by Jan-Otto Kröpke 2009-2016
  *
  * For the full copyright and license information, please view the LICENSE
  *

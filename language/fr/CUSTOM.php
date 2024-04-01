@@ -1,7 +1,7 @@
 <?php
 
 /**
- *  2Moons
+*  ultimateXnova
  *  Copyright (C) 2011  Slaver
  *
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * @package 2Moons
+ * @package ultimateXnova
  * @author Slaver <slaver7@gmail.com>
  * @copyright 2009 Lucky <lucky@xgproyect.net> (XGProyecto)
  * @copyright 2011 Slaver <slaver7@gmail.com> (Fork/2Moons)
