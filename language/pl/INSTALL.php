@@ -15,6 +15,7 @@
  * @link https://github.com/jkroepke/2Moons
  */
 
+
 $LNG['back']					= 'Wróć';
 $LNG['continue']				= 'Dalej';
 $LNG['continueUpgrade']			= 'Aktualizuj!';
@@ -29,10 +30,10 @@ $LNG['title_install']			= 'Instalator';
 
 $LNG['intro_lang']				= 'Język';
 $LNG['intro_install']			= 'Przejdź do instalacji';
-$LNG['intro_welcome']			= 'Serdecznie witamy w 2Moons!';
-$LNG['intro_text']				= '2Moons to najlepszy klon Ogame.<br>2Moons to najnowsza i najbardziej stabilna wersja Xnova, jaka kiedykolwiek powstała. Cechuje ją przyjazność, elastyczność i dynamiczność, jak również najwyższa jakość obsługi. System przeprowadzi Cię przez proces instalacji lub też aktualizacji aktualnej wersji do najnowszej. Jeśli masz jakiekolwiek problemy nie wahaj się zadać pytania na naszym forum poświęconemu rozwojowi i wsparciu.<br><br>2Moons podlega licencji GNU GPL v3. Licencje przeczytasz po kliknięciu odpowiedniego linku w menu.<br><br>Przed instalacją skrypt sprawdzi, czy twój serwer spełnia minimalne wymagania.';
-$LNG['intro_upgrade_head']		= 'Zainstalować 2Moons?';
-$LNG['intro_upgrade_text']		= '<p>2Moons zainstalowane, chcesz teraz sprawdzić aktualizacje?</p><p>Aktualizacje!</p>';
+$LNG['intro_welcome']			= 'Serdecznie witamy w ultimateXnova!';
+$LNG['intro_text']				= 'ultimateXnova to najnowsza i najbardziej stabilna wersja Xnova, jaka kiedykolwiek powstała. Cechuje ją przyjazność, elastyczność i dynamiczność, jak również najwyższa jakość obsługi. System przeprowadzi Cię przez proces instalacji lub też aktualizacji aktualnej wersji do najnowszej. Jeśli masz jakiekolwiek problemy nie wahaj się zadać pytania na naszym forum poświęconemu rozwojowi i wsparciu.<br><br>ultimateXnova podlega licencji GNU GPL v3. Licencje przeczytasz po kliknięciu odpowiedniego linku w menu.<br><br>Przed instalacją skrypt sprawdzi, czy twój serwer spełnia minimalne wymagania.';
+$LNG['intro_upgrade_head']		= 'Zainstalować ultimateXnova?';
+$LNG['intro_upgrade_text']		= '<p>ultimateXnova zainstalowane, chcesz teraz sprawdzić aktualizacje?</p><p>Aktualizacje!</p>';
 
 $LNG['upgrade_success']			= 'Aktualizacja przebiegła pomyślnie, baza danych została zaktualizowana do %s.';
 $LNG['upgrade_nothingtodo']		= 'Baza danych aktualna z wersją %s.';
@@ -40,7 +41,7 @@ $LNG['upgrade_back']			= 'Wróć';
 $LNG['upgrade_intro_welcome']	= 'Witaj w aktualizatorze bazy danych!';
 $LNG['upgrade_available']		= 'Dostępna jest aktualizacja bazy danych. Aktualna wersja bazy to %s i może zostać zaktualizowana do wersji %s.<br><br>Wybierz z menu wersję do której chcesz zaktualizować:';
 $LNG['upgrade_notavailable']	= 'Wersja %s bazy to aktualna wersja!.';
-$LNG['upgrade_required_rev']	= 'Aktualizator bazy danych działa od wersji r2579 (2Moons v1.7) lub wyższej!.';
+$LNG['upgrade_required_rev']	= 'Aktualizator bazy danych działa od wersji r2579 (ultimateXnova v1.7) lub wyższej!.';
 
 $LNG['licence_head']			= 'Licencja';
 $LNG['licence_desc']			= 'Prosze przeczytać licencję, przewiń by przeczytać całą!.';
@@ -48,7 +49,7 @@ $LNG['licence_accept']			= 'Możesz zainstalować ten program tylko wtedy, gdy z
 $LNG['licence_need_accept']		= 'By przejść dalej zaakceptuj licencję.';
 
 $LNG['req_head']				= 'Wymagania systemowe';
-$LNG['req_desc']				= '2Moons sprawdzi teraz konfigurację twojego serwera. Czytaj uważnie wyniki testów nim przejdziesz dalej. Jeśli chcesz używać opcjonalnych modułów to upewnij się że dodatkowe testy mają wynik pozytywny..';
+$LNG['req_desc']				= 'ultimateXnova sprawdzi teraz konfigurację twojego serwera. Czytaj uważnie wyniki testów nim przejdziesz dalej. Jeśli chcesz używać opcjonalnych modułów to upewnij się że dodatkowe testy mają wynik pozytywny..';
 $LNG['reg_yes']					= 'Tak';
 $LNG['reg_no']					= 'Nie';
 $LNG['reg_found']				= 'Znalazłem';
@@ -58,21 +59,21 @@ $LNG['reg_not_writable']		= 'Nie zapisywalny';
 $LNG['reg_file']				= 'Dane &raquo;%s&laquo; zapisywalne?';
 $LNG['reg_dir']					= 'Katalogi &raquo;%s&laquo; zapisywalne ?';
 $LNG['req_php_need']			= 'Minimalna wersja &raquo;PHP&laquo;';
-$LNG['req_php_need_desc']		= '<strong>Wymagane</strong> — PHP to język skryptowy wykonywane po stronie serwera, 2Moons jest w nim napisany. Do poprawnej instalacji wymagana wersja minimalna to PHP Version 5.2.5.';
+$LNG['req_php_need_desc']		= '<strong>Wymagane</strong> — PHP to język skryptowy wykonywane po stronie serwera, ultimateXnova jest w nim napisany. Do poprawnej instalacji wymagana wersja minimalna to PHP Version 5.2.5.';
 $LNG['reg_gd_need']				= 'Zainstalowana wersja biblioteki graficznej &raquo;gdlib&laquo;';
-$LNG['reg_gd_desc']				= '<strong>Opcjonalne</strong> — Biblioteka graficzna &raquo;gdlib&laquo; jest potrzebna do generowania grafik w "locie". Bez niej nie wykorzystasz wszystkich możliwości 2Moons.';
+$LNG['reg_gd_desc']				= '<strong>Opcjonalne</strong> — Biblioteka graficzna &raquo;gdlib&laquo; jest potrzebna do generowania grafik w "locie". Bez niej nie wykorzystasz wszystkich możliwości ultimateXnova.';
 $LNG['reg_mysqli_active']		= 'Rozszerzenie &raquo;MySQLi&laquo;';
 $LNG['reg_mysqli_desc']			= '<strong>Wymagane</strong> — musisz mieć zainstalowane rozszerzenie MYSQLi dla php. Jeśli nie masz musisz się skontaktować z dostawcą usługi lub zainstalować samemu.';
 $LNG['reg_json_need']			= 'Dostępny &raquo;JSON&laquo; ?';
 $LNG['reg_iniset_need']			= 'Funkcja php &raquo;ini_set&laquo; dostępna?';
 $LNG['reg_global_need']			= 'register_globals deaktywowane?';
-$LNG['reg_global_desc']			= '2Moons nie będzie funkcjonował gdy register_globals jest aktywne. Z powodów bezpieczeństwa zaleca się by, register_globals wyłączyć w ustawieniach php.';
+$LNG['reg_global_desc']			= 'ultimateXnova nie będzie funkcjonował gdy register_globals jest aktywne. Z powodów bezpieczeństwa zaleca się by, register_globals wyłączyć w ustawieniach php.';
 $LNG['req_ftp_head']			= 'Dostęp do FTP';
-$LNG['req_ftp_desc']			= 'Tutaj podaj dane dostępowe do serwera FTP, dzięki temu 2Moons będzie mogło się automatycznie aktualizować. Alternatywnym sposobem jest robienie tego ręcznie.';
+$LNG['req_ftp_desc']			= 'Tutaj podaj dane dostępowe do serwera FTP, dzięki temu ultimateXnova będzie mogło się automatycznie aktualizować. Alternatywnym sposobem jest robienie tego ręcznie.';
 $LNG['req_ftp_host']			= 'Hostname';
 $LNG['req_ftp_username']		= 'Nazwa użytkownika';
 $LNG['req_ftp_password']		= 'Hasło';
-$LNG['req_ftp_dir']				= 'Ścieżka do katalogu w którym jest zainstalowane 2Moons';
+$LNG['req_ftp_dir']				= 'Ścieżka do katalogu w którym jest zainstalowane ultimateXnova';
 $LNG['req_ftp_send']			= 'Wyślij';
 $LNG['req_ftp_error_data']		= 'Połączenie z serwerem nie powiodło się.';
 $LNG['req_ftp_error_dir']		= 'Błędna ścieżka dostępu do plików.';
@@ -108,9 +109,9 @@ $LNG['step4_admin_pass_desc']	= 'Minimalna długość hasła to 6 a maksymalnie 
 $LNG['step4_admin_mail']		= 'Adres kontaktowy email:';
 
 $LNG['step6_head']				= 'Gratualcje!';
-$LNG['step6_desc']				= 'Zainstalowałeś prawidłowo 2Moons.';
+$LNG['step6_desc']				= 'Zainstalowałeś prawidłowo ultimateXnova.';
 $LNG['step6_info_head']			= 'Możesz już grać!';
 $LNG['step6_info_additional']	= 'Po kliknięciu zostaniesz przeniesiony na stronę zarządzania grą.<br/><br/><strong>Skasuj plik &raquo;includes/ENABLE_INSTALL_TOOL&laquo; nim gra zostanie udostępniona, w przeciwnym wypadku bezpieczeństwo serwera będzie zagrożone!</strong>';
 
 $LNG['sql_close_reason']		= 'Gra chwilowo zamknięta';
-$LNG['sql_welcome']				= 'Serdecznie witamy na 2Moons v';
+$LNG['sql_welcome']				= 'Serdecznie witamy na ultimateXnova v';

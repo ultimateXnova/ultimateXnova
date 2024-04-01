@@ -45,7 +45,7 @@ Bir grup oyuncuya avantaj sa&#287;lamak amac&#305;yla otomatik bilgi &uuml;reten
 
 <p align="left"><b>7. Ger&ccedil;ek Hayata Y&ouml;nelik Tehditler</b></p>
 
-<p align="left">Di&#287;er oyunculara, tak&#305;m &uuml;yelerine, OGameTc temsilcilerine veya oyunun bir servisi ile ilgili herhangi birine, yerlerinin tespit edilece&#287;inin imas&#305; veya ifade  edilmesi; zarar verilece&#287;inin imas&#305; veya ifade edilmesi gibi ger&ccedil;ek hayata y&ouml;nelik her t&uuml;rl&uuml; tehdit yasakt&#305;r.</p>
+<p align="left">Di&#287;er oyunculara, tak&#305;m &uuml;yelerine,  temsilcilerine veya oyunun bir servisi ile ilgili herhangi birine, yerlerinin tespit edilece&#287;inin imas&#305; veya ifade  edilmesi; zarar verilece&#287;inin imas&#305; veya ifade edilmesi gibi ger&ccedil;ek hayata y&ouml;nelik her t&uuml;rl&uuml; tehdit yasakt&#305;r.</p>
 
 <p align="left"><b>8. Hakaret ve Spam </b></p>
 

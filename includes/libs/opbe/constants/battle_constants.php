@@ -36,7 +36,7 @@ define('USE_BIEXPLOSION_SYSTEM', true); // enable below system value
 define('PROB_TO_REAL_MAGIC', 2); //value used to adapt probability theory to critical cases.
 define('EPSILON', 1.2e-6);
 
-/*** Battle constants, default as Ogame ***/
+/*** Battle constants, default as Original ***/
 define('ROUNDS', 6); //how many rounds a battle have, no limits.
 define('SHIELDS_TECH_INCREMENT_FACTOR', 0.1); //how much a level increase the shield, in percentage from 0 to 1.
 define('ARMOUR_TECH_INCREMENT_FACTOR', 0.1); //how much a level increase the armour, in percentage from 0 to 1.
@@ -55,7 +55,7 @@ define('MAX_RF_NERF', 0.2); // how much the rapid fire can be randomically decre
 /*** Views and optimization options ***/
 define('ONLY_FIRST_AND_LAST_ROUND', false); //This option is usefull to decrease RAM usage, but the battle report will not contain all rounds.
 
-/*** After-battle constants, default as Ogame ***/
+/*** After-battle constants, default as Original ***/
 define('REPAIRED_DO_DEBRIS',true);
   
 //Percentage of debris generated from destroyed ships. 
@@ -68,7 +68,7 @@ if (!defined('DEFENSE_DEBRIS_FACTOR')) {
     define('DEFENSE_DEBRIS_FACTOR', 0);
 }
 
-define('POINT_UNIT', 1000); //Ogame point = 1000 resources.
+define('POINT_UNIT', 1000); //Original point = 1000 resources.
 define('MOON_UNIT_PROB', 100000);
 define('MAX_MOON_PROB', 20); //max probability to moon creation.
 define('MOON_MIN_START_SIZE', 2000);

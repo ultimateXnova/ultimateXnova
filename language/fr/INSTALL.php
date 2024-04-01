@@ -14,8 +14,8 @@ $LNG['title_install']		= 'Installeur';
 
 $LNG['intro_lang']			= "Language";
 $LNG['intro_instal']		= "Installation";
-$LNG['intro_welcome']		= "Bievenue dans 2Moons!";
-$LNG['intro_text']			= "Un des meilleurs clones Ogame : 2 Moons.<br>The latest is and 2 Moons the stablest flat rate was ever developed. 2 of Moon shines by stability, flexibility, dynamics, quality and user-friendliness. We hope always to be better than her expectations.<br><br>The installation system guides you through the install or upgrade from an older version to the latest. On questions or trouble don't hesitate to contact us.<br><br>2Moons is an open source project licensed under the GNU GPL v3. For the license please click on the item in the menu.<br><br>Before the installation starts, a test is conducted, if system requirements are met.";
+$LNG['intro_welcome']		= "Bievenue dans ultimateXnova!";
+$LNG['intro_text']			= "The latest is and ultimateXnova the stablest flat rate was ever developed. 2 of Moon shines by stability, flexibility, dynamics, quality and user-friendliness. We hope always to be better than her expectations.<br><br>The installation system guides you through the install or upgrade from an older version to the latest. On questions or trouble don't hesitate to contact us.<br><br>ultimateXnova is an open source project licensed under the GNU GPL v3. For the license please click on the item in the menu.<br><br>Before the installation starts, a test is conducted, if system requirements are met.";
 
 $LNG['reg_yes']				= "Oui";
 $LNG['reg_no']				= "Non";
@@ -37,7 +37,7 @@ $LNG['req_ftp_info']		= "Entrer vos accès FTP.";
 $LNG['req_ftp_host']		= "FTP Host";
 $LNG['req_ftp_username']	= "Username";
 $LNG['req_ftp_password']	= "Password";
-$LNG['req_ftp_dir']			= "Dossier de 2Moons";
+$LNG['req_ftp_dir']			= "Dossier de ultimateXnova";
 $LNG['req_ftp_send']		= "Envoyer";
 $LNG['req_ftp_pass_info']	= "Entrer une informations sur le mot de pass.";
 
