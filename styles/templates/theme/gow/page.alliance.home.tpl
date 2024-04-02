@@ -10,34 +10,56 @@
 	</tr>
 	{/if}
 	<tr>
-		<td style="width:50%">{$LNG.al_ally_info_tag}</td>
-		<td style="width:50%">{$ally_tag}</td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.al_ally_info_tag}</td>
+		<td class="fs-12 fw-bold text-blue">{$ally_tag}</td>
 	</tr>
 	<tr>
-		<td>{$LNG.al_ally_info_name}</td>
-		<td>{$ally_name}</td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.al_ally_info_name}</td>
+		<td class="fs-12 fw-bold text-blue">{$ally_name}</td>
 	</tr>
 	<tr>
-		<td>{$LNG.al_ally_info_members}</td>
-		<td>{$ally_members} / {$ally_max_members}{if $rights.MEMBERLIST} (<a href="?page=alliance&amp;mode=memberList">{$LNG.al_user_list}</a>){/if}</td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.al_ally_info_members}</td>
+		<td class="fs-12 fw-bold text-blue">[{$ally_members} / {$ally_max_members}]</td>
 	</tr>
+	{if $rights.MEMBERLIST}
 	<tr>
-		<td>{$LNG.al_rank}</td>
-		<td>{$rankName}{if $rights.ADMIN} (<a href="?page=alliance&amp;mode=admin">{$LNG.al_manage_alliance}</a>){/if}</td>
+		<td colspan="2">
+			<a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow w-100" href="?page=alliance&amp;mode=memberList">{$LNG.al_user_list}</a>
+		</td>
 	</tr>
+	{/if}
+	<tr>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.al_rank}</td>
+		<td class="fs-12 fw-bold text-blue">{$rankName}</td>
+	</tr>
+	{if $rights.ADMIN}
+	<tr>
+		<td colspan="2">
+			<a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow w-100" href="?page=alliance&amp;mode=admin">{$LNG.al_manage_alliance}</a>
+		</td>
+	</tr>
+	{/if}
     {if isModuleAvailable($smarty.const.MODULE_CHAT)}
 	<tr>
-		<td colspan="2"><a href="#" onclick="return Dialog.AllianceChat();">{$LNG.al_goto_chat}</a></td>
+		<td colspan="2">
+			<a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow w-100" href="#" onclick="return Dialog.AllianceChat();">{$LNG.al_goto_chat}</a>
+		</td>
 	</tr>
     {/if}
-	{if $rights.SEEAPPLY && $applyCount > 0}
+	{if $rights.SEEAPPLY}
 	<tr>
-		<td>{$LNG.al_requests}</td><td><a href="?page=alliance&amp;mode=admin&amp;action=mangeApply">{$requests}</a></td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.al_requests}</td>
+		<td>
+			<a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow w-100" href="?page=alliance&amp;mode=admin&amp;action=mangeApply">{$requests}</a>
+		</td>
 	</tr>
 	{/if}
 	{if $rights.ROUNDMAIL}
 	<tr>
-		<td>{$LNG.al_circular_message}</td><td><a href="game.php?page=alliance&mode=circular" onclick="return Dialog.open(this.href, 650, 300);">{$LNG.al_send_circular_message}</a></td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.al_circular_message}</td>
+		<td>
+			<a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow w-100" href="game.php?page=alliance&mode=circular" onclick="return Dialog.open(this.href, 650, 300);">{$LNG.al_send_circular_message}</a>
+		</td>
 	</tr>
 	{/if}
 	{if $rights.EVENTS}
@@ -97,28 +119,36 @@
 		<th colspan="2">{$LNG.pl_fightstats}</th>
 	</tr>
 	<tr>
-		<td>{$LNG.pl_totalfight}</td><td>{$totalfight|number}</td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.pl_totalfight}</td>
+		<td class="fs-12 fw-bold text-blue">{$totalfight|number}</td>
 	</tr>
 	<tr>
-		<td>{$LNG.pl_fightwon}</td><td>{$fightwon|number} {if $totalfight}({round($fightwon / $totalfight * 100, 2)}%){/if}</td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.pl_fightwon}</td>
+		<td class="fs-12 fw-bold text-blue">{$fightwon|number} {if $totalfight}({round($fightwon / $totalfight * 100, 2)}%){/if}</td>
 	</tr>
 	<tr>
-		<td>{$LNG.pl_fightlose}</td><td>{$fightlose|number} {if $totalfight}({round($fightlose / $totalfight * 100, 2)}%){/if}</td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.pl_fightlose}</td>
+		<td class="fs-12 fw-bold text-blue">{$fightlose|number} {if $totalfight}({round($fightlose / $totalfight * 100, 2)}%){/if}</td>
 	</tr>
 	<tr>
-		<td>{$LNG.pl_fightdraw}</td><td>{$fightdraw|number} {if $totalfight}({round($fightdraw / $totalfight * 100, 2)}%){/if}</td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.pl_fightdraw}</td>
+		<td class="fs-12 fw-bold text-blue">{$fightdraw|number} {if $totalfight}({round($fightdraw / $totalfight * 100, 2)}%){/if}</td>
 	</tr>
 	<tr>
-		<td>{$LNG.pl_unitsshot}</td><td>{$unitsshot}</td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.pl_unitsshot}</td>
+		<td class="fs-12 fw-bold text-blue">{$unitsshot}</td>
 	</tr>
 	<tr>
-		<td>{$LNG.pl_unitslose}</td><td>{$unitslose}</td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.pl_unitslose}</td>
+		<td class="fs-12 fw-bold text-blue">{$unitslose}</td>
 	</tr>
 	<tr>
-		<td>{$LNG.pl_dermetal}</td><td>{$dermetal}</td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.pl_dermetal}</td>
+		<td class="fs-12 fw-bold text-blue">{$dermetal}</td>
 	</tr>
 	<tr>
-		<td>{$LNG.pl_dercrystal}</td><td>{$dercrystal}</td>
+		<td class="fs-12 fw-bold text-gow-gray">{$LNG.pl_dercrystal}</td>
+		<td class="fs-12 fw-bold text-blue">{$dercrystal}</td>
 	</tr>
 </table>
 {if !$isOwner}

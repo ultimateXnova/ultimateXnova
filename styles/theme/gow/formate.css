@@ -236,7 +236,7 @@ input[type="radio"] {
 .color-white{
 	color: #fff!important;
 }
-.color-gray{
+.color-gray,.text-gray{
 	color: #ddd!important;
 }
 .color-green{
@@ -245,11 +245,14 @@ input[type="radio"] {
 .color-red,.text-red{
 	color:#e54438!important;
 }
-.color-blue{
+.color-blue,.text-blue{
 	color:#3d85c6!important;
 }
 .text-yellow,.color-yellow{
 	color:#ffd600!important;
+}
+.text-gow-gray{
+	color: #a79d9d!important;
 }
 .bg-black{
 	background: rgb(1,1,9);
