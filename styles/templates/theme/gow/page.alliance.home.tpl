@@ -122,12 +122,16 @@
 	</tr>
 </table>
 {if !$isOwner}
-<table class="table519">
+<table class="table table-sm fs-12 table-gow">
 	<tr>
 		<th>{$LNG.al_leave_alliance}</th>
 	</tr>
 	<tr>
-		<td><a href="game.php?page=alliance&amp;mode=close" onclick="return confirm('{$LNG.al_leave_ally}');"><button>{$LNG.al_continue}</button></a></td>
+		<td>
+			<a href="game.php?page=alliance&amp;mode=close" onclick="return confirm('{$LNG.al_leave_ally}');">
+				<button class="btn btn-block btn-danger text-white p-1 fs-12 fw-bold">{$LNG.al_continue}</button>
+			</a>
+		</td>
 	</tr>
 </table>
 {/if}

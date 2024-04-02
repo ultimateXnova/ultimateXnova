@@ -111,9 +111,16 @@ $("#tn3").hide();
 	</div>
 <br>
 <div class="infos">
-{if $Moon}<div class="moon"><a href="game.php?page=overview&amp;cp={$Moon.id}&amp;re=0" title="{$Moon.name}"><img src="{$dpath}planeten/mond.jpg" height="100" width="100" style="margin: 20% 0px 5px 0px;" alt="{$Moon.name} ({$LNG.fcm_moon})"></a><br>{$Moon.name} ({$LNG.fcm_moon})
+{if $Moon}
+<div class="moon">
+  <a href="game.php?page=overview&amp;cp={$Moon.id}&amp;re=0" title="{$Moon.name}">
+    <img src="{$dpath}planeten/mond.jpg" height="100" width="100" style="margin: 20% 0px 5px 0px;" alt="{$Moon.name} ({$LNG.fcm_moon})">
+  </a>
+  <br>{$Moon.name} ({$LNG.fcm_moon})
 </div>
-{else}&nbsp;{/if}
+{else}
+  &nbsp;
+{/if}
 		<div class="planeth">
 			<img style="float: left;" src="{$dpath}planeten/{$planetimage}.jpg" height="200" width="200" alt="{$planetname}"></div><div class="planeth">
  {$planetname}<br>

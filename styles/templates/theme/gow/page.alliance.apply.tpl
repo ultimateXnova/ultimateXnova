@@ -7,10 +7,14 @@
 	</tr>
 	<tr>
 		<td width="40%"><label for="message">{$LNG.al_message}</label></td>
-		<td><textarea name="text" cols="40" rows="20" class="tinymce" id="message">{$applytext}</textarea></td>
+		<td>
+			<textarea name="text" cols="40" rows="10" class="tinymce bg-dark text-white" id="message">{$applytext}</textarea>
+		</td>
 	</tr>
 	<tr>
-		<td colspan="2"><input type="submit" value="{$LNG.al_applyform_send}"></td>
+		<td colspan="2">
+			<input class="btn btn-block text-white btn-primary w-100 my-2" type="submit" value="{$LNG.al_applyform_send}">
+		</td>
 	</tr>
 </table>
 </form>
