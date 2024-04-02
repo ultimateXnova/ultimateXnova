@@ -86,7 +86,7 @@
 <div class="topnavWrapper d-flex align-items-center mx-auto my-2">
     <div style="height:80px;" class="d-flex flex-wrap col-5 justify-content-start align-items-end p-0">
     {foreach $resourceTable as $resourceID => $resourceData}
-    {if $resourceData@iteration == 5}
+      {if $resourceData@iteration == 5}
     </div>
           <div class="d-flex col-2 align-items-center">
               <a href="game.php?page=overview">
@@ -94,7 +94,7 @@
               </a>
           </div>
           <div style="height:80px;" class="d-flex flex-wrap col-5 justify-content-end align-items-start p-0">
-          {/if}
+       {/if}
           <div class="resourceWrapperOuter d-flex">
 
             <div class="d-flex align-items-center resourceWrapper w-100 h-100" data-bs-toggle="tooltip"
@@ -115,7 +115,13 @@
                   </tr>
                   <tr>
                     <td class='text-start text-yellow'>Production:</td>
-                    <td class='text-end color-green'>{$resourceData.production|number}&nbsp;/&nbsp;{$LNG.short_hour}</td>
+                    <td class='text-end {if $resourceData.current < $resourceData.max}color-green{else}color-red{/if}'>
+                      {if $resourceData.current < $resourceData.max}
+                      {$resourceData.production|number}&nbsp;/&nbsp;{$LNG.short_hour}
+                      {else}
+                      0
+                      {/if}    
+                    </td>
                   </tr>
                   {elseif $resourceID == 911}
                   <tr>
