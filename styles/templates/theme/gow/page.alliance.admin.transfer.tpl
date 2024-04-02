@@ -1,7 +1,7 @@
 {block name="title" prepend}{$LNG.lm_alliance}{/block}
 {block name="content"}
 <form action="game.php?page=alliance&amp;mode=admin&amp;action=transfer" method="post">
-<table class="table519">
+<table class="table table-gow table-sm fs-12">
 	<tr>
 		<th colspan="3">{$LNG.al_transfer_alliance}</th>
 	</tr>

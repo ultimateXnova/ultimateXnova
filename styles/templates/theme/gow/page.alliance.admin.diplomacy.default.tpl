@@ -1,14 +1,14 @@
 {block name="title" prepend}{$LNG.lm_alliance}{/block}
 {block name="content"}
 <p>
-	<table class="table519">
+	<table class="table table-gow table-sm fs-12">
 	<tr>
 		<th colspan="2">{$LNG.al_diplo_head}</th>
 	</tr>
 	<tr>
 		<td colspan="2">{$LNG.al_diplo_info}</th>
 	</tr>
-	{foreach $diploList.0 as $diploMode => $diploAlliances}	
+	{foreach $diploList.0 as $diploMode => $diploAlliances}
 	<tr>
 		<th colspan="2">{$LNG.al_diplo_level.$diploMode}</th>
 	</tr>
@@ -33,12 +33,12 @@
 	</table>
 </p>
 <p>
-	<table class="table519">
+	<table class="table table-gow table-sm fs-12">
 	<tr>
 		<th colspan="2">{$LNG.al_diplo_accept}</th>
 	</tr>
 	{if array_filter($diploList.1)}
-		{foreach $diploList.1 as $diploMode => $diploAlliances}	
+		{foreach $diploList.1 as $diploMode => $diploAlliances}
 		{if !empty($diploAlliances)}
 		<tr>
 			<th colspan="2">{$LNG.al_diplo_level.$diploMode}</th>
@@ -57,17 +57,17 @@
 	{else}
 	<tr>
 		<td colspan="2">{$LNG.al_diplo_no_accept}</td>
-	</tr>	
+	</tr>
 	{/if}
 	</table>
 </p>
 <p>
-	<table class="table519">
+	<table class="table table-gow table-sm fs-12">
 	<tr>
 		<th colspan="2">{$LNG.al_diplo_accept_send}</th>
 	</tr>
 	{if array_filter($diploList.2)}
-		{foreach $diploList.2 as $diploMode => $diploAlliances}	
+		{foreach $diploList.2 as $diploMode => $diploAlliances}
 		{if !empty($diploAlliances)}
 		<tr>
 			<th colspan="2">{$LNG.al_diplo_level.$diploMode}</th>
@@ -85,7 +85,7 @@
 	{else}
 	<tr>
 		<td colspan="2">{$LNG.al_diplo_no_accept}</td>
-	</tr>	
+	</tr>
 	{/if}
 	<tr>
 		<th colspan="2"><a href="game.php?page=alliance&amp;mode=admin">{$LNG.al_back}</a></th>
