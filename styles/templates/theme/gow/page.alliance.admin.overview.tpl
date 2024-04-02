@@ -1,36 +1,45 @@
 {block name="title" prepend}{$LNG.lm_alliance}{/block}
 {block name="content"}
-<table class="table table-gow">
+<table class="table table-gow table-sm fs-12 my-1">
 	<tr>
 		<th>{$LNG.al_manage_alliance}</th>
 	</tr>
 	<tr>
-		<td><a href="game.php?page=alliance&amp;mode=admin&amp;action=permissions">{$LNG.al_manage_ranks}</a></td>
+		<td>
+			<a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow w-100" href="game.php?page=alliance&amp;mode=admin&amp;action=permissions">{$LNG.al_manage_ranks}</a>
+		</td>
 	</tr>
 	<tr>
-		<td><a href="game.php?page=alliance&amp;mode=admin&amp;action=members">{$LNG.al_manage_members}</a></td>
+		<td>
+			<a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow w-100" href="game.php?page=alliance&amp;mode=admin&amp;action=members">{$LNG.al_manage_members}</a>
+		</td>
 	</tr>
 	{if $rights.DIPLOMATIC}
 	<tr>
-		<td><a href="game.php?page=alliance&amp;mode=admin&amp;action=diplomacy">{$LNG.al_manage_diplo}</a></td>
+		<td>
+			<a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow w-100" href="game.php?page=alliance&amp;mode=admin&amp;action=diplomacy">{$LNG.al_manage_diplo}</a>
+		</td>
 	</tr>
 	{/if}
 </table>
 <form action="game.php?page=alliance&mode=admin" method="post">
 <input type="hidden" name="textMode" value="{$textMode}">
 <input type="hidden" name="send" value="1">
-<table class="table table-gow">
+<table class="table table-gow table-sm fs-12 my-1">
 	<tr>
 		<th colspan="3">{$LNG.al_texts}</th>
 	</tr>
 	<tr>
-		<td><a href="game.php?page=alliance&amp;mode=admin&amp;textMode=external">{$LNG.al_outside_text}</a></td>
-		<td><a href="game.php?page=alliance&amp;mode=admin&amp;textMode=internal">{$LNG.al_inside_text}</a></td>
-		<td><a href="game.php?page=alliance&amp;mode=admin&amp;textMode=apply">{$LNG.al_request_text}</a></td>
+		<td>
+			<a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow w-100" href="game.php?page=alliance&amp;mode=admin&amp;textMode=external">{$LNG.al_outside_text}</a></td>
+		<td>
+			<a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow w-100" href="game.php?page=alliance&amp;mode=admin&amp;textMode=internal">{$LNG.al_inside_text}</a></td>
+		<td>
+			<a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow w-100" href="game.php?page=alliance&amp;mode=admin&amp;textMode=apply">{$LNG.al_request_text}</a></td>
 	</tr>
 	<tr>
 		<td colspan="3">
-			<textarea name="text" id="text" cols="70" rows="15" class="tinymce">{$text}</textarea>
+			<textarea class="bg-dark text-white w-100" name="text" id="text" cols="70" rows="15" class="tinymce">{$text}</textarea>
 		</td>
 	</tr>
 	<tr>
@@ -40,29 +49,31 @@
 		</td>
 	</tr>
 </table>
-<table>
+<table class="table table-gow table-sm fs-12 my-1">
 	<tr>
 		<th colspan="2">{$LNG.al_manage_options}</th>
 	</tr>
 	<tr>
 		<td>{$LNG.al_tag}</td>
-		<td><input type="text" name="ally_tag" value="{$ally_tag}" size="8" maxlength="8" required></td>
+		<td>
+			<input class="form-control bg-dark text-white p-1" type="text" name="ally_tag" value="{$ally_tag}" size="8" maxlength="8" required>
+		</td>
 	</tr>
 	<tr>
 		<td>{$LNG.al_name}</td>
-		<td><input type="text" name="ally_name" value="{$ally_name}" size="20" maxlength="30" required></td>
+		<td><input class="form-control bg-dark text-white p-1" type="text" name="ally_name" value="{$ally_name}" size="20" maxlength="30" required></td>
 	</tr>
 	<tr>
 		<td>{$LNG.al_manage_founder_rank}</td>
-		<td><input type="text" name="owner_range" value="{$ally_owner_range}" size="30"></td>
+		<td><input class="form-control bg-dark text-white p-1" type="text" name="owner_range" value="{$ally_owner_range}" size="30"></td>
 	</tr>
 	<tr>
 		<td>{$LNG.al_web_site}</td>
-		<td><input type="text" name="web" value="{$ally_web}" size="70"></td>
+		<td><input class="form-control bg-dark text-white p-1" type="text" name="web" value="{$ally_web}" size="70"></td>
 	</tr>
 	<tr>
 		<td>{$LNG.al_manage_image}</td>
-		<td><input type="text" name="image" value="{$ally_image}" size="70"></td>
+		<td><input class="form-control bg-dark text-white p-1" type="text" name="image" value="{$ally_image}" size="70"></td>
 	</tr>
 	<tr>
 		<td>{$LNG.al_view_stats}</td>
@@ -114,20 +125,28 @@
 </table>
 </form>
 {if $AllianceOwner}
-<table class="table-gow table">
+<table class="table table-gow table-sm fs-12 my-1">
 	<tr>
 		<th>{$LNG.al_disolve_alliance}</th>
 	</tr>
 	<tr>
-		<td><form action="game.php?page=alliance&amp;mode=admin&amp;action=close" method="post"><input type="submit" value="{$LNG.al_continue}" onclick="return confirm('{$LNG.al_close_ally}');"></form></td>
+		<td>
+			<form action="game.php?page=alliance&amp;mode=admin&amp;action=close" method="post">
+				<input class="btn btn-block btn-danger text-white fs-12 p-1 fw-bold w-100" type="submit" value="{$LNG.al_continue}" onclick="return confirm('{$LNG.al_close_ally}');">
+			</form>
+	</td>
 	</tr>
 </table>
-<table class="table table-gow">
+<table class="table table-gow table-sm fs-12 my-1">
 	<tr>
 		<th>{$LNG.al_transfer_alliance}</th>
 	</tr>
 	<tr>
-		<td><form action="game.php?page=alliance&amp;mode=admin&amp;action=transfer" method="post"><input type="submit" value="{$LNG.al_continue}"></form></td>
+		<td>
+			<form action="game.php?page=alliance&amp;mode=admin&amp;action=transfer" method="post">
+				<input class="btn btn-block btn-primary text-white fs-12 p-1 fw-bold w-100" type="submit" value="{$LNG.al_continue}">
+			</form>
+		</td>
 	</tr>
 </table>
 {/if}
