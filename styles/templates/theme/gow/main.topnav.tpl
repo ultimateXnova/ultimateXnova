@@ -1,6 +1,11 @@
 <div style="height:30px;" class="d-flex align-items-center justify-content-center bg-light-black">
 
   <ul class="d-flex justify-content-center align-items-center list-unstyled fs-12 py-3 my-0 mx-0 col-4">
+    {if isModuleAvailable($smarty.const.MODULE_ATTACK_ALERT)}
+    <div style="width:15px;" class="">
+      <img id="attack_alert" src="" alt="">
+    </div>
+    {/if}
     {if isModuleAvailable($smarty.const.MODULE_NOTICE)}
     <li class="px-2 f-12 hover-underline d-flex align-items-center h-100">
       <a class="text-white" href="javascript:OpenPopup('?page=notes', 'notes', 720, 300);" data-bs-toggle="tooltip"

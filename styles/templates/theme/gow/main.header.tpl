@@ -21,7 +21,7 @@
 	{if !empty($goto)}
 	<meta http-equiv="refresh" content="{$gotoinsec};URL={$goto}">
 	{/if}
-	{assign var="REV" value="1.0.0.161" nocache}
+	{assign var="REV" value="1.0.0.169" nocache}
 
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="./styles/resource/css/base/boilerplate.css?v={$REV}">
@@ -48,6 +48,7 @@
 	var queryString	= "{$queryString|escape:'javascript'}";
 	var isPlayerCardActive	= "{$isPlayerCardActive|json}";
 	var relativeTime = Math.floor(Date.now() / 1000);
+	var attackListenTime = {$attackListenTime};
 
 	setInterval(function() {
 		if(relativeTime < Math.floor(Date.now() / 1000)) {
@@ -56,6 +57,9 @@
 		}
 	}, 1);
 	</script>
+
+
+
 	<script type="text/javascript" src="./scripts/base/jquery.js?v={$REV}"></script>
 	<script type="text/javascript" src="./scripts/base/jquery.ui.js?v={$REV}"></script>
 	<script type="text/javascript" src="./scripts/base/jquery.cookie.js?v={$REV}"></script>
@@ -66,7 +70,12 @@
 	{foreach item=scriptname from=$scripts}
 	<script type="text/javascript" src="./scripts/game/{$scriptname}.js?v={$REV}"></script>
 	{/foreach}
-
+	{if isModuleAvailable($smarty.const.MODULE_ATTACK_ALERT)}
+	<script type="text/javascript">
+	var attackListenTime = {$attackListenTime};
+	</script>
+	<script type="text/javascript" src="./scripts/game/attackAlert.js?v={$REV}"></script>
+	{/if}
 	<!-- fancybox 5.0 -->
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
