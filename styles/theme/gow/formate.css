@@ -29,16 +29,7 @@
 	color: #ddd;
 }
 
-.tip{
-	display: none;
-	padding: 10px;
-	border: 1px solid #B63535;
-	position: fixed;
-	margin: auto;
-	background: #382F2F;
-	color: #f1f1f1;
-	top:20px;
-}
+
 
 /*special scrollbar*/
 
