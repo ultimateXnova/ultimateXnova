@@ -19,7 +19,9 @@
       </td>
     </tr>
   	<tr>
-      <td colspan="2"><input type="submit" value="{$LNG.bu_send}"></td>
+      <td class="text-center" colspan="2">
+        <input class="btn btn-primary text-white px-2 py-0" type="submit" value="{$LNG.bu_send}">
+      </td>
   	</tr>
   </table>
 </form>
