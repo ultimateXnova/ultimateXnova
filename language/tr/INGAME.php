@@ -21,6 +21,16 @@
 // Translated into Turkish by Ibraihm Senyer . All rights reversed (C) 2013
 // 2Moons - Copyright (C) 2010-2012 Slaver
 
+//main.topnav.tpl//
+
+$LNG['resource_available'] = "Mevcut";
+$LNG['resource_capacity'] = "Depo Kapasitesi";
+$LNG['resource_production'] = "Üretim";
+$LNG['energy_available'] = "Mevcut Enerji";
+$LNG['energy_used'] = "Kullanılan Enerji";
+$LNG['energy_produced'] = "Üretilen Enerji";
+$LNG['darkmatter_available'] = "Mevcut Karanlık Madde";
+
 //-------------------------------- filoTable.tpl ------------------//
 
 $LNG['fm_no_fleet_movements'] = "Filo Hareketi Yok";

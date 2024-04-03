@@ -19,6 +19,15 @@
 
 // Translation into Russian - Copyright © 2010-2013 InquisitorEA <support@moon-hunt.ru>
 
+//main.topnav.tpl//
+
+$LNG['resource_available'] = "Доступно";
+$LNG['resource_capacity'] = "Емкость хранилища";
+$LNG['resource_production'] = "Производство";
+$LNG['energy_available'] = "Доступная энергия";
+$LNG['energy_used'] = "Использованная энергия";
+$LNG['energy_produced'] = "Произведенная энергия";
+$LNG['darkmatter_available'] = "Текущая Темная материя";
 
 //-------------------- FleetTable.tpl ------------------//
 

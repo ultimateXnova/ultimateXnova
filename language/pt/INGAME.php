@@ -21,6 +21,16 @@
 
 // 2Moons - Copyright (C) 2012  Jan Kröpke
 
+//main.topnav.tpl//
+
+$LNG['resource_available'] = "Disponível";
+$LNG['resource_capacity'] = "Capacidade de armazenamento";
+$LNG['resource_production'] = "Produção";
+$LNG['energy_available'] = "Energia Disponível";
+$LNG['energy_used'] = "Energia Utilizada";
+$LNG['energy_produced'] = "Energia Produzida";
+$LNG['darkmatter_available'] = "Matéria escura atual";
+
 //------------------- FleetTable.tpl -------------------//
 
 $LNG['fm_no_fleet_movements'] = "Sem movimentos de frota";

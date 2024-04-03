@@ -20,6 +20,17 @@
 // 2Moons - Copyright (C) 2010-2012 Slaver
 // Grammar Pedantry fixes @etaletai 2018
 
+
+//main.topnav.tpl//
+
+$LNG['resource_available'] = "Available";
+$LNG['resource_capacity'] = "Storage Capacity";
+$LNG['resource_production'] = "Production";
+$LNG['energy_available'] = "Available Energy";
+$LNG['energy_used'] = "Used Energy";
+$LNG['energy_produced'] = "Produced Energy";
+$LNG['darkmatter_available'] = "Current Darkmatter";
+
 //-------------------- fleetTable.tpl  ------------------//
 
 $LNG['fm_no_fleet_movements'] = "No Fleet Movements";

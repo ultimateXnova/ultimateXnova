@@ -15,6 +15,16 @@
  * @version 1.8.x Koray Karakuş <koraykarakus@yahoo.com>
  * @link https://github.com/ultimateXnova/ultimateXnova
  */
+ //main.topnav.tpl//
+
+ $LNG['resource_available'] = "Disponible";
+ $LNG['resource_capacity'] = "Capacidad de almacenamiento";
+ $LNG['resource_production'] = "Producción";
+ $LNG['energy_available'] = "Energía disponible";
+ $LNG['energy_used'] = "Energía usada";
+ $LNG['energy_produced'] = "Energía producida";
+ $LNG['darkmatter_available'] = "Materia Oscura Actual";
+
 
  //----------------------------------- tabla de flota.tpl ------------------//
 

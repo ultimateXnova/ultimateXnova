@@ -17,6 +17,16 @@
  * @link https://github.com/ultimateXnova/ultimateXnova
  */
 
+ //main.topnav.tpl//
+
+ $LNG['resource_available'] = "Dostępne";
+ $LNG['resource_capacity'] = "Pojemność magazynowania";
+ $LNG['resource_production'] = "Produkcja";
+ $LNG['energy_available'] = "Dostępna energia";
+ $LNG['energy_used'] = "Zużyta energia";
+ $LNG['energy_produced'] = "Wyprodukowana energia";
+ $LNG['darkmatter_available'] = "Aktualna ciemna materia";
+
  //-------------------- flotTable.tpl ------------------//
 
  $LNG['fm_no_fleet_movements'] = "Brak ruchów floty";

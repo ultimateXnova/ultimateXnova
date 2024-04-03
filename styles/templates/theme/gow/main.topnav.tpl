@@ -106,39 +106,39 @@
                 <tbody>
                   {if in_array($resourceID,array(901,902,903))}
                   <tr>
-                    <td class='text-start text-yellow'>Available:</td>
+                    <td class='text-start text-yellow'>{$LNG.resource_available}:</td>
                     <td class='text-end'>{$resourceData.current|number}</td>
                   </tr>
                   <tr>
-                    <td class='text-start text-yellow'>Storage Capacity:</td>
+                    <td class='text-start text-yellow'>{$LNG.resource_capacity}:</td>
                     <td class='text-end'>{$resourceData.max|number}</td>
                   </tr>
                   <tr>
-                    <td class='text-start text-yellow'>Production:</td>
+                    <td class='text-start text-yellow'>{$LNG.resource_production}:</td>
                     <td class='text-end {if $resourceData.current < $resourceData.max}color-green{else}color-red{/if}'>
                       {if $resourceData.current < $resourceData.max}
                       {$resourceData.production|number}&nbsp;/&nbsp;{$LNG.short_hour}
                       {else}
                       0
-                      {/if}    
+                      {/if}
                     </td>
                   </tr>
                   {elseif $resourceID == 911}
                   <tr>
-                    <td class='text-start text-yellow'>Available Energy:</td>
+                    <td class='text-start text-yellow'>{$LNG.energy_available}:</td>
                     <td class='text-end {if  ($resourceData.max + $resourceData.used) > 0}color-green{else}color-red{/if}'>{($resourceData.max + $resourceData.used)|number}&nbsp;/&nbsp;{$LNG.short_hour}</td>
                   </tr>
                   <tr>
-                    <td class='text-start text-yellow'>Used Energy:</td>
+                    <td class='text-start text-yellow'>{$LNG.energy_used}:</td>
                     <td class='color-red text-end'>{$resourceData.used|number}&nbsp;/&nbsp;{$LNG.short_hour}</td>
                   </tr>
                   <tr>
-                    <td class='text-start text-yellow'>Produced Energy:</td>
+                    <td class='text-start text-yellow'>{$LNG.energy_produced}:</td>
                     <td class='color-green text-end'>{$resourceData.max|number}&nbsp;/&nbsp;{$LNG.short_hour}</td>
                   </tr>
                   {elseif $resourceID == 921}
                   <tr>
-                    <td class='text-start text-yellow'>Current Darkmatter:</td>
+                    <td class='text-start text-yellow'>{$LNG.darkmatter_available}:</td>
                     <td class='text-end'>{$resourceData.current|number}</td>
                   </tr>
                   {/if}

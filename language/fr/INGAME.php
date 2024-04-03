@@ -4,6 +4,16 @@
 // Version 1.0 - Initial release
 // Version 1.1 - Decode accent HTML to UTF-8 format & small spellchecking
 
+//main.topnav.tpl//
+
+$LNG['resource_available'] = "Disponible";
+$LNG['resource_capacity'] = "Capacité de stockage";
+$LNG['resource_production'] = "Production";
+$LNG['energy_available'] = "Énergie disponible";
+$LNG['energy_used'] = "Énergie utilisée";
+$LNG['energy_produced'] = "Énergie produite";
+$LNG['darkmatter_available'] = "Matière noire actuelle";
+
 //-------------------- flotteTable.tpl ------------------//
 
 $LNG['fm_no_fleet_movements'] = "Aucun mouvement de flotte" ;
