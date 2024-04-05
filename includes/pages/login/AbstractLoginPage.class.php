@@ -69,7 +69,18 @@ abstract class AbstractLoginPage
 
 		$this->tplObj	= new template;
 		list($tplDir)	= $this->tplObj->getTemplateDir();
-		$this->tplObj->setTemplateDir($tplDir.'login/');
+		// Pfahli: Added option for login-themes based on theme folder in preperation for new theme
+		$config = Config::get();
+		$default_theme = $config->server_default_theme;
+		
+		if (file_exists(ROOT_PATH.'styles/theme/'.$default_theme.'/login/')) {
+			// if the theme has a login folder, use it instead of the default folder
+			$this->tplObj->setTemplateDir(ROOT_PATH.'styles/theme/'.$default_theme.'/login/');
+		} else {
+			// else use the default folder
+			$this->tplObj->setTemplateDir($tplDir.'login/');
+		}
+		
 		return true;
 	}
 
