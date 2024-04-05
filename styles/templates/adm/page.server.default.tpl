@@ -63,6 +63,7 @@ $(document).ready(function(){
 		<option {if $server_default_theme == 'nova'}selected{/if} value="nova">Nova</option>
 		<option {if $server_default_theme == 'gow'}selected{/if} value="gow">Gow</option>
 		<option {if $server_default_theme == 'EpicBlueXIII'}selected{/if} value="EpicBlueXIII">EpicBlueXIII</option>
+		<option {if $server_default_theme == 'office'}selected{/if} value="office">Office</option>
 	</select>
 </div>
 
