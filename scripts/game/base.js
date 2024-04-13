@@ -201,7 +201,7 @@ var Dialog	= {
 }
 
 function NotifyBox(text) {
-	tip = $('#tooltip')
+	tip = $('#tooltipNotify')
 	tip.html(text).addClass('notify').css({
 		left : (($(window).width() - $('#leftmenu').width()) / 2 - tip.outerWidth() / 2) + $('#leftmenu').width(),
 	}).show();

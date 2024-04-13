@@ -10,7 +10,9 @@
 		<td style="line-height:1;" class="text-center align-middle" style="word-wrap: break-word;color:{$CategoryRow.color};">
 			<a class="fs-12 hover-underline" href="game.php?page=messages&category={$CategoryID}" style="color:{$CategoryRow.color};">{$LNG.mg_type.{$CategoryID}}</a>
 		<br>
-		<span class="fs-12" id="unread_{$CategoryID}">{$CategoryRow.unread}</span><span class="fs-12">/</span><span class="fs-12" id="total_{$CategoryID}">{$CategoryRow.total}</span>
+		<span class="fs-12" id="unread_{$CategoryID}">{$CategoryRow.unread}</span>
+		<span class="fs-12">/</span>
+		<span data-total-number="{$CategoryRow.total}" class="fs-12" id="total_{$CategoryID}">{$CategoryRow.total}</span>
 		</td>
 		{if $CategoryRow@last || ($CategoryRow@iteration % 6) === 0}</tr>{/if}
 		{/foreach}
@@ -87,7 +89,7 @@
 		</td>
 		<td class="text-center align-middle">
 			{if $MessID != 999}
-			<a href="#" onclick="Message.delMessage({$Message.id});return false;">
+			<a href="#" onclick="Message.deleteMessage({$Message.id}, {$Message.type});return false;">
 				<img src="{$dpath}img/deletemsg.png">
 			</a>
 			{/if}

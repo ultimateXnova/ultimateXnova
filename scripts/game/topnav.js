@@ -6,17 +6,16 @@
 function resourceTicker(config, init) {
 	if(typeof init !== "undefined" && init === true)
 		window.setInterval(function(){resourceTicker(config)}, 1000);
-		
-	var element	= $('#'+config.valueElem);
 
+	var element	= $('#'+config.valueElem);
 	if(element.hasClass('res_current_max'))
 	{
 		return false;
 	}
-	
+
 	var nrResource = Math.max(0, Math.floor(parseFloat(config.available) + parseFloat(config.production) / 3600 * (serverTime.getTime() - startTime) / 1000));
-	
-	if (nrResource < config.limit[1]) 
+
+	if (nrResource < config.limit[1])
 	{
 		if (!element.hasClass('res_current_warn') && nrResource >= config.limit[1] * 0.9)
 		{
