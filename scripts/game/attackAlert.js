@@ -7,7 +7,6 @@ function attackAlert(){
       url: 'game.php?page=attackAlert&mode=show&ajax=1',
       dataType: 'json',
       success: function (data) {
-        console.log(data);
 
       if (data === "attack") {
         $('#attack_alert').attr('src','styles/theme/gow/images/attack_red.gif');
