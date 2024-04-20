@@ -118,7 +118,10 @@ if(defined('DATABASE_VERSION') && DATABASE_VERSION === 'OLD')
 }
 
 $config = Config::get();
-date_default_timezone_set($config->timezone);
+if(isset($config->timezone) && $config->timezone != '') {
+	date_default_timezone_set($config->timezone);
+}
+
 
 
 
