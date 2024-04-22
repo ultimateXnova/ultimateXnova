@@ -131,11 +131,21 @@ function maxResource(id) {
 	calculateTransportCapacity();
 }
 
+function minResource(id){
+	$('#' + id + "_to_transport").val(0);
+}
+
 
 function maxResources() {
 	maxResource('metal');
 	maxResource('crystal');
 	maxResource('deuterium');
+}
+
+function minResources() {
+	minResource('metal');
+	minResource('crystal');
+	minResource('deuterium');
 }
 
 function calculateTransportCapacity() {
@@ -144,8 +154,10 @@ function calculateTransportCapacity() {
 	var deuterium = Math.abs(document.getElementsByName("deuterium")[0].value);
 	transportCapacity = data.fleetroom - data.consumption - metal - crystal - deuterium;
 	if (transportCapacity < 0) {
+		$('#remainingresources').val(NumberGetHumanReadable(transportCapacity));
 		document.getElementById("remainingresources").innerHTML = "<font color=red>" + NumberGetHumanReadable(transportCapacity) + "</font>";
 	} else {
+		$('#remainingresources').val(NumberGetHumanReadable(transportCapacity));
 		document.getElementById("remainingresources").innerHTML = "<font color=lime>" + NumberGetHumanReadable(transportCapacity) + "</font>";
 	}
 	return transportCapacity;

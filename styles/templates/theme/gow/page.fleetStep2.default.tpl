@@ -4,53 +4,90 @@
 <input type="hidden" name="token" value="{$token}">
    	<table class="table table-gow table-sm fs-12">
         <tr>
-        	<th colspan="2">{$galaxy}:{$system}:{$planet} - {$LNG["type_planet_{$type}"]}</th>
+        	<th colspan="2">[{$galaxy}:{$system}:{$planet}] - {$LNG["type_planet_{$type}"]}</th>
         </tr>
 		<tr>
-			<th class="text-center">{$LNG.fl_mission}</th>
-      <th class="text-center">{$LNG.fl_resources}</th>
+			<td class="text-center">{$LNG.fl_mission}</td>
+      <td class="text-center">{$LNG.fl_resources}</td>
     </tr>
 		<tr>
-			<td class="left top" style="width:50%;margin:0;padding:0;"{if $StaySelector} rowspan="5"{/if}>
-        		<table class="table table-gow table-sm" border="0" cellpadding="0" cellspacing="0" style="margin:0;padding:0;">
-        			{foreach $MissionSelector as $MissionID}
-					<tr style="height:20px;">
-						<td class="transparent left">
-						<input id="radio_{$MissionID}" type="radio" name="mission" value="{$MissionID}" {if $mission == $MissionID || $MissionID@total == 1}checked="checked"{/if} style="width:60px;"><label for="radio_{$MissionID}">{$LNG["type_mission_{$MissionID}"]}</label><br>
-							{if $MissionID == 17}<br><div style="color:red;padding-left:13px;">{$LNG.fl_transfer_alert_message}</div><br>{/if}
-							{if $MissionID == 15}<br><div style="color:red;padding-left:13px;">{$LNG.fl_expedition_alert_message}</div><br>{/if}
-							{if $MissionID == 11}<br><div style="color:red;padding-left:13px;">{$fl_dm_alert_message}</div><br>{/if}
+			<td class="w-50" {if $StaySelector} rowspan="5"{/if}>
+    		<table class="table table-gow table-sm" border="0" cellpadding="0" cellspacing="0" style="margin:5px 0;padding:0;">
+    			{foreach $MissionSelector as $MissionID}
+					<tr>
+						<td>
+						<input id="radio_{$MissionID}" type="radio" name="mission" value="{$MissionID}" {if $mission == $MissionID || $MissionID@total == 1}checked="checked"{/if} style="width:60px;">
+            <label for="radio_{$MissionID}">{$LNG["type_mission_{$MissionID}"]}</label>
+							{if $MissionID == 17}
+              <div class="fs-11 color-red px-2">{$LNG.fl_transfer_alert_message}</div>
+              {/if}
+							{if $MissionID == 15}
+              <div class="fs-11 color-red px-2">{$LNG.fl_expedition_alert_message}</div>
+              {/if}
+							{if $MissionID == 11}
+              <div class="fs-11 color-red px-2">{$fl_dm_alert_message}</div>
+              {/if}
 						</td>
 					</tr>
-					{/foreach}
-        		</table>
-        	</td>
-        	<td class="top">
-				<table class="table table-gow table-sm fs-12">
-                    <tr style="height:20px;">
-        				<td class="transparent">{$LNG.tech.901}</td>
-        				<td class="transparent"><a href="javascript:maxResource('metal');">{$LNG.fl_max}</a></th>
-        				<td class="transparent"><input name="metal" size="10" onchange="calculateTransportCapacity();" type="text"></td>
+			   {/foreach}
+    		</table>
+      </td>
+      <td class="w-50">
+				<table class="table table-gow table-sm fs-12" border="0" cellpadding="0" cellspacing="0" style="margin:5px 0;padding:0;">
+              <tr colspan="5">
+        				<td style="vertical-align: middle;" colspan="1">{$LNG.tech.901}</td>
+        				<td colspan="1">
+                  <button type="button" style="padding:2px;" class="btn btn-sm p-1 bg-dark text-white fs-11" onclick="maxResource('metal');">{$LNG.fl_max}</button>
+                </td>
+                <td colspan="1">
+                  <button type="button" style="padding:2px;" class="btn btn-sm p-1 bg-dark text-white fs-11" onclick="minResource('metal');">min</button>
+                </td>
+        				<td colspan="2">
+                  <input id="metal_to_transport" style="height:24px;" class="form-control bg-black text-white" name="metal" onchange="calculateTransportCapacity();" type="text">
+                </td>
         			</tr>
-                    <tr style="height:20px;">
-        				<td class="transparent">{$LNG.tech.902}</td>
-        				<td class="transparent"><a href="javascript:maxResource('crystal');">{$LNG.fl_max}</a></th>
-        				<td class="transparent"><input name="crystal" size="10" onchange="calculateTransportCapacity();" type="text"></td>
+              <tr>
+        				<td style="vertical-align: middle;" colspan="1">{$LNG.tech.902}</td>
+        				<td colspan="1">
+                  <button type="button" style="padding:2px;" class="btn btn-sm p-1 bg-dark text-white fs-11" onclick="maxResource('crystal');">{$LNG.fl_max}</button>
+                </td>
+                <td colspan="1">
+                  <button type="button" style="padding:2px;" class="btn btn-sm p-1 bg-dark text-white fs-11" onclick="minResource('crystal');">min</button>
+                </td>
+        				<td colspan="2">
+                  <input id="crystal_to_transport" style="height:24px;" class="form-control bg-black text-white" name="crystal" onchange="calculateTransportCapacity();" type="text">
+                </td>
         			</tr>
-                    <tr style="height:20px;">
-        				<td class="transparent">{$LNG.tech.903}</td>
-        				<td class="transparent"><a href="javascript:maxResource('deuterium');">{$LNG.fl_max}</a></td>
-        				<td class="transparent"><input name="deuterium" size="10" onchange="calculateTransportCapacity();" type="text"></td>
+              <tr>
+        				<td style="vertical-align: middle;" colspan="1">{$LNG.tech.903}</td>
+        				<td colspan="1">
+                  <button type="button" style="padding:2px;" class="btn btn-sm p-1 bg-dark text-white fs-11" onclick="maxResource('deuterium');">{$LNG.fl_max}</button>
+                </td>
+                <td colspan="1">
+                  <button type="button" style="padding:2px;" class="btn btn-sm p-1 bg-dark text-white fs-11" onclick="minResource('deuterium');">min</button>
+                </td>
+        				<td colspan="2">
+                  <input id="deuterium_to_transport" style="height:24px;" class="form-control bg-black text-white" name="deuterium" onchange="calculateTransportCapacity();" type="text">
+                </td>
         			</tr>
-                    <tr style="height:20px;">
-        				<td class="transparent">{$LNG.fl_resources_left}</td>
-        				<td class="transparent" colspan="2" id="remainingresources">-</td>
+              <tr>
+        				<td colspan="1">{$LNG.fl_resources_left}</td>
+        				<td style="vertical-align: middle;" colspan="4">
+                  <input id="remainingresources" style="height:24px;" class="form-control bg-black text-white" readonly>
+                </td>
         			</tr>
-                    <tr style="height:20px;">
-        				<td class="transparent" colspan="3"><a href="javascript:maxResources()">{$LNG.fl_all_resources}</a></td>
+              <tr>
+        				<td colspan="5" class="text-center">
+                  <button type="button" style="padding:2px;" class="btn btn-sm p-1 bg-dark text-white fs-11 w-50" onclick="maxResources();">{$LNG.fl_all_resources}</button>
+                </td>
         			</tr>
-                    <tr style="height:20px;">
-        				<td class="transparent" colspan="3">{$LNG.fl_fuel_consumption}: <span id="consumption" class="consumption">{$consumption}</span></td>
+              <tr>
+        				<td colspan="5" class="text-center">
+                  <button type="button" style="padding:2px;" class="btn btn-sm p-1 bg-dark text-white fs-11 w-50" onclick="minResources();">reset</button>
+                </td>
+        			</tr>
+              <tr>
+        				<td colspan="5" class="text-center color-red">{$LNG.fl_fuel_consumption}: <span id="consumption" class="consumption">{$consumption}</span></td>
         			</tr>
 				</table>
 			</td>
