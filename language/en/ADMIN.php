@@ -20,6 +20,57 @@
 // Translated into English by QwataKayean . All rights reversed (C) 2012
 // 2Moons - Copyright (C) 2010-2012 Slaver
 
+//---------------	ShowColonySettingsPage.class.php - page.colony.default.tpl ------------------------//
+$LNG['cs_metal_start'] = "metal (start)";
+$LNG['cs_crystal_start'] = "crystal (start)";
+$LNG['cs_deuterium_start'] = "deuterium (start)";
+$LNG['cs_metal_mine_start'] = "Metal Mine Level";
+$LNG['cs_crystal_mine_start'] = "Crystal Mine Level";
+$LNG['cs_deuterium_mine_start'] = "Deuterium Mine Level";
+$LNG['cs_solar_plant_start'] = "Solar Plant Level";
+$LNG['cs_fusion_plant_start'] = "Fusion Plant Level";
+$LNG['cs_robot_factory_start'] = "Robot Factory Level";
+$LNG['cs_nano_factory_start'] = "Nanit Factory Level";
+$LNG['cs_hangar_start'] = "Shipyard Level";
+$LNG['cs_metal_store_start'] = "Metal Storage Level";
+$LNG['cs_crystal_store_start'] = "Crystal Storage Level";
+$LNG['cs_deuterium_store_start'] = "Deuterium Storage Level";
+$LNG['cs_laboratory_start'] = "Laboratory Level";
+$LNG['cs_terraformer_start'] = "Terraformer Level";
+$LNG['cs_university_start'] = "University Level";
+$LNG['cs_ally_deposit_start'] = "Ally Deposit Level";
+$LNG['cs_silo_start'] = "Silo Level";
+$LNG['cs_small_ship_cargo_start'] = "Small Ship Cargo (amount)";
+$LNG['cs_big_ship_cargo_start'] = "Big Ship Cargo (amount)";
+$LNG['cs_light_hunter_start'] = "Light Hunter (amount)";
+$LNG['cs_heavy_hunter_start'] = "Heavy Hunter (amount)";
+$LNG['cs_crusher_start'] = "Crusher (amount)";
+$LNG['cs_battle_ship_start'] = "Battle Ship (amount)";
+$LNG['cs_colonizer_start'] = "Colony Ship (amount)";
+$LNG['cs_recycler_start'] = "Recycler (amount)";
+$LNG['cs_spy_sonde_start'] = "Spy probe (amount)";
+$LNG['cs_bomber_ship_start'] = "Bomber Ship (amount)";
+$LNG['cs_solar_satelit_start'] = "Solar Satellite (amount)";
+$LNG['cs_destructor_start'] = "Destructor (amount)";
+$LNG['cs_dearth_star_start'] = "Death Star (amount)";
+$LNG['cs_ev_transporter_start'] = "Ev transporter (amount)";
+$LNG['cs_star_crasher_start'] = "Star Crasher (amount)";
+$LNG['cs_dm_ship_start'] = "DM Ship (amount)";
+$LNG['cs_orbital_station_start'] = "Orbital Station (amount)";
+$LNG['cs_misil_launcher_start'] = "Misil Launcher (amount)";
+$LNG['cs_small_laser_start'] = "Small Laser (amount)";
+$LNG['cs_big_laser_start'] = "Big Laser (amount)";
+$LNG['cs_gauss_canyon_start'] = "Gauss Canyon (amount)";
+$LNG['cs_ionic_canyon_start'] = "Ionic Canyon (amount)";
+$LNG['cs_buster_canyon_start'] = "Buster Canyon (amount)";
+$LNG['cs_small_protection_shield_start'] = "Small Protection Shield (amount)";
+$LNG['cs_planet_protector_start'] = "Planet Protector (amount)";
+$LNG['cs_big_protection_shield_start'] = "Big Protection Shield (amount)";
+$LNG['cs_graviton_canyon_start'] = "Gravitation Canyon (amount)";
+$LNG['cs_interceptor_misil_start'] = "Intercepting Missile (amount)";
+$LNG['cs_interplanetary_misil_start'] = "Interplanetary Missile (amount)";
+
+
 //---------------	ShowInfosPage.class.php - page.information.default.tpl ------------------------//
 $LNG['ad_infos_server'] = "Server";
 $LNG['ad_infos_server_infos'] = "Server Information";
