@@ -280,9 +280,9 @@ abstract class AbstractGamePage
 					'selected' => ($CPLANET['id'] == $PLANET['id']) ? true : false,
 					'field_current' => $CPLANET['field_current'],
 					'field_max' => $CPLANET['field_max'],
-					'diameter' => $CPLANET['diameter'],
-					'temp_min' => $CPLANET['temp_min'],
-					'temp_max' => $CPLANET['temp_max'],
+					'diameter' => pretty_number($CPLANET['diameter']) . " km",
+					'temp_min' => $CPLANET['temp_min'] . " °C",
+					'temp_max' => $CPLANET['temp_max'] . " °C",
 				);
 
 			}else {
@@ -298,9 +298,9 @@ abstract class AbstractGamePage
 					'selected' => ($CPLANET['id'] == $PLANET['id']) ? true : false,
 					'field_current' => $CPLANET['field_current'],
 					'field_max' => $CPLANET['field_max'],
-					'diameter' => $CPLANET['diameter'],
-					'temp_min' => $CPLANET['temp_min'],
-					'temp_max' => $CPLANET['temp_max'],
+					'diameter' => pretty_number($CPLANET['diameter']) . " km",
+					'temp_min' => $CPLANET['temp_min'] . " °C",
+					'temp_max' => $CPLANET['temp_max'] . " °C",
 					'id_luna' => $CPLANET['id_luna'],
 				);
 
