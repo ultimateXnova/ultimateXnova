@@ -1,18 +1,17 @@
 {block name="title" prepend}{$LNG.lm_buildings}{/block}
 {block name="content"}
 
-		{if $messages}
+{if $messages}
 	<div class="message"><a href="?page=messages">{$messages}</a></div>
-	
-	{/if}
+{/if}
 {if !empty($Queue)}
 <div id="buildlist" class="infos1">
-	
+
 		{foreach $Queue as $List}
 		{$ID = $List.element}
 		<div class="buildb">
 
-				{$List@iteration}.: 
+				{$List@iteration}.:
 				{if !($isBusy.research && ($ID == 6 || $ID == 31)) && !($isBusy.shipyard && ($ID == 15 || $ID == 21)) && $RoomIsOk && $CanBuildElement && $BuildInfoList[$ID].buyable}
 				<form class="build_form" action="game.php?page=buildings" method="post">
 					<input type="hidden" name="cmd" value="insert">
@@ -39,46 +38,54 @@
 				<br><span style="color:lime" data-time="{$List.endtime}" class="timer">{$List.display}</span>
 			</div>
 	{/foreach}
-
-	
 </div >
-
 {/if}
 
 	<div>
-<div class="planeto"> <button id="btn1">Mining</button> | <button id="btn2">Other</button> | <button id="btn3">All</button></div>		
+<div class="d-flex bg-purple p-2">
+	<button class="btn btn-sm btn-info text-white fs-12 fw-bold mx-1 color-black" id="btn1">Mining</button>
+	<button class="btn btn-sm btn-info text-white fs-12 fw-bold mx-1 color-black" id="btn2">Other</button>
+	<button class="btn btn-sm btn-info text-white fs-12 fw-bold mx-1 color-black" id="btn3">All</button>
+</div>
 
 {foreach $BuildInfoList as $ID => $Element}
 {if ($ID == 1 || $ID == 2 || $ID == 3 || $ID == 4 || $ID == 12 || $ID == 22 || $ID == 23 || $ID == 24)}
-<div class="infos">
-<div class="buildn">
-<a href="#" onclick="return Dialog.info({$ID})">{$LNG.tech.{$ID}}</a>{if $Element.level > 0} ({$LNG.bd_lvl} {$Element.level}{if $Element.maxLevel != 255}/{$Element.maxLevel}{/if}){/if}
-	</div>
+<div class="infos scroll">
+<div class="buildn d-flex justify-content-center">
+<a class="fs-12 user-select-none" href="#" onclick="return Dialog.info({$ID})">{$LNG.tech.{$ID}}</a>
+{if $Element.level > 0}
+<span class="fs-12 user-select-none">(&nbsp;{$LNG.bd_lvl}&nbsp;{$Element.level}&nbsp;/&nbsp;{$Element.maxLevel}&nbsp;)</span>
+{/if}
+</div>
 		<div class="buildl">
 			<a href="#" onclick="return Dialog.info({$ID})">
 				<img style="float: left;" src="{$dpath}gebaeude/{$ID}.gif" alt="{$LNG.tech.{$ID}}" width="120" height="120">
 			</a>
 		{$LNG.bd_remaining}
 						{foreach $Element.costOverflow as $ResType => $ResCount}
-						<a href='#' onclick="return Dialog.info({$ResType});" class='tooltip' data-tooltip-content="<table><tr><th>{$LNG.tech.{$ResType}}</th></tr><tr><table class='hoverinfo'><tr><td>{$LNG.shortDescription.$ResType}</td></tr></table></tr></table>">{$LNG.tech.{$ResType}}</a>: <span style="font-weight:700">{$ResCount|number}</span><br>
+						<a href='#' onclick="return Dialog.info({$ResType});" data-bs-toggle="tooltip"
+	          data-bs-placement="left"
+	          data-bs-html="true"
+						title="<table><tr><th>{$LNG.tech.{$ResType}}</th></tr><tr><table class='hoverinfo'><tr><td>{$LNG.shortDescription.$ResType}</td></tr></table></tr></table>">{$LNG.tech.{$ResType}}:</a>
+						<span style="font-weight:700">{$ResCount|number}</span>
 						{/foreach}
 						<br>
 {if !empty($Element.infoEnergy)}
 							{$LNG.bd_next_level}<br>
 							{$Element.infoEnergy}<br>
 						{/if}
-					
-		
-		
 
-		
+
+
+
+
 </div>
 
 	<div class="buildl">
 							<span>{foreach $Element.costResources as $RessID => $RessAmount}
 					<a href='#' onclick="return Dialog.info({$RessID});" class='tooltip' data-tooltip-content="<table><tr><th>{$LNG.tech.{$RessID}}</th></tr><tr><table class='hoverinfo'><tr><td><img src='{$dpath}gebaeude/{$RessID}.{if $RessID >=600 && $RessID <= 699}jpg{else}gif{/if}'></td><td>{$LNG.shortDescription.$RessID}</td></tr></table></tr></table>">{$LNG.tech.{$RessID}}</a>: <b><span style="color:{if $Element.costOverflow[$RessID] == 0}lime{else}#ffd600{/if}">{$RessAmount|number}</span></b>
 					{/foreach}</span><br><br>
-					
+
 					{if $Element.maxLevel == $Element.levelToBuild}
 						<span style="color:#ffd600">{$LNG.bd_maxlevel} || <button>End Game</button></span>
 					{elseif ($isBusy.research && ($ID == 6 || $ID == 31)) || ($isBusy.shipyard && ($ID == 15 || $ID == 21))}
@@ -98,7 +105,7 @@
 						<span style="color:#ffd600">{$LNG.bd_no_more_fields}</span>
 						{/if}
 					{/if}
-						
+
 				<br>
 						{$LNG.fgf_time}:{$Element.elementTime|time}
 {if $Element.level > 0}
@@ -136,7 +143,7 @@
 						{/if}
 					</div>
 </div>
- {else} <div class="infoso">
+ {else} <div class="infoso scroll">
 <div class="buildn">
 <a href="#" onclick="return Dialog.info({$ID})">{$LNG.tech.{$ID}}</a>{if $Element.level > 0} ({$LNG.bd_lvl} {$Element.level}{if $Element.maxLevel != 255}/{$Element.maxLevel}{/if}){/if}
 	</div>
@@ -153,18 +160,18 @@
 							{$LNG.bd_next_level}<br>
 							{$Element.infoEnergy}<br>
 						{/if}
-					
-		
-		
 
-		
+
+
+
+
 </div>
 
 	<div class="buildl">
 <span>{foreach $Element.costResources as $RessID => $RessAmount}
 					<a href='#' onclick="return Dialog.info({$RessID});" class='tooltip' data-tooltip-content="<table><tr><th>{$LNG.tech.{$RessID}}</th></tr><tr><table class='hoverinfo'><tr><td><img src='{$dpath}gebaeude/{$RessID}.{if $RessID >=600 && $RessID <= 699}jpg{else}gif{/if}'></td><td>{$LNG.shortDescription.$RessID}</td></tr></table></tr></table>">{$LNG.tech.{$RessID}}</a>: <b><span style="color:{if $Element.costOverflow[$RessID] == 0}lime{else}#ffd600{/if}">{$RessAmount|number}</span></b>
 					{/foreach}</span><br><br>
-					
+
 					{if $Element.maxLevel == $Element.levelToBuild}
 						<span style="color:#ffd600">{$LNG.bd_maxlevel}</span>
 					{elseif ($isBusy.research && ($ID == 6 || $ID == 31)) || ($isBusy.shipyard && ($ID == 15 || $ID == 21))}
@@ -184,7 +191,7 @@
 						<span style="color:#ffd600">{$LNG.bd_no_more_fields}</span>
 						{/if}
 					{/if}
-						
+
 				<br>
 						{$LNG.fgf_time}:{$Element.elementTime|time}
 {if $Element.level > 0}

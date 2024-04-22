@@ -14,7 +14,7 @@
     border-secondary
     {/if}
   {/if} w-75">
-    <a class="d-flex  hover-pointer text-decoration-none" href="game.php?page={$page}&amp;cp={$PlanetRow.id}" data-bs-toggle="tooltip"
+    <a class="d-flex hover-pointer text-decoration-none" href="game.php?page={$page}&amp;cp={$PlanetRow.id}" data-bs-toggle="tooltip"
     data-bs-placement="left"
     data-bs-html="true"
     title="
@@ -59,7 +59,8 @@
     {/if}
   </a>
     {if isset($PlanetRow.moonInfo)}
-    <a class="hover-pointer" href="game.php?page={$page}&amp;cp={$PlanetRow.moonInfo[0].id}" data-bs-toggle="tooltip"
+    <a class="hover-pointer" href="game.php?page={$page}&amp;cp={$PlanetRow.moonInfo[0].id}"
+    data-bs-toggle="tooltip"
     data-bs-placement="left"
     data-bs-html="true"
     title="

@@ -1,15 +1,15 @@
 {block name="title" prepend}{if $mode == "defense"}{$LNG.lm_defenses}{else}{$LNG.lm_shipshard}{/if}{/block}
 {block name="content"}
 
-	{if $messages}
-	<div class="message"><a href="?page=messages">{$messages}</a></div>
-
-	{/if}
+{if $messages}
+<div class="message"><a href="?page=messages">{$messages}</a></div>
+{/if}
 {if !$NotBuilding}
-<table width="70%" id="infobox" style="border: 2px solid red; text-align:center;background:transparent">
-	<tr><td>{$LNG.bd_building_shipyard}</td></tr>
+<table class="table" id="infobox" >
+	<tr>
+		<td>{$LNG.bd_building_shipyard}</td>
+	</tr>
 </table>
-<br><br>
 {/if}
 {if !empty($BuildList)}
 <div style="text-align: center;">
@@ -32,14 +32,13 @@
 {/if}
 
 <div>
-{if $mode == "defense"}
-{else}
-<div class="planeto">
-	<button id="ship1">Civil</button> |
-	<button id="ship2">Military</button> |
-	<button id="ship3">All</button>
-{/if}
+{if $mode == "fleet"}
+<div class="d-flex bg-purple p-2">
+	<button class="btn btn-sm btn-info text-white fs-12 fw-bold mx-1 color-black" id="ship1">Civil</button>
+	<button class="btn btn-sm btn-info text-white fs-12 fw-bold mx-1 color-black" id="ship2">Military</button>
+	<button class="btn btn-sm btn-info text-white fs-12 fw-bold mx-1 color-black" id="ship3">All</button>
 </div>
+{/if}
 	{foreach $elementList as $ID => $Element}
 
 		<div class="infos" id="s{$ID}"><form action="game.php?page=shipyard&amp;mode={$mode}" method="post" id="s{$ID}">

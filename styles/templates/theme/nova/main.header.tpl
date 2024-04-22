@@ -9,10 +9,16 @@
 	<title>{block name="title"} - {$uni_name} - {$game_name}{/block}</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<!-- Bootstrap 5 - No IE support -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 	{if !empty($goto)}
 	<meta http-equiv="refresh" content="{$gotoinsec};URL={$goto}">
 	{/if}
-	{assign var="REV" value="1.0.0.1" nocache}
+	{assign var="REV" value="1.0.0.17" nocache}
 
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="./styles/resource/css/base/boilerplate.css?v={$REV}">
@@ -55,9 +61,9 @@
 	<script type="text/javascript" src="./scripts/base/jquery.fancybox.js?v={$REV}"></script>
 	<script type="text/javascript" src="./scripts/base/jquery.validationEngine.js?v={$REV}"></script>
 	<script type="text/javascript" src="./scripts/l18n/validationEngine/jquery.validationEngine-{$lang}.js?v={$REV}"></script>
-	<script type="text/javascript" src="./scripts/base/tooltip.js?v={$REV}"></script>
 	<script type="text/javascript" src="./scripts/game/base.js?v={$REV}"></script>
 	<script type="text/javascript" src="./scripts/base/steem.min.js"></script>
+	<script type="text/javascript" src="./scripts/base/tooltip.js?v={$REV}"></script>
 	{foreach item=scriptname from=$scripts}
 	<script type="text/javascript" src="./scripts/game/{$scriptname}.js?v={$REV}"></script>
 	{/foreach}
@@ -341,6 +347,53 @@ $("#600h").show();
 	<!-- fancybox 5.0 -->
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+
+	{if isModuleAvailable($smarty.const.MODULE_ATTACK_ALERT)}
+	<script type="text/javascript">
+	var attackListenTime = {$attackListenTime};
+	</script>
+	<script type="text/javascript" src="./scripts/game/attackAlert.js?v={$REV}"></script>
+	{/if}
+
+	<script>
+
+	var myDefaultWhiteList = bootstrap.Tooltip.Default.allowList
+	myDefaultWhiteList.table = ['class'];
+	myDefaultWhiteList.tbody = [];
+	myDefaultWhiteList.thead = [];
+	myDefaultWhiteList.th = ['colspan'];
+	myDefaultWhiteList.tr = [];
+	myDefaultWhiteList.td = ['colspan'];
+	myDefaultWhiteList.span = ['class'];
+	myDefaultWhiteList.img = ['src','alt','width','height'];
+	myDefaultWhiteList.form = ['class','action','method'];
+	myDefaultWhiteList.input = ['type','name','value'];
+	myDefaultWhiteList.button = ['type','class'];
+
+
+	//initialize bootstrap tooltips
+	$(document).ready(function(){
+		$('[data-bs-toggle="tooltip"]').tooltip({
+			container: 'body',
+			html: true,
+			whiteList: myDefaultWhiteList
+		});
+	});
+
+	// To allow elements
+	//popovers
+
+	$(document).ready(function(){
+		$('[data-bs-toggle="popover"]').popover({
+			container: 'body',
+			html: true,
+			whiteList: myDefaultWhiteList
+		});
+
+	});
+
+	</script>
+
 </head>
 <body id="{if isset($smarty.get.page)}{$smarty.get.page|htmlspecialchars|default:'overview'}{/if}" class="{$bodyclass}">
 	<div id="tooltip" class="tip"></div>
