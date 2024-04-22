@@ -30,23 +30,23 @@ class ShowFleetStep1Page extends AbstractGamePage
 	{
 		global $USER, $PLANET, $pricelist, $reslist, $LNG;
 
-		$targetGalaxy 			= HTTP::_GP('galaxy', (int) $PLANET['galaxy']);
-		$targetSystem 			= HTTP::_GP('system', (int) $PLANET['system']);
-		$targetPlanet			= HTTP::_GP('planet', (int) $PLANET['planet']);
-		$targetType 			= HTTP::_GP('type', (int) $PLANET['planet_type']);
+		$targetGalaxy = HTTP::_GP('galaxy', (int) $PLANET['galaxy']);
+		$targetSystem = HTTP::_GP('system', (int) $PLANET['system']);
+		$targetPlanet	= HTTP::_GP('planet', (int) $PLANET['planet']);
+		$targetType = HTTP::_GP('type', (int) $PLANET['planet_type']);
 
-		$mission				= HTTP::_GP('target_mission', 0);
+		$mission = HTTP::_GP('target_mission', 0);
 
-		$Fleet		= array();
-		$FleetRoom	= 0;
+		$Fleet = array();
+		$FleetRoom = 0;
 		foreach ($reslist['fleet'] as $id => $ShipID)
 		{
-			$amount		 				= max(0, round(HTTP::_GP('ship'.$ShipID, 0.0, 0.0)));
+			$amount	= max(0, round(HTTP::_GP('ship'.$ShipID, 0.0, 0.0)));
 
 			if ($amount < 1 || $ShipID == 212) continue;
 
 			$Fleet[$ShipID]				= $amount;
-			$FleetRoom			   	   += $pricelist[$ShipID]['capacity'] * $amount;
+			$FleetRoom += $pricelist[$ShipID]['capacity'] * $amount;
 		}
 
 		$FleetRoom	*= 1 + $USER['factor']['ShipStorage'];
@@ -64,7 +64,7 @@ class ShowFleetStep1Page extends AbstractGamePage
 			'fleetMinDuration'	=> MIN_FLEET_TIME,
 		);
 
-		$token		= getRandomString();
+		$token = getRandomString();
 
 		$_SESSION['fleet'][$token]	= array(
 			'time'		=> TIMESTAMP,

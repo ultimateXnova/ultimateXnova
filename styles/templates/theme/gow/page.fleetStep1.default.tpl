@@ -179,4 +179,12 @@ data			= {$fleetdata|json};
 shortCutRows	= {$themeSettings.SHORTCUT_ROWS_ON_FLEET1};
 fl_no_shortcuts	= '{$LNG.fl_no_shortcuts}';
 </script>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+		updateVars();
+});
+</script>
+
+
 {/block}
