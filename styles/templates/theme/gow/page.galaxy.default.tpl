@@ -7,6 +7,7 @@
 	}
 	function closePopover(){
 		$('.popover').removeClass('show');
+		$('.popover').popover('hide');
 	}
 </script>
 
@@ -312,7 +313,8 @@
         {/if}
 		</td>
 		<td class="text-center align-middle">
-			<a onclick="closePopovers();" class="hover-underline hover-pointer user-select-none" data-bs-toggle="popover"
+			<a onclick="closePopovers();" class="hover-underline hover-pointer user-select-none"
+			data-bs-toggle="popover"
 			data-bs-placement="right"
 			data-bs-html="true"
 			 title="<table class='table table-gow fs-11 w-100'>
@@ -349,7 +351,8 @@
 		</td>
 		<td class="text-center align-middle" style="white-space: nowrap;">
 			{if $currentPlanet.alliance}
-			<a onclick="closePopovers();" class="hover-underline hover-pointer user-select-none" data-bs-toggle="popover"
+			<a onclick="closePopovers();" class="hover-underline hover-pointer user-select-none"
+			data-bs-toggle="popover"
 			data-bs-placement="right"
 			data-bs-html="true"
 			 title="<table class='table table-gow fs-11 w-100 px-0'>
@@ -373,6 +376,7 @@
 						</td>
 					</tr>
 					{/if}
+					<button style='height:18px;width:18px;bottom:3px;right:3px;' class='position-absolute p-0 m-0 text-white fs-11' onclick='closePopover();'>X</button>
 				 </table>">
 				<span class="{foreach $currentPlanet.alliance.class as $class}{if !$class@first} {/if}galaxy-alliance-{$class}{/foreach} galaxy-alliance">{$currentPlanet.alliance.tag}</span>
 			</a>
