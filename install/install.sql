@@ -397,6 +397,11 @@ CREATE TABLE `%PREFIX%config` (
   `expedition_consider_holdtime` BOOLEAN NOT NULL DEFAULT 1,
   `expedition_consider_same_coordinate` BOOLEAN NOT NULL DEFAULT 1,
   `darkmatter_start` int(11) unsigned NOT NULL DEFAULT 0,
+  `relocate_price` INT unsigned NOT NULL DEFAULT 50000,
+  `relocate_next_time` smallint(5) unsigned NOT NULL DEFAULT 24,
+  `relocate_move_fleet_directly` BOOLEAN NOT NULL DEFAULT 0,
+  `relocate_jump_gate_active` smallint(5) unsigned NOT NULL DEFAULT 24,
+
   PRIMARY KEY (`uni`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
@@ -701,6 +706,7 @@ CREATE TABLE `%PREFIX%planets` (
   `der_crystal` double(50,0) unsigned NOT NULL DEFAULT '0',
   `id_luna` int(11) NOT NULL DEFAULT '0',
   `is_bot` BOOLEAN NOT NULL DEFAULT 0,
+  `last_relocate` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `id_luna` (`id_luna`),
   KEY `id_owner` (`id_owner`),

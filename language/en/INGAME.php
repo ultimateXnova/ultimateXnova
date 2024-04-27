@@ -20,6 +20,25 @@
 // 2Moons - Copyright (C) 2010-2012 Slaver
 // Grammar Pedantry fixes @etaletai 2018
 
+//relocate module
+
+$LNG['cannot_use_in_vac'] = "You cannot use this option in vacation mode";
+$LNG['rl_relocate'] = "relocate";
+$LNG['rl_info'] = "You need %s Dark Matter to move your planet / moon !";
+$LNG['rl_error_type_1'] = "You didn't enter coordinates correctly";
+$LNG['rl_error_type_2'] ="Relocation should be started from Planet";
+$LNG['rl_error_type_3'] ="Position is not free";
+$LNG['rl_error_type_4'] ="Wrong possition !";
+$LNG['rl_error_type_5'] ="You cannot move planet if there is a building in construction !";
+$LNG['rl_error_type_6'] ="You cannot move planet if there is a research started from planet !";
+$LNG['rl_error_type_7'] ="There is fleet movement which is started from this planet, you cannot relocate !";
+$LNG['rl_error_type_8'] ="Same planet can be moved once in every %s hours";
+$LNG['rl_error_type_9'] = "You cannot move planet if there is a construction in shipyard !";
+$LNG['rl_error_type_10'] = "You cannot move planet if the planet is under attack !";
+$LNG['rl_error_type_11'] = "Not Enough Dark Matter !";
+$LNG['rl_success'] = "Your planet was teleported to the following coordinates: ";
+$LNG['lm_relocate'] = "Relocate";
+
 
 //main.topnav.tpl//
 

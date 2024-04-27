@@ -49,9 +49,14 @@
       </tr>
     {if !empty($news)}
       <tr>
-        <td class="text-center" colspan="3">
+        <td class="text-center">
           <button class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow" onclick="showNews();">Check News</button>
         </td>
+        {if  isModuleAvailable($smarty.const.MODULE_RELOCATE)}
+          <td class="text-center">
+            <a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow" href="game.php?page=relocate">Relocate</a>
+          </td>
+        {/if}
       </tr>
       <tr id="newsRow" class="d-none">
         <td colspan="2">
