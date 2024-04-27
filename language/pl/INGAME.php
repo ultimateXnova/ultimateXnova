@@ -17,6 +17,25 @@
  * @link https://github.com/ultimateXnova/ultimateXnova
  */
 
+ //przenieś moduł
+
+ $LNG['cannot_use_in_vac'] = "Nie możesz używać tej opcji w trybie wakacyjnym";
+ $LNG['rl_relocate'] = "przenieś";
+ $LNG['rl_info'] = "Potrzebujesz %s ciemnej materii, aby poruszyć twoją planetę/księżyc!";
+ $LNG['rl_error_type_1'] = "Nie podałeś poprawnie współrzędnych";
+ $LNG['rl_error_type_2'] ="Przenoszenie należy rozpocząć od Planety";
+ $LNG['rl_error_type_3'] ="Pozycja nie jest wolna";
+ $LNG['rl_error_type_4'] ="Zła pozycja!";
+ $LNG['rl_error_type_5'] ="Nie możesz poruszyć planety, jeśli znajduje się tam budynek w budowie!";
+ $LNG['rl_error_type_6'] ="Nie możesz poruszyć planety, jeśli na planecie rozpoczęły się badania!";
+ $LNG['rl_error_type_7'] ="Z tej planety rozpoczął się ruch floty, nie możesz się przenieść!";
+ $LNG['rl_error_type_8'] ="Ta sama planeta może zostać przesunięta raz na %s godzin";
+ $LNG['rl_error_type_9'] = "Nie możesz przesuwać planety, jeśli w stoczni trwają prace budowlane!";
+ $LNG['rl_error_type_10'] = "Nie możesz poruszyć planetą, jeśli jest ona atakowana!";
+ $LNG['rl_error_type_11'] = "Za mało ciemnej materii!";
+ $LNG['rl_success'] = "Twoja planeta została teleportowana do następujących współrzędnych: ";
+ $LNG['lm_relocate'] = "Przenieś";
+
  //main.topnav.tpl//
 
  $LNG['resource_available'] = "Dostępne";
@@ -189,6 +208,8 @@ $LNG['ov_closed']							= 'Gra chwilowo nieaktywna!';
 $LNG['ov_reflink']							= 'Reflink';
 $LNG['ov_noreflink']						= 'Nikogo nie zwerbowałeś do gry';
 $LNG['ov_chat_online']						= 'Użytkownicy na czacie:';
+$LNG['ov_players'] = 'Gracze';
+$LNG['ov_moving_fleets'] = 'Przenoszenie flot';
 
 //przegląd działań
 

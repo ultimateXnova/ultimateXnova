@@ -4,6 +4,25 @@
 // Version 1.0 - Initial release
 // Version 1.1 - Decode accent HTML to UTF-8 format & small spellchecking
 
+//déplacer le module
+
+$LNG['cannot_use_in_vac'] = "Vous ne pouvez pas utiliser cette option en mode vacances";
+$LNG['rl_relocate'] = "déménager";
+$LNG['rl_info'] = "Vous avez besoin de %s matière noire pour déplacer votre planète/lune !";
+$LNG['rl_error_type_1'] = "Vous n'avez pas saisi correctement les coordonnées";
+$LNG['rl_error_type_2'] = "La relocalisation doit être lancée depuis la planète";
+$LNG['rl_error_type_3'] ="La position n'est pas libre";
+$LNG['rl_error_type_4'] ="Mauvaise position !";
+$LNG['rl_error_type_5'] = "Vous ne pouvez pas déplacer la planète s'il y a un bâtiment en construction !";
+$LNG['rl_error_type_6'] ="Vous ne pouvez pas déplacer la planète s'il y a une recherche lancée depuis la planète !";
+$LNG['rl_error_type_7'] ="Il y a un mouvement de flotte qui démarre depuis cette planète, vous ne pouvez pas le déplacer !";
+$LNG['rl_error_type_8'] ="La même planète peut être déplacée une fois toutes les %s heures";
+$LNG['rl_error_type_9'] = "Vous ne pouvez pas déplacer la planète s'il y a une construction dans le chantier naval !";
+$LNG['rl_error_type_10'] = "Vous ne pouvez pas déplacer la planète si elle est attaquée !";
+$LNG['rl_error_type_11'] = "Pas assez de matière noire !";
+$LNG['rl_success'] = "Votre planète a été téléportée aux coordonnées suivantes : ";
+$LNG['lm_relocate'] = "Déplacer";
+
 //main.topnav.tpl//
 
 $LNG['resource_available'] = "Disponible";
@@ -175,6 +194,8 @@ $LNG['ov_closed']							= 'Le serveur est suspendu pour le moment ! ';
 $LNG['ov_reflink']							= 'Lien référence';
 $LNG['ov_noreflink']						= 'À l\'heure actuelle, vous n\'avez recruté aucun joueur.';
 $LNG['ov_chat_online']						= 'Joueur dans le Chat:';
+$LNG['ov_players'] = 'Joueurs';
+$LNG['ov_moving_fleets'] = 'Flottes en mouvement';
 
 // aperçu des actions
 

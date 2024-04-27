@@ -21,6 +21,25 @@
 
 // 2Moons - Copyright (C) 2012  Jan Kröpke
 
+//realocar módulo
+
+$LNG['cannot_use_in_vac'] = "Você não pode usar esta opção no modo férias";
+$LNG['rl_relocate'] = "realocar";
+$LNG['rl_info'] = "Você precisa de %s Matéria Escura para mover seu planeta/lua!";
+$LNG['rl_error_type_1'] = "Você não digitou as coordenadas corretamente";
+$LNG['rl_error_type_2'] ="A realocação deve ser iniciada a partir do Planeta";
+$LNG['rl_error_type_3'] ="Posição não está livre";
+$LNG['rl_error_type_4'] ="Posição errada!";
+$LNG['rl_error_type_5'] ="Você não pode mover o planeta se houver um prédio em construção!";
+$LNG['rl_error_type_6'] ="Você não pode mover o planeta se houver uma pesquisa iniciada no planeta !";
+$LNG['rl_error_type_7'] ="Há movimento de frota iniciado neste planeta, você não pode realocar !";
+$LNG['rl_error_type_8'] ="O mesmo planeta pode ser movido uma vez a cada %s horas";
+$LNG['rl_error_type_9'] = "Você não pode mover o planeta se houver uma construção no estaleiro !";
+$LNG['rl_error_type_10'] = "Você não pode mover o planeta se o planeta estiver sob ataque!";
+$LNG['rl_error_type_11'] = "Não há matéria escura suficiente!";
+$LNG['rl_success'] = "Seu planeta foi teletransportado para as seguintes coordenadas: ";
+$LNG['lm_relocate'] = "Relocar";
+
 //main.topnav.tpl//
 
 $LNG['resource_available'] = "Disponível";
@@ -191,6 +210,8 @@ $LNG['ov_closed']							= 'O universo está atualmente desativado';
 $LNG['ov_reflink']							= 'Recrutas';
 $LNG['ov_noreflink']						= 'De momento, não recrutaste algum jogador.';
 $LNG['ov_chat_online']						= 'Jogadores no chat:';
+$LNG['ov_players'] = 'Jogadores';
+$LNG['ov_moving_fleets'] = 'Frotas em movimento';
 
 // visão geral das ações
 

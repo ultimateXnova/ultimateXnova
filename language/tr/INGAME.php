@@ -21,6 +21,26 @@
 // Translated into Turkish by Ibraihm Senyer . All rights reversed (C) 2013
 // 2Moons - Copyright (C) 2010-2012 Slaver
 
+//relocate module
+
+$LNG['cannot_use_in_vac'] = "Bu özelliği tatil modundayken kullanamazsınız !";
+$LNG['rl_relocate'] = "İskan";
+$LNG['rl_info'] = "Gezegen ya da ayınızı taşımak için ihtiyacınız olan karanlık madde: %s !";
+$LNG['rl_error_type_1'] = "Koordinatlar doğru girilmedi !";
+$LNG['rl_error_type_2'] ="İskan emri gezegenden başlatılmalı !";
+$LNG['rl_error_type_3'] ="Koordinatlar boş değil";
+$LNG['rl_error_type_4'] ="Yanlış koordinatlar";
+$LNG['rl_error_type_5'] ="İnşaa listenizde bina varken gezegeninizi taşıyamazsınız !";
+$LNG['rl_error_type_6'] ="Gezegeninizden başlatılmış bir araştırma olduğu için iskan edemezsiniz !";
+$LNG['rl_error_type_7'] ="Bu gezegenden başlatılan bir filo hareketi olduğu için iskan edemezsiniz !";
+$LNG['rl_error_type_8'] ="Aynı gezegen her %s saatte bir taşınabilir.";
+$LNG['rl_error_type_9'] = "Tershanede üretim emri varsa gezegeninizi taşıyamazsınız";
+$LNG['rl_error_type_10'] = "Saldırı altındayken gezegeninizi taşıyamazsınız !";
+$LNG['rl_error_type_11'] = "Yeterli karanlık maddeye sahip değilsiniz !";
+$LNG['rl_success'] = "Gezegeniniz belirtilen koordinatlara taşındı: ";
+$LNG['lm_relocate'] = "İskan";
+
+
 //main.topnav.tpl//
 
 $LNG['resource_available'] = "Mevcut";
@@ -192,6 +212,9 @@ $LNG['ov_closed']							= 'Evren şu an çevrimdışı';
 $LNG['ov_reflink']							= 'Davet et';
 $LNG['ov_noreflink']						= 'Şu ana kadar sayende <br> 0 </br>kişi katıldı .';
 $LNG['ov_chat_online']						= 'Sohbetteki Oyuncular:';
+$LNG['ov_players'] = "Oyuncular";
+$LNG['ov_moving_fleets'] = "Aktif Filolar";
+
 $LNG['Metal']                      			= 'Metal';
 $LNG['Crystal']                      		= 'Kristal';
 $LNG['Deuterium']                      		= 'Deuterium';

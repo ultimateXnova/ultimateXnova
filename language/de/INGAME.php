@@ -16,7 +16,24 @@
  * @version 1.8.x Koray Karakuş <koraykarakus@yahoo.com>
  * @link https://github.com/ultimateXnova/ultimateXnova
  */
+ //Modul verschieben
 
+ $LNG['cannot_use_in_vac'] = "Sie können diese Option nicht im Urlaubsmodus verwenden";
+ $LNG['rl_relocate'] = "relocate";
+ $LNG['rl_info'] = "Du brauchst %s Dunkle Materie, um deinen Planeten/Mond zu bewegen!";
+ $LNG['rl_error_type_1'] = "Sie haben die Koordinaten nicht richtig eingegeben";
+ $LNG['rl_error_type_2'] ="Umzug sollte vom Planeten aus gestartet werden";
+ $LNG['rl_error_type_3'] ="Position ist nicht frei";
+ $LNG['rl_error_type_4'] ="Falsche Position !";
+ $LNG['rl_error_type_5'] ="Sie können den Planeten nicht verschieben, wenn sich ein Gebäude im Bau befindet!";
+ $LNG['rl_error_type_6'] ="Sie können den Planeten nicht verschieben, wenn eine Forschung vom Planeten aus gestartet wird!";
+ $LNG['rl_error_type_7'] = "Es gibt eine Flottenbewegung, die von diesem Planeten aus gestartet wird. Sie können nicht umziehen!";
+ $LNG['rl_error_type_8'] ="Derselbe Planet kann alle %s Stunden einmal bewegt werden";
+ $LNG['rl_error_type_9'] = "Sie können den Planeten nicht bewegen, wenn es in der Werft eine Konstruktion gibt!";
+ $LNG['rl_error_type_10'] = "Sie können den Planeten nicht bewegen, wenn er angegriffen wird!";
+ $LNG['rl_error_type_11'] = "Nicht genug Dunkle Materie!";
+ $LNG['rl_success'] = "Ihr Planet wurde zu den folgenden Koordinaten teleportiert: ";
+ $LNG['lm_relocate'] = "Umziehen";
  //main.topnav.tpl//
 
 $LNG['resource_available'] = "Verfügbar";
@@ -151,7 +168,7 @@ $LNG['ov_have_new_message']					= 'Du hast eine neue Nachricht';
 $LNG['ov_have_new_messages']					= 'Du hast %d neue Nachrichten';
 $LNG['ov_planetmenu']						= 'Name ändern/Löschen';
 $LNG['ov_free']							= 'Frei';
-$LNG['ov_news']							= 'News';
+$LNG['ov_news']							= 'Nachricht';
 $LNG['ov_place']						= 'Platz';
 $LNG['ov_of']							= 'von';
 $LNG['ov_planet']						= 'Planet';

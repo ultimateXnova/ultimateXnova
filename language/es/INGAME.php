@@ -15,6 +15,26 @@
  * @version 1.8.x Koray Karakuş <koraykarakus@yahoo.com>
  * @link https://github.com/ultimateXnova/ultimateXnova
  */
+
+ //reubicar módulo
+
+ $LNG['cannot_use_in_vac'] = "No puedes usar esta opción en modo vacaciones";
+ $LNG['rl_relocate'] = "reubicar";
+ $LNG['rl_info'] = "¡Necesitas %s Materia Oscura para mover tu planeta/luna!";
+ $LNG['rl_error_type_1'] = "No ingresaste las coordenadas correctamente";
+ $LNG['rl_error_type_2'] ="La reubicación debe iniciarse desde Planet";
+ $LNG['rl_error_type_3'] ="La posición no está libre";
+ $LNG['rl_error_type_4'] ="¡Posición incorrecta!";
+ $LNG['rl_error_type_5'] ="¡No puedes mover el planeta si hay un edificio en construcción!";
+ $LNG['rl_error_type_6'] ="¡No puedes mover un planeta si hay una investigación iniciada desde un planeta!";
+ $LNG['rl_error_type_7'] ="¡Hay un movimiento de flota que se inicia desde este planeta, no se puede reubicar!";
+ $LNG['rl_error_type_8'] ="El mismo planeta puede moverse una vez cada %s horas";
+ $LNG['rl_error_type_9'] = "¡No puedes mover el planeta si hay una construcción en el astillero!";
+ $LNG['rl_error_type_10'] = "¡No puedes mover el planeta si está bajo ataque!";
+ $LNG['rl_error_type_11'] = "¡No hay suficiente materia oscura!";
+ $LNG['rl_success'] = "Su planeta fue teletransportado a las siguientes coordenadas: ";
+ $LNG['lm_relocate'] = "Reubicar";
+
  //main.topnav.tpl//
 
  $LNG['resource_available'] = "Disponible";
@@ -187,6 +207,8 @@ $LNG['ov_closed']							= '¡El Juego se encuentra temporalmente cerrado!';
 $LNG['ov_reflink']							= 'Enlace Ref.';
 $LNG['ov_noreflink']						= 'No tiene Usuarios Referidos.';
 $LNG['ov_chat_online']						= 'Usuarios en el Chat:';
+$LNG['ov_players'] = 'Jugadores';
+$LNG['ov_moving_fleets'] = 'Flotas en movimiento';
 
 //vista general de acciones
 
