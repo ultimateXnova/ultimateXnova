@@ -2,14 +2,26 @@
 {block name="title" prepend}{$LNG.lm_overview}{/block}
 {block name="content"}
 
+
+
 <script>
   function showNews(){
 
-    if ($('#newsRow').hasClass('d-none')) {
-      $('#newsRow').removeClass('d-none');
-    }else {
-      $('#newsRow').addClass('d-none');
-    }
+    $.ajax({
+        type: "POST",
+        url: 'game.php?page=overview&mode=changeNewsVisibility&ajax=1',
+        success: function(data)
+        {
+
+          if ($('#newsRow').hasClass('d-none')) {
+            $('#newsRow').removeClass('d-none')
+          }else {
+            $('#newsRow').addClass('d-none')
+          }
+
+        }
+
+    });
 
   }
 </script>
@@ -58,7 +70,7 @@
           </td>
         {/if}
       </tr>
-      <tr id="newsRow" class="d-none">
+      <tr id="newsRow" class="{if $show_news_active}d-none{/if}">
         <td colspan="2">
           <table class="table table-gow fs-12">
             <thead>

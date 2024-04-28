@@ -951,6 +951,7 @@ CREATE TABLE `%PREFIX%users` (
   `user_secret_question_id` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `user_secret_question_answer` TINYTEXT NOT NULL DEFAULT '',
   `show_fleets_active` BOOLEAN NOT NULL DEFAULT 1,
+  `show_news_active` BOOLEAN NOT NULL DEFAULT 1,
   `is_bot` BOOLEAN NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `authlevel` (`authlevel`),

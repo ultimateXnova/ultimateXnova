@@ -99,6 +99,24 @@ class ShowOverviewPage extends AbstractGamePage
 
 	}
 
+	function changeNewsVisibility(){
+
+		global $USER;
+
+		$result = 0;
+
+		($USER['show_news_active']) ? $result = 0 : $result = 1;
+
+		$sql = "UPDATE %%USERS%% SET `show_news_active` = " . $result . " WHERE id = :userId;";
+
+		Database::get()->update($sql,array(
+			':userId' => $USER['id']
+		));
+
+		$this->sendJSON($result);
+
+	}
+
 	function show()
 	{
 		global $LNG, $PLANET, $USER, $config;
@@ -294,6 +312,7 @@ class ShowOverviewPage extends AbstractGamePage
 			'RefLinks'					=> $RefLinks,
 			'chatOnline'				=> $chatOnline,
 			'path'						=> HTTP_PATH,
+			'show_news_active' => $USER['show_news_active']
 		));
 
 		$this->display('page.overview.default.tpl');
