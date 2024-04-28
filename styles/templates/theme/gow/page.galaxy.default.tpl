@@ -139,7 +139,7 @@
 					<td>
 						<div class='d-flex flex-column'>
 						{if $currentPlanet.missions.6}
-						<a class='hover-underline my-1 hover-pointer' onclick='doit(6,{$currentPlanet.planet.id})'>{$LNG.type_mission_6}</a>
+						<a class='hover-underline my-1 hover-pointer' onclick='doit(6,{$currentPlanet.planet.id});closePopover();'>{$LNG.type_mission_6}</a>
 						{/if}
 						{foreach $currentPlanet.user.class as $class}
 						{if $class != 'vacation' && $currentPlanet.planet.phalanx}
@@ -250,7 +250,7 @@
 									 </a>
 									 {/if}
 									 {if $currentPlanet.missions.6}
-									 <a class='hover-underline my-1 hover-pointer' onclick='doit(6,{$currentPlanet.moon.id});'>
+									 <a class='hover-underline my-1 hover-pointer' onclick='doit(6,{$currentPlanet.moon.id});closePopover();'>
 										 {$LNG.type_mission_6}
 									 </a>
 									 {/if}
