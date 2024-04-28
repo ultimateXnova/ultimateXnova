@@ -581,16 +581,16 @@ $LNG['in_bonus'] 							= 'Bonus:';
 
 //----------------------------------------------------------------------------//
 // Mesajlar
-$LNG['mg_type'][0]                          = 'Casusluk Mesajlari';
-$LNG['mg_type'][1]                          = 'Oyuncu Mesajlari';
-$LNG['mg_type'][2]                          = 'Ittifak Mesajlari';
-$LNG['mg_type'][3]                          = 'Savas Mesajlari';
-$LNG['mg_type'][4]                          = 'Sistem Mesajlari';
-$LNG['mg_type'][5]                          = 'Nakliye Mesajlari';
-$LNG['mg_type'][15]                         = 'Kesif Mesajlari';
+$LNG['mg_type'][0]                          = 'Casusluk Mesajları';
+$LNG['mg_type'][1]                          = 'Oyuncu Mesajları';
+$LNG['mg_type'][2]                          = 'İttifak Mesajları';
+$LNG['mg_type'][3]                          = 'Savaş Mesajları';
+$LNG['mg_type'][4]                          = 'Sistem Mesajları';
+$LNG['mg_type'][5]                          = 'Nakliye Mesajları';
+$LNG['mg_type'][15]                         = 'Keşif Mesajları';
 $LNG['mg_type'][50]                         = 'Oyundan Haberler';
-$LNG['mg_type'][99]                         = 'Insaa Mesajlari';
-$LNG['mg_type'][100]                        = 'Butun Mesajlari';
+$LNG['mg_type'][99]                         = 'İnşaa Mesajları';
+$LNG['mg_type'][100]                        = 'Bütün Mesajlar';
 $LNG['mg_type'][999]                        = 'Giden Mesajlar';
 $LNG['mg_no_subject']			            = 'Konu Yok';
 $LNG['mg_no_text']				            = 'Mesaj Yok';
@@ -604,30 +604,30 @@ $LNG['mg_action']							= 'Aksiyon';
 $LNG['mg_date']					        	= 'Tarih';
 $LNG['mg_from']					            = 'Kimden';
 $LNG['mg_to']                               = 'Kime';
-$LNG['mg_subject']					        = 'Baslik';
+$LNG['mg_subject']					        = 'Başlık';
 $LNG['mg_message_title']					= 'Mesajlar';
 $LNG['mg_message_type']			            = 'Mesaj Tipi';
 $LNG['mg_total']				            = 'Toplam';
-$LNG['mg_game_operators']			        = 'Yoneticiler';
+$LNG['mg_game_operators']			        = 'Yöneticiler';
 $LNG['mg_error']                            = 'Alici Bulunamadi!';
-$LNG['mg_overview']                         = 'Yoneticilerden Bilgiler';
+$LNG['mg_overview']                         = 'Yöneticilerden Bilgiler';
 $LNG['mg_send_new']                         = 'Mesaj Yaz';
-$LNG['mg_send_to']                          = 'Alicilar';
+$LNG['mg_send_to']                          = 'Alıcılar';
 $LNG['mg_message']                          = 'Mesaj';
 $LNG['mg_characters']                       = 'karakter';
-$LNG['mg_send']                             = 'Gonder';
+$LNG['mg_send']                             = 'Gönder';
 $LNG['mg_game_message']                     = 'Oku';
-$LNG['mg_message_send']			            = 'Mesaj basariyla gonderildi!';
+$LNG['mg_message_send']			            = 'Mesaj başarıyla gönderildi!';
 $LNG['mg_empty_text']				        = 'Metin giriniz';
 $LNG['mg_answer_to']						= 'Cevapla:';
-$LNG['mg_write_mail_to_ops']                = 'Email gonder';
+$LNG['mg_write_mail_to_ops']                = 'Email gönder';
 $LNG['mg_page']								= 'Sayfa';
-$LNG['mg_read_marked']						= 'Secili mesajlari okundu olarak isaretle';
-$LNG['mg_read_type_all']					= 'Butun mesajlari okundu olarak isaretle';
-$LNG['mg_read_all']							= 'Bu tip mesajlari okundu olarak isaretle';
+$LNG['mg_read_marked']						= 'Seçili mesajları okundu olarak işaretle';
+$LNG['mg_read_type_all']					= 'Bütün mesajları okundu olarak işaretle';
+$LNG['mg_read_all']							= 'Bu tip mesajlari okundu olarak işaretle';
 $LNG['mg_confirm']							= 'Onayla';
 $LNG['mg_receiver_block_pm']				= 'Alici ozel mesaj kabul etmiyor.';
-$LNG['mg_deleted']					= 'The message has been deleted.';
+$LNG['mg_deleted']					= 'Mesaj silindi.';
 
 
 //----------------------------------------------------------------------------//
