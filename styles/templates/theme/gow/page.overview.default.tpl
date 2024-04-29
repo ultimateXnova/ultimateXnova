@@ -64,11 +64,6 @@
         <td class="text-center">
           <button class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow" onclick="showNews();">{$LNG.ov_news}</button>
         </td>
-        {if  isModuleAvailable($smarty.const.MODULE_RELOCATE)}
-          <td class="text-center">
-            <a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow" href="game.php?page=relocate">{$LNG.rl_relocate}</a>
-          </td>
-        {/if}
       </tr>
       <tr id="newsRow" class="{if $show_news_active}d-none{/if}">
         <td colspan="2">
@@ -129,6 +124,13 @@
                 <a class="hover-underline" href="game.php?page=galaxy&amp;galaxy={$galaxy}&amp;system={$system}">[{$galaxy}:{$system}:{$planet}]</a>
               </td>
             </tr>
+            {if  isModuleAvailable($smarty.const.MODULE_RELOCATE)}
+            <tr >
+              <td colspan="2" class="text-center">
+                <a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow" href="game.php?page=relocate">{$LNG.rl_relocate}</a>
+              </td>
+            </tr>
+            {/if}
           </tbody>
         </table>
       </td>
