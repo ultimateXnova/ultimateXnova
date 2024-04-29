@@ -5,11 +5,21 @@
 <script>
   function showNews(){
 
-    if ($('#newsRow').hasClass('d-none')) {
-      $('#newsRow').removeClass('d-none');
-    }else {
-      $('#newsRow').addClass('d-none');
-    }
+    $.ajax({
+        type: "POST",
+        url: 'game.php?page=overview&mode=changeNewsVisibility&ajax=1',
+        success: function(data)
+        {
+
+          if ($('#newsRow').hasClass('d-none')) {
+            $('#newsRow').removeClass('d-none')
+          }else {
+            $('#newsRow').addClass('d-none')
+          }
+
+        }
+
+    });
 
   }
 </script>
@@ -68,7 +78,7 @@
   <button class="text-yellow" onclick="showNews();">Check News</button>
 </div>
 <div class="bg-nova">
-  <table id="newsRow" class="d-none">
+  <table id="newsRow" class="{if $show_news_active}d-none{/if}">
       <tr class="bg-purple">
         <th colspan="3">{$LNG.ov_news}</th>
       </tr>
@@ -154,6 +164,13 @@
             <span class="fs-12 fw-bold">{$LNG.ov_position}: <a href="game.php?page=galaxy&amp;galaxy={$galaxy}&amp;system={$system}">[{$galaxy}:{$system}:{$planet}]</a></span>
           </td>
         </tr>
+        {if  isModuleAvailable($smarty.const.MODULE_RELOCATE)}
+        <tr >
+          <td colspan="2" class="text-center">
+            <a class="btn btn-dark py-0 px-1 border border-secondary fs-12 text-yellow" href="game.php?page=relocate">{$LNG.rl_relocate}</a>
+          </td>
+        </tr>
+        {/if}
       </table>
     </div>
 </div>
