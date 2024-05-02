@@ -60,6 +60,7 @@ $(document).ready(function(){
 <div class="form-gorup d-flex flex-column my-1 p-2 ">
 	<label for="theme" class="text-start my-1 cursor-pointer hover-underline user-select-none">Default Theme</label>
 	<select id="theme" class="form-select bg-dark text-white border-secondary" name="server_default_theme">
+		<option {if $server_default_theme == 'nextgen'}selected{/if} value="nextgen">NeXt Generation</option>
 		<option {if $server_default_theme == 'nova'}selected{/if} value="nova">Nova</option>
 		<option {if $server_default_theme == 'gow'}selected{/if} value="gow">Gow</option>
 		<option {if $server_default_theme == 'EpicBlueXIII'}selected{/if} value="EpicBlueXIII">EpicBlueXIII</option>
