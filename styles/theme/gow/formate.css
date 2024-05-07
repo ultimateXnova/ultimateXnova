@@ -331,7 +331,13 @@ table{
 	background-color: rgba(0,0,0,0.5);
 	margin: 0 auto;
 	border: 0px solid rgba(0,0,0,0);
+	
 }
+
+.table-gow, .resourceWrapper, .menu-button {
+	backdrop-filter: blur(10px);
+}
+
 .table-tooltip{
 	background: transparent;
 }
