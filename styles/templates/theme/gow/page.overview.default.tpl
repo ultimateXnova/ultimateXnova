@@ -91,9 +91,9 @@
       <td>
         <div class="d-flex flex-row align-items-center justify-content-center  fs-12">
           <div class="d-flex flex-column align-items-center justify-content-center w-100">
-            <span>{$planetname}</span>
-            <a class="hover-pointer" href="?page=overview&cp={$planet_id}">
-              <img src="{$dpath}planeten/{$planetimage}.jpg" height="160" width="160" alt="{$planetname}">
+            <span class="overview-planet-name">{$planetname}</span>
+            <a class="hover-pointer" href="?page=overview&cp={$planet_id}" class="overview-planet-wrapper">
+              <img src="{$dpath}planeten/{$planetimage}.jpg" alt="{$planetname}" class="overview-planet">
             </a>
           </div>
           {if $Moon}

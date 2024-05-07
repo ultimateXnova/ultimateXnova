@@ -728,7 +728,21 @@ margin-bottom: 5px;
 	background: rgba(0,0,0,1);
 }
 
+.overview-planet {
+	border: 10px solid;
+	width: 320px;
+	height: 320px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(45deg, #00d9ff, #868686, #00d9ff, #868686);
+  overflow: hidden;
+}
 
+.overview-planet-name {
+	font-size: 1.5em;
+}
 
 @media only screen and (min-width: 576px) {
 
