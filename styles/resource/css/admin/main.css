@@ -3,8 +3,15 @@
 	font-family: Verdana, Helvetica, Arial;
 	font-weight: 500;
 }
+html {
+	background: url('../../../theme/gow/img/background.jpg') 0 0;
+	background-size: cover;
+	background-position: fixed;
+	height: 100%;
+}
 body {
-	background: url('../../../theme/gow/img/bkd_page.jpg') 0 0;
+	background: none !important;
+	height: 100%;
 }
 
 .content{
@@ -38,12 +45,27 @@ body {
 /*background colors*/
 
 .bg-black{
-  background: linear-gradient(to right, #000000, #333333);
+  background-color: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+ 
   color: #ffffff;
   padding: 50px;
   text-align: center;
 }
+.bg-dark {
+	background-color: rgba(0,0,0,0.8) !important;
+  backdrop-filter: blur(10px);
 
+}
+
+.adm-left-menu li {
+	padding-left: 10px !important;
+}
+.topnav {
+	border-radius: 0px 00px 20px 20px;
+	border: 5px solid rgba(255, 0, 0, 0.6) !important;
+	border-top: none !important;
+}
 .table-dark a{
 	color: #fff;
 }
