@@ -10,11 +10,14 @@ body {
   background-size: cover;
   color: #FFFFFF;
   font-family: Verdana, Helvetica, Arial;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
 	overflow-y: scroll;
 }
-
+* {
+	font-size: 16px;
+	line-height: 1.25em;
+}
 input, textarea, select, option, button{
 	background-color:#171F2F;
 	color:#BBB;
@@ -54,6 +57,7 @@ a:hover{
 
 #navbar.bg-dark {
 	background-color: rgba(0,0,0,0.5) !important;
+	backdrop-filter: blur(10px);
   }
 
 .hover-color-yellow:hover{
@@ -171,6 +175,12 @@ ul#rules {
 .contentbox {
 	background: rgba(0,0,0,0.5);
 	padding: 15px 25px;
+	backdrop-filter: blur(10px);
+	margin-top: 15px;
+	border-radius: 15px;
+}
+.rounded {
+	border-radius: 15px !important;
 }
 
 /** BUTTONS **/
