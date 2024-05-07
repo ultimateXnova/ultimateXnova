@@ -24,9 +24,9 @@ $(document).ready(function(){
 </script>
 
 <div id="leftmenu">
-	<div style="background-image: url('./styles/theme/gow/img/menu-top.png');height:100px;"></div>
-	<input class="bg-dark text-white py-0 my-1 form-control" style="height:38px;width:100%;" id="searchInput" type="text"  placeholder="search...">
-	<ul class="bg-dark d-flex flex-column p-0 m-0" id="menu">
+	<div class="adm-logo"><img src="./styles/resource/images/ultimatexnova.svg"></div>
+	<input class="bg-black text-white py-0 my-1 form-control" style="height:38px;width:100%;" id="searchInput" type="text"  placeholder="search...">
+	<ul class="bg-black d-flex flex-column p-0 m-0 adm-left-menu" id="menu">
 		{if allowedTo('ShowInformationPage')}
 			<li class="d-flex {if $currentPage == 'infos'}menu-active{/if}">
 				<a class="d-flex w-100 h-100 p-1 text-decoration-none text-white fs-6" href="?page=infos">{$LNG.mu_game_info}</a>
@@ -222,6 +222,6 @@ $(document).ready(function(){
       <a class="d-flex w-100 h-100 p-1  text-decoration-none text-white fs-6" href="?page=clearCache" >{$LNG.mu_clear_cache}</a>
     </li>
     {/if}
-		<li style="background-image: url('./styles/theme/gow/img/menu-foot.png');height:30px;"></li>
+	
 	</ul>
 </div>

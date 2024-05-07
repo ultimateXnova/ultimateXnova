@@ -7,7 +7,7 @@
 			{include file="main.navigation.tpl" bodyclass="full"}
 		</div>
 		<div style="width:calc(100% - 250px);">
-			<div class="row bg-dark py-3">
+			<div class="row bg-black py-3 topnav">
 				{include file="main.topnav.tpl" bodyclass="full"}
 			</div>
 			<div class="content">
