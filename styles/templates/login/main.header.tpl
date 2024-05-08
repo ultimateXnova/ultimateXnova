@@ -26,13 +26,13 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/styles/resource/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/styles/resource/favicon/favicon-16x16.png">
 <link rel="manifest" href="/styles/resource/favicon/site.webmanifest">
-	<title>{block name="title"} - {$gameName}{/block}</title>
-	<meta name="keywords" content="SteemNova, Steem, Browsergame, MMOSG, MMOG, Strategy, XNova, 2Moons, Space">
-	<meta name="description" content="Massively Multiplayer Online Strategy Game (MMOSG) for Steemians. Space Browsergame with competition between Alliances for Steem cryptocurrency. Free-to-play, win-to-pay style.">
+	<title>{$gameName}</title>
+	<meta name="keywords" content="{$gameName}, UltimateXnovam, SteemNova, Steem, Browsergame, MMOSG, MMOG, Strategy, XNova, 2Moons, Space">
+	<meta name="description" content="Massive Multiplayer Online Strategy Game (MMOSG). Space Browsergame with competition between Alliances. Free-to-play.">
 	<!-- open graph protocol -->
-	<meta property="og:title" content="SteemNova">
+	<meta property="og:title" content="{$gameName}">
 	<meta property="og:type" content="website">
-	<meta property="og:description" content="Massively Multiplayer Online Strategy Game (MMOSG) for Steemians. Space Browsergame with competition between Alliances for Steem cryptocurrency. Free-to-play, win-to-pay style.">
+	<meta property="og:description" content="Massive Multiplayer Online Strategy Game (MMOSG). Space Browsergame with competition between Alliances. Free-to-play,.">
 	<meta property="og:image" content="styles/resource/images/meta.png">
 	<!--[if lt IE 9]>
 	<script src="scripts/base/html5.js"></script>
