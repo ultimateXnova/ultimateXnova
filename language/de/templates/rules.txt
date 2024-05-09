@@ -18,8 +18,8 @@
 		<p>Eine Annahme des Krieges ist nicht erforderlich. Kriege, die offensichtlich nur der massiven Umgehung der Bashregel dienen, sind verboten. Dies zu beurteilen obliegt den zuständigen Moderatoren und Operatoren.</p>
 	</li>
 	<li>
-		<h1>5. Irak-Angriffe</h1>
-		<p>Es sind nur 1000 Irak-Angriffe pro 24 Stunden erlaubt. Die Anzahl der Raketen pro Angriff ist unabhängig.</p>
+		<h1>5. Angriffe</h1>
+		<p>Es sind nur 1000 Angriffe pro 24 Stunden erlaubt. Die Anzahl der Raketen pro Angriff ist unabhängig.</p>
 	</li>
 	<li>
 		<h1>6. Bugusing</h1>
