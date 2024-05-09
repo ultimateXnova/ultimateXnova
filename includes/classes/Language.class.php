@@ -43,12 +43,6 @@ class Language implements ArrayAccess {
 
 	public function getUserAgentLanguage()
 	{
-   		if (isset($_REQUEST['lang']) && in_array($_REQUEST['lang'], self::getAllowedLangs()))
-		{
-			HTTP::sendCookie('lang', $_REQUEST['lang'], 2147483647);
-			$this->setLanguage($_REQUEST['lang']);
-			return true;
-		}
 		// Pfahli: Added check for GET var to set language
 		if (isset($_GET['lang']) && in_array($_GET['lang'], self::getAllowedLangs()))
 		{
@@ -56,6 +50,13 @@ class Language implements ArrayAccess {
 			$this->setLanguage($_GET['lang']);
 			return true;
 		}
+   		if (isset($_REQUEST['lang']) && in_array($_REQUEST['lang'], self::getAllowedLangs()))
+		{
+			HTTP::sendCookie('lang', $_REQUEST['lang'], 2147483647);
+			$this->setLanguage($_REQUEST['lang']);
+			return true;
+		}
+		
 
    		if ((MODE === 'LOGIN' || MODE === 'INSTALL') && isset($_COOKIE['lang']) && in_array($_COOKIE['lang'], self::getAllowedLangs()))
 		{
