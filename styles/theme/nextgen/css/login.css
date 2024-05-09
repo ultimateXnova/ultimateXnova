@@ -5,12 +5,13 @@ html, body {
 }
 
 .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-3xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6 {
-    font-family: "Space Mono", monospace;
-font-weight: 700;
+    font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
 }
 .uk-navbar-item, .uk-navbar-nav > li > a, .uk-navbar-toggle {
-    font-family: "Space Mono", monospace;
-    font-size: 1.1em;
+    font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+    font-size: 1.3em;
 }
 
 html {
@@ -123,6 +124,12 @@ img.logo {
     border-radius: 15px;
 }
 
+
+.login-heading {
+    font-size: 1.5em;
+    color: rgba(255,255,255,1);
+}
+
 .uk-navbar-header {
     display: flex;
     justify-content: center;
@@ -130,8 +137,7 @@ img.logo {
     float: left;
     background-color: rgba(0,0,0,0);
 }
-
-.login-heading {
-    font-size: 1.5em;
-    color: rgba(255,255,255,1);
-}
+.uk-navbar-nav .uk-active {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 128, 0, 0.6);
+  }

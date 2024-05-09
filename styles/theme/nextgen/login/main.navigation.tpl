@@ -18,28 +18,28 @@
 				<div class="uk-navbar-right">
 				<ul class="uk-navbar-nav">
 					<li class="menu-item">
-						<a class="uk-preserve-width {if $page == 'index'}active{/if}" href="index.php?page=index">{$LNG.siteTitleIndex}</a>
+						<a class="uk-preserve-width {if $page == 'index'}uk-active{/if} {if $page == ''}uk-active{/if}" href="index.php?page=index">{$LNG.siteTitleIndex}</a>
 					</li>
 					<li class="menu-item">
-						<a class="uk-preserve-width {if $page == 'register'}active{/if}" href="index.php?page=register">{$LNG.siteTitleRegister}</a>
+						<a class="uk-preserve-width {if $page == 'register'}uk-active{/if}" href="index.php?page=register">{$LNG.siteTitleRegister}</a>
 					</li>
 					<li class="menu-item">
-						<a class="uk-preserve-width {if $page == 'news'}active{/if}" href="index.php?page=news">{$LNG.siteTitleNews}</a>
+						<a class="uk-preserve-width {if $page == 'news'}uk-active{/if}" href="index.php?page=news">{$LNG.siteTitleNews}</a>
 					</li>
 					<!-- <li class="menu-item">
-						<a class="uk-preserve-width {if $page == 'screens'}active{/if}" href="index.php?page=screens">{$LNG.siteTitleScreens}</a>
+						<a class="uk-preserve-width {if $page == 'screens'}uk-active{/if}" href="index.php?page=screens">{$LNG.siteTitleScreens}</a>
 					</li>
 					<li class="menu-item">
-						<a class="uk-preserve-width {if $page == 'banList'}active{/if}" href="index.php?page=banList">{$LNG.siteTitleBanList}</a>
+						<a class="uk-preserve-width {if $page == 'banList'}uk-active{/if}" href="index.php?page=banList">{$LNG.siteTitleBanList}</a>
 					</li>
 					<li class="menu-item">
-						<a class="uk-preserve-width {if $page == 'battleHall'}active{/if}" href="index.php?page=battleHall">{$LNG.siteTitleBattleHall}</a>
+						<a class="uk-preserve-width {if $page == 'battleHall'}uk-active{/if}" href="index.php?page=battleHall">{$LNG.siteTitleBattleHall}</a>
 					</li> -->
 					<li class="menu-item">
-						<a class="uk-preserve-width {if $page == 'rules'}active{/if}" href="index.php?page=rules">{$LNG.siteTitleRules}</a>
+						<a class="uk-preserve-width {if $page == 'rules'}uk-active{/if}" href="index.php?page=rules">{$LNG.siteTitleRules}</a>
 					</li>
 					<li class="menu-item">
-						<a class="uk-preserve-width {if $page == 'disclamer'}active{/if}" href="index.php?page=disclamer">{$LNG.siteTitleDisclamer}</a>
+						<a class="uk-preserve-width {if $page == 'disclamer'}uk-active{/if}" href="index.php?page=disclamer">{$LNG.siteTitleDisclamer}</a>
 					</li>
 				</ul>
 
