@@ -2,6 +2,7 @@ html, body {
     font-family: "Space Mono", monospace;
     background: none;
     height: 100%;
+    
 }
 
 .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-3xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6 {
@@ -16,10 +17,11 @@ html, body {
 }
 
 html {
-    background: radial-gradient(circle, rgba(74,99,112,1) 0%, rgba(42,42,61,1) 58%, rgba(2,2,6,1) 100%);
-    background-image: url("../img/login.png");
+    /* background: radial-gradient(circle, rgba(74,99,112,1) 0%, rgba(42,42,61,1) 58%, rgba(2,2,6,1) 100%);
+     background-image: url("../img/login.png");
     background-size: cover;
-    background-position: center center;
+    background-position: center center; */
+    background-color: rgba(0,0,0,1);
 }
 * {
     box-sizing: border-box;
