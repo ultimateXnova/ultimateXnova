@@ -18,7 +18,7 @@
  */
 
 // Site Title
-$LNG['siteTitleIndex']				= 'Index';
+$LNG['siteTitleIndex']				= 'Startseite';
 $LNG['siteTitleRegister']			= 'Registrieren';
 $LNG['siteTitleScreens']			= 'Screenshots';
 $LNG['siteTitleBanList']			= 'Pranger';

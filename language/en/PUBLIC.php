@@ -20,7 +20,7 @@
 // 2Moons - Copyright (C) 2010-2012 J�n Kropke
 
 // Site Title
-$LNG['siteTitleIndex']				= 'Index';
+$LNG['siteTitleIndex']				= 'Home';
 $LNG['siteTitleRegister']			= 'Register';
 $LNG['siteTitleScreens']			= 'Screenshots';
 $LNG['siteTitleBanList']			= 'Banned Hall';
