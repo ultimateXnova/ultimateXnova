@@ -21,10 +21,10 @@ class Config
 	protected $configData = array();
 	protected $updateRecords = array();
 	protected static $instances = array();
-
+	public $VERSION = '1.8.1';
 
 	// Global configkeys
-	protected static $globalConfigKeys	= array('VERSION', 'game_name', 'stat', 'stat_level', 'stat_last_update',
+	protected static $globalConfigKeys	= array( 'game_name', 'stat', 'stat_level', 'stat_last_update',
 										   'stat_settings', 'stat_update_time', 'stat_last_db_update', 'stats_fly_lock',
 										   'cron_lock', 'ts_modon', 'ts_server', 'ts_tcpport', 'ts_udpport', 'ts_timeout',
 										   'ts_version', 'ts_cron_last', 'ts_cron_interval', 'ts_login', 'ts_password',
