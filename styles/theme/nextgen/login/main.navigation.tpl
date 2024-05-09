@@ -39,7 +39,7 @@
 						<a class="uk-preserve-width {if $page == 'rules'}uk-active{/if}" href="index.php?page=rules">{$LNG.siteTitleRules}</a>
 					</li>
 					<li class="menu-item">
-						<a class="uk-preserve-width {if $page == 'rules'}uk-active{/if}" href="https://discord.gg/9zRCUUaHaR"><img src="styles/theme/nextgen/img/social/discord-mark-white.svg" width="30px"></a>
+						<a class="uk-preserve-width {if $page == 'rules'}uk-active{/if}" href="https://discord.gg/9zRCUUaHaR" target="_blank"><img src="styles/theme/nextgen/img/social/discord-mark-white.svg" width="30px" alt="Discord"></a>
 					</li>
 					
 				</ul>
