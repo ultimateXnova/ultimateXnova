@@ -45,14 +45,14 @@
 				<i class="bi bi-list d-flex d-md-none px-3 text-white fs-2 menu_icon" data-bs-toggle="offcanvas" data-bs-target="#phoneMenu"></i>
 
 				<div class="dropdown">
-				<button style="width:120px;height:24px;" class="btn btn-secondary dropdown-toggle p-1 menu-item justify-content-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
-					{$LNG.registerLanguage}
+				<button style="width:120px;height:32px;" class="btn btn-secondary dropdown-toggle p-1 menu-item justify-content-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+					<!-- {$LNG.registerLanguage} --> Language
 				</button>
 				<ul style="width:auto;" class="dropdown-menu flex-column bg-dark p-0" aria-labelledby="dropdownMenuButton1">
 						{foreach $languages as $langKey => $langName}
 						<li class="d-flex w-100">
 								<a class="text-decoration-none hover-bg-color-grey menu-item w-100 px-2" href="?lang={$langKey}" rel="alternate" hreflang="{$langKey}" title="{$langName}">
-									<span class="flags {$langKey}">{$langName}</span>
+									<img src="styles/theme/nextgen/img/lang/{$langKey}.svg" class="lang-flag">
 									<span class="">{$langName}</span>
 								</a>
 							</li>

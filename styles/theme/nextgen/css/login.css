@@ -97,7 +97,7 @@ select#universe {
 .dark-blur-bg {
     background-color: rgba(0,0,0,0.1);
     backdrop-filter: blur(10px);
-    box-shadow: 
+    color: rgba(255,255,255,1);
 }
 .menu-container {
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -181,4 +181,11 @@ header {
   .info {
     color: rgba(255,255,255,0.8);
     font-size: 0.8em;
+  }
+
+  .lang-flag {
+    width: 24px;
+    height: 14px;
+    display: inline-block;
+    border-radius: 5px;
   }
