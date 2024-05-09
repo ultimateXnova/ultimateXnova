@@ -7,7 +7,7 @@
 			<li><a href="index.php?page=rules">{$LNG.menu_rules}</a></li>
 			<li><a href="index.php?page=battleHall">{$LNG.menu_battlehall}</a></li>
 			<li><a href="index.php?page=banList">{$LNG.menu_banlist}</a></li>
-			<li><a href="index.php?page=disclamer">{$LNG.menu_disclamer}</a></li>
+			
 		</ul>
 	</nav> -->
 	<div class="dark-blur-bg menu-container box-shadow-large">
@@ -38,9 +38,7 @@
 					<li class="menu-item">
 						<a class="uk-preserve-width {if $page == 'rules'}uk-active{/if}" href="index.php?page=rules">{$LNG.siteTitleRules}</a>
 					</li>
-					<li class="menu-item">
-						<a class="uk-preserve-width {if $page == 'disclamer'}uk-active{/if}" href="index.php?page=disclamer">{$LNG.siteTitleDisclamer}</a>
-					</li>
+					
 				</ul>
 
 				{if count($languages) > 1}
@@ -54,7 +52,7 @@
 						{foreach $languages as $langKey => $langName}
 						<li class="d-flex w-100">
 								<a class="text-decoration-none hover-bg-color-grey menu-item w-100 px-2" href="?lang={$langKey}" rel="alternate" hreflang="{$langKey}" title="{$langName}">
-									<!--<span class="flags {$langKey}">{$langName}</span>-->
+									<span class="flags {$langKey}">{$langName}</span>
 									<span class="">{$langName}</span>
 								</a>
 							</li>

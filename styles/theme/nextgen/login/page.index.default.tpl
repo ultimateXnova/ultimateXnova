@@ -62,7 +62,11 @@ function loginSubmit(activeRecaptcha,use_recaptcha_on_login){
 
 	<!-- <h1 class="fs-3 my-4 w-100">{sprintf($LNG.loginWelcome, $gameName)}</h1>
 	<p style="max-width:600px;" class="fs-6 my-2 w-100 mx-auto">{sprintf($LNG.loginServerDesc, $gameName)}</p>-->
-	<div style="max-width:300px;" class="login-container dark-blur-bg box-shadow-large">
+	<div style="max-width:300px;" class="box-border description-container dark-blur-bg box-shadow-large">
+		{sprintf($LNG.loginServerDesc, $gameName)}
+		<a class="hover-bg-color-grey btn btn-block w-100 bg-dark text-white my-2 fs-6" href="index.php?page=register">{$LNG.buttonRegister}</a>
+	</div>
+	<div style="max-width:300px;" class="box-border login-container dark-blur-bg box-shadow-large">
 
 				<h1 class="login-heading">{$LNG.loginHeader}</h1>
 				<form id="login" action="" method="post">

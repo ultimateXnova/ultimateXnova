@@ -7,6 +7,7 @@ html, body {
 .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-3xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6 {
     font-family: "Rajdhani", sans-serif;
   font-weight: 500;
+  color: rgba(255,255,255,1);
 }
 .uk-navbar-item, .uk-navbar-nav > li > a, .uk-navbar-toggle {
     font-family: "Rajdhani", sans-serif;
@@ -102,6 +103,16 @@ select#universe {
     border-bottom: 1px solid rgba(255,255,255,0.1);
     
 }
+.footer-container {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    bottom: 0px;
+    position: fixed;
+    left: 0px;
+    padding: 10px;
+    border-radius: 0px 20px 0px 0px;
+    padding-right: 15px;
+}
 
 .box-shadow-large {
     box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
@@ -113,15 +124,29 @@ img.logo {
     float: left;
 }
 
-.login-container {
+.login-container, .description-container{
     padding: 20px;
-    max-width: 300px;
-    color: rgba(255,255,255,1);
     margin-top: 20vh;
-    background-color: rgba(0,0,0,0.5);
+    
     float: right;
+}
+.description-container {
+    float: left;
+    text-align: center;
+}
+.box-border {
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,1);
+    padding: 20px;
+}
+
+.register-container {
+    max-width: 500px;
+    
+    margin: 0 auto;
+    margin-top: 5vh;
 }
 
 
@@ -136,8 +161,19 @@ img.logo {
     align-items: center;
     float: left;
     background-color: rgba(0,0,0,0);
+    margin-bottom: 40px;
+}
+header {
+    margin-bottom: 40px;
+
 }
 .uk-navbar-nav .uk-active {
     color: #fff;
     text-shadow: 0 0 8px rgba(255, 128, 0, 0.6);
+  }
+
+  #rules li, #rules ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
   }

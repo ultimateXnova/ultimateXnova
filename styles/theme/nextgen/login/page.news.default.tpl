@@ -1,11 +1,16 @@
 {block name="title" prepend}{$LNG.siteTitleNews}{/block}
-{block name="content"}
+{block name="content"}<h1>{$LNG.siteTitleNews}</h1>
 {foreach $newsList as $newsRow}
 {if !$newsRow@first}<hr>{/if}
-<h2>{$newsRow.title}</h2><br>
-<div class="info">{$newsRow.from}</div>
-<br><div><p>{$newsRow.text}</p></div>
-{foreachelse}
-<h1>{$LNG.news_does_not_exist}</h1>
+<div class="box-border dark-blur-bg box-shadow-large">
+    <h1 class="login-heading">{$LNG.siteTitleRegister}</h1>
+    <h2>{$newsRow.title}</h2><br>
+    <div class="info">{$newsRow.from}</div>
+    <br><div><p>{$newsRow.text}</p></div>
+</div>
+    {foreachelse}
+<div class="box-border dark-blur-bg box-shadow-large">
+    <h1 class="login-heading">{$LNG.news_does_not_exist}</h1>
+</div>
 {/foreach}
 {/block}

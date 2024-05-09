@@ -1,5 +1,7 @@
 {block name="title" prepend}{$LNG.siteTitleDisclamer}{/block}
 {block name="content"}
+<h1>{$LNG.siteTitleDisclamer}</h1>
+<div class="box-border dark-blur-bg box-shadow-large">
 <table id="disclamerTable">
 	<tr>
 		<td style="width:50%;text-align:left;">{$LNG.disclamerLabelAddress}</td><td style="width:50%;text-align:left;">{$disclamerAddress}</td>
@@ -20,4 +22,5 @@
 		<td colspan="2" style="text-align:left;">{$disclamerNotice}</td>
 	</tr>
 </table>
+</div>
 {/block}

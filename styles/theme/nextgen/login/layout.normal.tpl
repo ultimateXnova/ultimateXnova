@@ -12,21 +12,13 @@
 			<td class="box-out-content-left"></td>
 			<td class="box-out-content-center">
 				<table class="box-inner">
-					<tr class="box-inner-header">
-						<td class="box-inner-header-left"></td>
-						<td class="box-inner-header-center"><img class="img-fluid px-1" src="styles/resource/images/ultimatexnova.svg" width="400px"/><h1>{block name=title}{/block}</h1></td>
-						<td class="box-inner-header-right"></td>
-					</tr>
+					
 					<tr class="box-inner-content">
 						<td class="box-inner-content-left"></td>
 						<td class="box-inner-content-center">{block name=content} {/block}</td>
 						<td class="box-inner-content-right"></td>
 					</tr>
-					<tr class="box-inner-footer">
-						<td class="box-inner-footer-left"></td>
-						<td class="box-inner-footer-center"></td>
-						<td class="box-inner-footer-right"></td>
-					</tr>
+					
 				</table>					
 			</td>
 			<td class="box-out-content-right"></td>
