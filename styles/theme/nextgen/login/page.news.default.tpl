@@ -3,8 +3,7 @@
 {foreach $newsList as $newsRow}
 {if !$newsRow@first}<hr>{/if}
 <div class="box-border dark-blur-bg box-shadow-large">
-    <h1 class="login-heading">{$LNG.siteTitleRegister}</h1>
-    <h2>{$newsRow.title}</h2><br>
+    <h1 class="login-heading">{$newsRow.title}</h1>
     <div class="info">{$newsRow.from}</div>
     <br><div><p>{$newsRow.text}</p></div>
 </div>

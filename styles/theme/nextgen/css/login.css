@@ -177,3 +177,8 @@ header {
     padding: 0px;
     margin: 0px;
   }
+
+  .info {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.8em;
+  }
