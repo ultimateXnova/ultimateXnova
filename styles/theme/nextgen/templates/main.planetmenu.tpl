@@ -1,6 +1,6 @@
 {if $AllPlanets}
   {foreach $AllPlanets as $PlanetRow}
-  <div class="d-flex align-items-center justify-content-start my-1 mx-auto p-1 border border-1
+  <div class="dark-blur-bg box-border box-shadow-large planet-box
   {if isset($PlanetRow.moonInfo)}
     {if $PlanetRow.moonInfo[0].selected || $PlanetRow.selected}
     border-danger
