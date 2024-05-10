@@ -154,7 +154,7 @@ abstract class AbstractGamePage
 		$PlanetSelect	= array();
 
 		if($USER['bana'] == 1) {
-			echo 'You received a Ban. If you think this is a mistake, write on our Discord: <a href="https://discord.gg/g6UHwXE">https://discord.gg/g6UHwXE</a>'; die();
+			echo 'You received a Ban. If you think this is a mistake, contact us via email'; die();
 		}
 
 		if(isset($USER['PLANETS'])) {
