@@ -30,6 +30,16 @@ If you have docker installed, you can run ultimateXnova by opening the docker-co
 The default port is set to 3838. To access the installer, just open http://localhost:3838. After you are finished, make sure to remove the file "ENABLE_INSTALL_TOOL" from the "/includes/" folder.
 
 ## UI-Updates
+
+###  NextGen UI
+<img style="float: right; padding-left: 25px;" src="screenshots/screenshot-nextgen-ui-login.png" width="30%">
+We are currently working on a sleek and modern design to completely modernize the look and feel of the game by adding animations and haptics.
+One of the target goals is to get rid of the tables and rewrite the templates with better class names and UIkit. This will also simplify mobile optimizations in the future.
+
+
+<i>Currently, only the login is ready, while the user interface mostly falls back to Galaxy of Wars. To enable the new login theme, set your default theme to NextGen.</i>
+
+
 ### Brand new "Office"-Theme
 <img style="float: right; padding-left: 25px;" src="screenshots/office-v1.png" width="30%">
 Introducing a brand new design called "Office". This design is based on Teams to blend more fluidly into an office environment. By reducing visual clutter to a minimum and using a similiar styling, it is easier to play in public without other people noticing. It is still a work in progress as it is based on the old "Nova" theme which doesn't fully support all dependencies in buildings etc.
