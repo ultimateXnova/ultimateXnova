@@ -89,7 +89,7 @@
 <div class="dark-blur-bg menu-container box-shadow-large">
 	<div class="uk-container">
     <nav id="navbar" class="uk-navbar">
-      <div class="uk-navbar-left"><img class="logo" src="styles/resource/images/ultimatexnova.svg"/></div>
+      <div class="uk-navbar-left"><a href="game.php?page=overview"><img class="logo" src="styles/resource/images/ultimatexnova.svg"/></a></div>
       <div class="uk-navbar-right">
        
       </div> 

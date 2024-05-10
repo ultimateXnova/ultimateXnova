@@ -6,8 +6,7 @@
 html, body {
     font-family: "Space Mono", monospace;
     font-family: var(--main-font-family);
-    height: 100%;
-    
+   background-color: rgba(0,0,0,0);
 }
 
 
@@ -57,9 +56,14 @@ html, body {
 -webkit-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
 }
+a:hover img.logo {
+    transform: scale(1.05);
+opacity: 0.9;
+}
 img.logo {
-    width: 250px;
+    width: 300px;
     float: left;
+    transition: all 0.5s ease;
 }
 /* Navbar */
 .uk-navbar-header {
@@ -105,8 +109,8 @@ header {
    display: block;
    clear: both;
    width: 100%;
-   margin-top: 15px;
-   margin-bottom: 15px;
+   margin-top: 25px;
+   margin-bottom: 25px;
    height: 52px;
    z-index: 999;
     display: block;
@@ -203,14 +207,16 @@ header {
 
 /* Planet Box */
 .planet-box {
-    margin-left: 20px;
+    margin-top: 10px;
 }
 
 /* Main Menu */
 
 .main-menu-container {
-    border-radius: 25px;
+    border-radius: 0px 0px 25px 25px;
     padding: 5px;
+   width: 100%;
+   padding-top: 20px;
 }
 ul.main-menu, .main-menu li {
     list-style-type: none;
@@ -230,6 +236,7 @@ ul.main-menu, .main-menu li {
     font-family: var(--secondary-font-family);
     text-align: center;
     transition: all 0.5s ease;
+
 }
 .main-menu li a:hover {
     background-color: rgba(0,0,0,0.7);

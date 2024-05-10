@@ -1,41 +1,42 @@
 {include file="main.header.tpl" bodyclass="full"}
 
 <div class="">
-	{if $page != "imperium"}
+	
 		{include file="main.topnav.tpl"}
-	{/if}
-		<div class="d-flex m-0 p-0 justify-content-center">
-			{if $page != "imperium"}
-				<div class="d-flex justify-content-center contentLeft">
-					{include file="main.navigation.tpl"}
-				</div>
-				{/if}
-					<div class="d-flex justify-content-center {if $page!='imperium'}contentMiddle{else}w-100{/if}">
-						<content class="content-wrapper">
-							{if $hasAdminAccess}
-							<div class="alert alert-danger my-2 p-2 fs-12 globalWarning">
-							{$LNG.admin_access_1} <a class="fw-bold hover-underline hover-pointer text-danger" id="drop-admin">{$LNG.admin_access_link}</a>{$LNG.admin_access_2}
-							</div>
-							{/if}
-							{if $closed}
-							<div class="infobox">{$LNG.ov_closed}</div>
-							{elseif $delete}
-							<div class="infobox">{$delete}</div>
-							{elseif $vacation}
-							<div class="infobox">{$LNG.tn_vacation_mode} {$vacation}</div>
-							{/if}
-							{if $page != "imperium"}
-							{include file="fleetTable.tpl"}
-							{/if}
-							{block name="content"}{/block}
-							<table class="hack"></table>
-						</content>
-					</div>
-					{if $page != "imperium"}
-					<div class="d-flex flex-column contentRight">
-						{include file="main.planetmenu.tpl"}
+		<div class="uk-container">
+			<div class="tm-grid-expand uk-grid-column-small uk-grid-margin uk-grid">
+				{if $page != "imperium"}
+					<div class="uk-grid-item-match uk-width-1-5@m uk-first-column uk-padding-remove">
+						{include file="main.navigation.tpl"}
 					</div>
 					{/if}
+						<div class="uk-grid-item-match {if $page!='imperium'}uk-width-3-5@m{else}uk-width-1-1@m{/if} ">
+							<content class="content-wrapper">
+								{if $hasAdminAccess}
+								<div class="alert alert-danger my-2 p-2 fs-12 globalWarning">
+								{$LNG.admin_access_1} <a class="fw-bold hover-underline hover-pointer text-danger" id="drop-admin">{$LNG.admin_access_link}</a>{$LNG.admin_access_2}
+								</div>
+								{/if}
+								{if $closed}
+								<div class="infobox">{$LNG.ov_closed}</div>
+								{elseif $delete}
+								<div class="infobox">{$delete}</div>
+								{elseif $vacation}
+								<div class="infobox">{$LNG.tn_vacation_mode} {$vacation}</div>
+								{/if}
+								{if $page != "imperium"}
+								{include file="fleetTable.tpl"}
+								{/if}
+								{block name="content"}{/block}
+								<table class="hack"></table>
+							</content>
+						</div>
+						{if $page != "imperium"}
+						<div class="uk-grid-item-match uk-width-1-5@m uk-padding-remove">
+							{include file="main.planetmenu.tpl"}
+						</div>
+						{/if}
+			</div>
 		</div>
 
 
