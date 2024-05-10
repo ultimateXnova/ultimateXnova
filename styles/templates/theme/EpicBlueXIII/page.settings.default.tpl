@@ -68,6 +68,7 @@
 			<td>{$LNG.op_skin_example}</td>
 			<td>
 				<select name="user_theme">
+					<option {if $theme == 'nextgen'}selected{/if} value="nextgen">NextGen</option>
 					<option {if $theme == 'nova'}selected{/if} value="nova">Nova</option>
 					<option {if $theme == 'gow'}selected{/if} value="gow">Galaxy of Wars</option>
 					<option {if $theme == 'EpicBlueXIII'}selected{/if} value="EpicBlueXIII">Epic Blue</option>
