@@ -97,15 +97,19 @@ abstract class AbstractGamePage
 
 		$this->tplObj	= new template;
 		list($tplDir)	= $this->tplObj->getTemplateDir();
-
 		$path = $theme = "";
 
 		$theme = ($config->let_users_change_theme) ? $USER['dpath'] : $config->server_default_theme;
 
 		$path = "theme/" . $theme;
-
-
-		$this->tplObj->setTemplateDir($tplDir. $path);
+		if(file_exists($tplDir. $path)) {
+			$this->tplObj->setTemplateDir($tplDir. $path);
+		}
+		if(file_exists($tplDir)) {
+			$this->tplObj->setTemplateDir($tplDir);
+		}
+		
+		
 		return true;
 	}
 

@@ -50,7 +50,8 @@ class template extends Smarty
 		$this->setCaching(Smarty::CACHING_LIFETIME_CURRENT);
 		$this->setCompileDir(is_writable(CACHE_PATH) ? CACHE_PATH : $this->getTempPath());
 		$this->setCacheDir($this->getCompileDir().'templates');
-		$this->setTemplateDir('styles/templates/');
+		global $LNG, $THEME;
+		$this->setTemplateDir($THEME->getTemplatePath());
 	}
 
 	private function getTempPath()
@@ -116,6 +117,7 @@ class template extends Smarty
 		{
 			$this->setTemplateDir($THEME->getTemplatePath());
 		}
+		
 
 		$tplDir	= $this->getTemplateDir();
 

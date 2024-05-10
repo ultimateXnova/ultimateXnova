@@ -75,7 +75,16 @@ class Theme
 	}
 
 	function getTemplatePath() {
-		return ROOT_PATH.'/styles/templates/'.$this->skin.'/';
+		$new_path = ROOT_PATH.'styles/theme/'.$this->skin.'/templates';
+		$legacy_path = ROOT_PATH.'/styles/templates/'.$this->skin.'/';
+		
+		if(file_exists($new_path)) {
+			return $new_path;
+		} else {
+			return $legacy_path;
+		} 
+		
+		
 	}
 
 	function isCustomTPL($tpl) {
