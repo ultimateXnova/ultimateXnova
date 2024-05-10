@@ -21,7 +21,7 @@ class Config
 	protected $configData = array();
 	protected $updateRecords = array();
 	protected static $instances = array();
-	public $VERSION = '1.8.1';
+	public $VERSION = '1.8.1.1';
 
 	// Global configkeys
 	protected static $globalConfigKeys	= array( 'game_name', 'stat', 'stat_level', 'stat_last_update',
