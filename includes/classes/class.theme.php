@@ -74,11 +74,11 @@ class Theme
 		return $this->skin;
 	}
 
-	function getTemplatePath() {
+	function getTemplatePath($mode = false) {
 		$new_path = ROOT_PATH.'styles/theme/'.$this->skin.'/templates';
 		$legacy_path = ROOT_PATH.'/styles/templates/'.$this->skin.'/';
 		
-		if(file_exists($new_path)) {
+		if(file_exists($new_path) && $mode == false) {
 			return $new_path;
 		} else {
 			return $legacy_path;

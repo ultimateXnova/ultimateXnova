@@ -51,7 +51,12 @@ class template extends Smarty
 		$this->setCompileDir(is_writable(CACHE_PATH) ? CACHE_PATH : $this->getTempPath());
 		$this->setCacheDir($this->getCompileDir().'templates');
 		global $LNG, $THEME;
-		$this->setTemplateDir($THEME->getTemplatePath());
+		if(MODE === 'ADMIN' || MODE === 'INSTALL') {
+			$this->setTemplateDir('styles/templates/');
+		} else {
+			$this->setTemplateDir($THEME->getTemplatePath());
+		}
+		
 	}
 
 	private function getTempPath()
@@ -119,11 +124,16 @@ class template extends Smarty
 		}
 		
 
-		$tplDir	= $this->getTemplateDir();
+		
 
 		if(MODE === 'INSTALL') {
+			$this->setTemplateDir($THEME->getTemplatePath(true));
+			$tplDir	= $this->getTemplateDir();
 			$this->setTemplateDir($tplDir[0].'install/');
 		} elseif(MODE === 'ADMIN') {
+			$this->setTemplateDir($THEME->getTemplatePath(true));
+			$tplDir	= $this->getTemplateDir();
+			var_dump($tplDir);
 			$this->setTemplateDir($tplDir[0].'adm/');
 			$this->adm_main();
 		}
