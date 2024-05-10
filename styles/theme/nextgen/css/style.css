@@ -28,6 +28,15 @@ html, body {
     backdrop-filter: blur(10px);
     color: rgba(255,255,255,1);
 }
+
+.box-border {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,1);
+    padding: 20px;
+}
+
 .menu-container {
     border-bottom: 1px solid rgba(255,255,255,0.1);
     
@@ -150,6 +159,11 @@ header {
 .resource-name {
     font-family: var(--secondary-font-family);
     margin-bottom: -2px;
+    transition: all 0.5s ease;
+}
+
+.resource:hover .resource-name {
+    font-weight: 700;
 }
 .resource-picture {
     width: 40px;
@@ -185,4 +199,47 @@ header {
 .resource:hover img {
     transform: scale(2.5);
 
+}
+
+/* Planet Box */
+.planet-box {
+    margin-left: 20px;
+}
+
+/* Main Menu */
+
+.main-menu-container {
+    border-radius: 25px;
+    padding: 5px;
+}
+ul.main-menu, .main-menu li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+.main-menu li a {
+    display: block;
+    border-radius: 25px;
+    background-color: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 5px 15px;
+    margin-bottom: 5px;
+    width: 100%;
+    color: rgba(255,255,255,1);
+    font-family: var(--secondary-font-family);
+    text-align: center;
+    transition: all 0.5s ease;
+}
+.main-menu li a:hover {
+    background-color: rgba(0,0,0,0.7);
+    text-decoration: none;
+    transform: scale(1.1);
+    font-weight: 700;
+}
+.main-menu li a.menuActive {
+    background-color: rgba(0,0,0,0.7);
+    text-decoration: none;
+   
+    font-weight: 700;
 }

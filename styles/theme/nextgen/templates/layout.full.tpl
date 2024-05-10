@@ -52,7 +52,7 @@
 	<footer>
 		{foreach $cronjobs as $cronjob}<img src="cronjob.php?cronjobID={$cronjob}" alt="">{/foreach}
 
-		<div style="z-index:9999;" class="bg-black d-none d-sm-flex justify-content-center w-100 position-fixed bottom-0 py-1">
+		<div style="z-index:9999;" class="dark-blur-bg footer-container box-shadow-large">
 			{if isModuleAvailable($smarty.const.MODULE_SERVER_INFO)}
 			<span class="font-size-12 px-2 border-end hover-underline text-white hover-pointer" data-bs-toggle="tooltip"
 			data-bs-placement="left"

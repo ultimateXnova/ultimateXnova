@@ -93,13 +93,6 @@ select#universe {
     float: left;
     text-align: center;
 }
-.box-border {
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 15px;
-    background-color: rgba(0,0,0,0.5);
-    color: rgba(255,255,255,1);
-    padding: 20px;
-}
 
 .register-container {
     max-width: 500px;
