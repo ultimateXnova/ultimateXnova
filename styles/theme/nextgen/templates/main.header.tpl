@@ -30,6 +30,26 @@
 	<link rel="stylesheet" type="text/css" href="{$dpath}formate.css?v={$REV}">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+	<!-- NG Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<!-- NG Libraries -->
+	<link rel="stylesheet" href="styles/theme/nextgen/css/uikit.min.css">
+	<link rel="stylesheet" href="styles/theme/nextgen/css/uikit-rtl.min.css">
+	<script src="styles/theme/nextgen/js/uikit.min.css"></script>
+	<script src="styles/theme/nextgen/js/uikit-icons.min.css"></script>
+	<!-- NG CSS -->
+	<link rel="stylesheet" href="styles/theme/nextgen/css/style.css">
+	<!-- Favicons  -->
+	<link rel="shortcut icon" href="/styles/resource/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="/styles/resource/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/styles/resource/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/styles/resource/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/styles/resource/favicon/site.webmanifest">
+
 	<script type="text/javascript">
 	var ServerTimezoneOffset = {$Offset};
 	var serverTime 	= new Date({$date.0}, {$date.1 - 1}, {$date.2}, {$date.3}, {$date.4}, {$date.5});

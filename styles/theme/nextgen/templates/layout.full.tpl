@@ -1,6 +1,6 @@
 {include file="main.header.tpl" bodyclass="full"}
 
-<div class="container-fluid pt-0 pb-5 px-0 m-0">
+<div class="">
 	{if $page != "imperium"}
 		{include file="main.topnav.tpl"}
 	{/if}

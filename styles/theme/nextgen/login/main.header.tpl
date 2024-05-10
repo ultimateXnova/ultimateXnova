@@ -30,6 +30,7 @@
 	<script src="styles/theme/nextgen/js/uikit-icons.min.css"></script>
 	<!-- NG CSS -->
 	<link rel="stylesheet" href="styles/theme/nextgen/css/login.css">
+	<link rel="stylesheet" href="styles/theme/nextgen/css/style.css">
 	<!-- Favicons  -->
 	<link rel="shortcut icon" href="/styles/resource/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" sizes="180x180" href="/styles/resource/favicon/apple-touch-icon.png">

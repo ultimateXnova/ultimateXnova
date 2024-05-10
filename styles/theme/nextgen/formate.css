@@ -1,7 +1,5 @@
 /** Edit Color here **/
-*{
-	font-family: Verdana,Helvetica,Arial;
-}
+
 
 /*main.topnav.tpl*/
 .resourceWrapperOuter{
@@ -282,19 +280,19 @@ input[type="radio"] {
 }
 
 .fs-12{
-	font-size: 12px!important;
+	font-size: 14px!important;
 }
 .fs-11{
-	font-size: 11px!important;
+	font-size: 13px!important;
 }
 .fs-10{
-	font-size: 10px!important;
+	font-size: 12px!important;
 }
 .fs-9{
-	font-size: 9px!important;
+	font-size: 11px!important;
 }
 .fs-14{
-	font-size: 14px!important;
+	font-size: 18px!important;
 }
 
 .button-blue{
