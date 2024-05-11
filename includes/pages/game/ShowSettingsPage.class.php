@@ -390,9 +390,7 @@ class ShowSettingsPage extends AbstractGamePage
 			));
 		}
 
-		// 1.8.1.1: Check if bg_img exists in the database, else creates it
 		
-		$db->checkAndCreateColumn('%%USERS%%', 'bg_img');
 		$sql =  "UPDATE %%USERS%% SET
 		dpath = :dpath,
 		bg_img = :bg_img,
