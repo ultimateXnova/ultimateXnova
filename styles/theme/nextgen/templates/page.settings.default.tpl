@@ -88,12 +88,11 @@
 		</tr>
 		
 		{/if}
-		<tr>
-			<td>{$LNG.op_background_image}</td>
-		</tr>
+	
 		<tr>
 			<td colspan="2">
-			<div class="settings_bg_img-container tm-grid-expand uk-grid-column-small uk-grid-margin uk-grid">
+			<h3 class="uk-text-center">{$LNG.op_background_image}</h3>	
+			<div class="settings_bg_img-container tm-grid-expand uk-grid-column-small uk-grid">
 				<div class="settings_bg_img_select uk-width-1-4@m">
 					<label for="mars">
 						<input id="mars" type="radio" name="user_background_image" value="mars" {if $bg_img == 'mars'}checked{/if}>
