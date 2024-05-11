@@ -119,8 +119,13 @@ switch ($mode) {
         $fileRevision = 0;
 
 		$directoryIterator = new DirectoryIterator(ROOT_PATH . 'install/migrations/');
+
+		// 1.8.1.1: Check if bg_img exists in the database, else creates it
+		$db->checkAndCreateColumn('%%USERS%%', 'bg_img');
+
+
 		/** @var $fileInfo DirectoryIterator */
-		foreach ($directoryIterator as $fileInfo) {
+		/* foreach ($directoryIterator as $fileInfo) {
 			if (!$fileInfo->isFile() || !preg_match('/^migration_\d+/', $fileInfo->getFilename())) {
 				continue;
 			}
@@ -141,7 +146,7 @@ switch ($mode) {
 			'header'        => $LNG['menu_upgrade']
 		));
 
-		$template->show('ins_update.tpl');
+		$template->show('ins_update.tpl');*/
 		break;
 	case 'doupgrade':
 		// TODO:Need a rewrite!
