@@ -279,7 +279,7 @@ $LNG['se_news']                         = 'Duyurular';
 $LNG['se_verfiy_mail']                  = 'Email aktivasyonu';
 $LNG['se_verfiy_mail_info']             = 'Eger bu secenek isaretli olursa, oyuncular kayit olduklarinda maillerine gelen aktivasyon linkinden hesaplarini aktive etmeleri gerekmetedir.';
 $LNG['se_smtp']                         = 'SMTP Ayarlari';
-$LNG['se_smtp_info']					= 'SMTP server ayarlarini girerek AuGame server ile oyuncular arasinda haberlesme SMTP Mail sunucusu tarafindan saglanir.';
+$LNG['se_smtp_info']					= 'SMTP server ayarlarini girerek ultimateXnova server ile oyuncular arasinda haberlesme SMTP Mail sunucusu tarafindan saglanir.';
 $LNG['se_mail_active']                 = 'Emaili aktif et?';
 $LNG['se_mail_use']						= 'Email versiyonu:';
 $LNG['se_mail_sel_0']					= 'Function PHP mail()';
@@ -1059,7 +1059,7 @@ $LNG['log_disclamersettings']			= 'Iletisim';
 
 //###########################################################//
 //---------------	Ana Sayfa	------------------------//
-$LNG['ow_title'] = 'AUGAME - En yeni gelistirilmis uzay strateji Oyunu!';
+$LNG['ow_title'] = 'ultimateXnova - En yeni gelistirilmis uzay strateji Oyunu!';
 $LNG['ow_donate'] = 'Kodu Gelistirenlere Bagis';
 $LNG['ow_welcome_text'] = 'En populer online MMORPG oyununa hosgeldiniz!';
 $LNG['ow_overview'] = 'Kontrol';
@@ -1307,6 +1307,6 @@ $LNG['up_del']							= 'Silindi:';
 $LNG['up_submit']						= 'Gonder';
 $LNG['up_version']						= 'Versiyon';
 $LNG['up_chmod_error']					= "Dosyayi degistirme yetkisi yok : \n\n";
-$LNG['up_need_curl']					= 'Hata: CURL girilmemis.<br> Augame guncellemeleri icin cURL girmelisiniz';
-$LNG['up_no_xml_ext']					= 'Hata: XML Parser girilmemis.<br>Augame server otomatik bakim icin XML Parser girmelisiniz.';
+$LNG['up_need_curl']					= 'Hata: CURL girilmemis.<br> ultimateXnova guncellemeleri icin cURL girmelisiniz';
+$LNG['up_no_xml_ext']					= 'Hata: XML Parser girilmemis.<br>ultimateXnova server otomatik bakim icin XML Parser girmelisiniz.';
 $LNG['up_offline']						= 'Sunucuyla baglanti kurulamadi';

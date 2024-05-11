@@ -1,7 +1,7 @@
 <?php
 /**
 *  ultimateXnova
-*  based on 2moons by Jan-Otto Kröpke 2009-2016
+*  based on ultimateXnova by Jan-Otto Kröpke 2009-2016
  *
  * For the full copyright and license information, please view the LICENSE
  *
@@ -18,7 +18,7 @@
 
 
 // Translated into English by QwataKayean . All rights reversed (C) 2012
-// 2Moons - Copyright (C) 2010-2012 Slaver
+// ultimateXnova - Copyright (C) 2010-2012 Slaver
 
 //---------------	ShowColonySettingsPage.class.php - page.colony.default.tpl ------------------------//
 $LNG['cs_metal_start'] = "metal (start)";
@@ -135,7 +135,7 @@ $LNG['time_minutes'] = 'Minutes';
 $LNG['time_seconds'] = 'Seconds';
 //###########################################################//
 
-$LNG['info_information'] = 'Send or report bugs in the forum for <a href="%s" target="tracker">2Moons</a><br>Otherwise there will be support!';
+$LNG['info_information'] = 'Send or report bugs in the forum for <a href="%s" target="tracker">ultimateXnova</a><br>Otherwise there will be support!';
 
 //---------------	Sim ou não	------------------------//
 $LNG['one_is_yes_1'] = 'Yes';
@@ -394,9 +394,9 @@ $LNG['ma_modes'] = array('Game', 'Mail', 'Game & Mail');
 //###########################################################//
 
 //---------------	Pagina Inicial	------------------------//
-$LNG['ow_title'] = 'Welcome to 2Moons!';
+$LNG['ow_title'] = 'Welcome to ultimateXnova!';
 $LNG['ow_donate'] = 'Donate';
-$LNG['ow_welcome_text'] = 'Welcome to popular 2Moons! (:';
+$LNG['ow_welcome_text'] = 'Welcome to popular ultimateXnova! (:';
 $LNG['ow_overview'] = 'Control';
 $LNG['ow_support'] = 'Support';
 $LNG['ow_credits'] = 'Credits';
@@ -512,7 +512,7 @@ $LNG['se_news'] = 'News';
 $LNG['se_verfiy_mail'] = 'The system of checking email';
 $LNG['se_verfiy_mail_info'] = 'If this option is active players has to activate their accounts.';
 $LNG['se_smtp'] = 'Settings of SMTP';
-$LNG['se_smtp_info'] = 'Enter the SMTP server to allow communication between the 2Moons server and their players by SMTP mail server.';
+$LNG['se_smtp_info'] = 'Enter the SMTP server to allow communication between the ultimateXnova server and their players by SMTP mail server.';
 $LNG['se_mail_active'] = 'Enables it to Email?';
 $LNG['se_mail_use'] = 'Version of email:';
 $LNG['se_mail_sel_0'] = 'Function PHP mail()';
@@ -1241,8 +1241,8 @@ $LNG['up_del'] = 'Deleted in:';
 $LNG['up_submit'] = 'Send';
 $LNG['up_version'] = 'Version';
 $LNG['up_chmod_error'] = "No write permission (s) for folder:\n\n";
-$LNG['up_need_curl'] = 'Error: CURL is not present.<br>The maintaining of 2Moons requires cURL to run download files.';
-$LNG['up_no_xml_ext'] = 'Error: XML Parser is not present.<br>The maintaining of 2Moons requires XML Parser to process the files present.';
+$LNG['up_need_curl'] = 'Error: CURL is not present.<br>The maintaining of ultimateXnova requires cURL to run download files.';
+$LNG['up_no_xml_ext'] = 'Error: XML Parser is not present.<br>The maintaining of ultimateXnova requires XML Parser to process the files present.';
 $LNG['up_offline'] = 'Update of server unavailable';
 
 // Página de chat

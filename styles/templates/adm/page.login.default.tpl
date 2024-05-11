@@ -48,7 +48,9 @@ function loginSubmit(activeRecaptcha,use_recaptcha_on_admin_login){
 </script>
 
 	<form style="max-width:350px;margin-top:150px;" action="?page=login&mode=validate" method="post" class="mx-auto p-3 bg-black rounded">
-		<div class="form-group my-2 text-center fs-14 fw-bold text-white">
+	<img class="logo" src="styles/resource/images/ultimatexnova.svg" width="300px"/>
+				
+	<div class="form-group my-2 text-center fs-14 fw-bold text-white">
 			{$LNG.adm_login}
 		</div>
 		<div class="form-group my-2 fs-12 fw-bold text-white">

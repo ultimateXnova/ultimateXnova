@@ -2,7 +2,7 @@
 
 /**
 *  ultimateXnova
-*  based on 2moons by Jan-Otto Kröpke 2009-2016
+*  based on ultimateXnova by Jan-Otto Kröpke 2009-2016
  *
  * For the full copyright and license information, please view the LICENSE
  *
@@ -306,12 +306,12 @@ $LNG['ma_all']                         = 'Все';
 $LNG['ma_modes']                       = array('Игровое сообщение', 'Сообщение на электронную почту всем игрокам', 'Игровое сообщение + Сообщение на электронную почту всем игрокам');
 
 // Обзор
-$LNG['ow_title']                       = 'Добро пожаловать в 2Moons';
+$LNG['ow_title']                       = 'Добро пожаловать в ultimateXnova';
 $LNG['ow_donate']                      = 'Пожертвование';
-$LNG['ow_welcome_text']                = 'Спасибо за выбор 2Moons.';
+$LNG['ow_welcome_text']                = 'Спасибо за выбор ultimateXnova.';
 $LNG['ow_overview']                    = 'Панель управления';
 $LNG['ow_support']                     = 'Техническая поддержка';
-$LNG['ow_credits']                     = 'Команда 2Moons';
+$LNG['ow_credits']                     = 'Команда ultimateXnova';
 $LNG['ow_forum']                       = 'Форум';
 $LNG['ow_proyect_leader']              = 'Лидеры проекта';
 $LNG['ow_translator']                  = 'Переводчики';
@@ -410,7 +410,7 @@ $LNG['se_smtp_pass']                   = 'Пароль SMTP';
 $LNG['se_smtp_sendmail']               = 'Адрес электронной почты';
 $LNG['se_smtp_sendmail_info']          = 'Адрес электронной почты, с которой автоматически будут отправляться письма игрокам. Не должен быть идентичен регистрационному адресу электронной почты.';
 $LNG['se_ftp']                         = 'FTP';
-$LNG['se_ftp_info']                    = '2Moons имеет своеобразную систему обновления. Файлы должны находиться на сервере FTP. Это требует сервер данных 2Moons.<br>Если Вы не используете систему обновления, то эти поля можете оставить пустыми.';
+$LNG['se_ftp_info']                    = 'ultimateXnova имеет своеобразную систему обновления. Файлы должны находиться на сервере FTP. Это требует сервер данных ultimateXnova.<br>Если Вы не используете систему обновления, то эти поля можете оставить пустыми.';
 $LNG['se_ftp_host']                    = 'FTP хост';
 $LNG['se_ftp_user']                    = 'FTP логин';
 $LNG['se_ftp_pass']                    = 'FTP пароль';
@@ -1100,8 +1100,8 @@ $LNG['up_del']                         = 'Удалить';
 $LNG['up_submit']                      = 'Обновить';
 $LNG['up_version']                     = 'Версия';
 $LNG['up_chmod_error']                 = 'Нет прав на запись (CHMOD 777) для папок:\n\n';
-$LNG['up_need_curl']                   = 'cURL не доступен.<br>Система обновления 2Moons требует cURL для загрузки файлов обновления.';
-$LNG['up_no_xml_ext']                  = 'XML-parser не доступен.<br>Система обновления 2Moons требует XML-парсер для обработки файлов.';
+$LNG['up_need_curl']                   = 'cURL не доступен.<br>Система обновления ultimateXnova требует cURL для загрузки файлов обновления.';
+$LNG['up_no_xml_ext']                  = 'XML-parser не доступен.<br>Система обновления ultimateXnova требует XML-парсер для обработки файлов.';
 $LNG['up_offline']                     = 'Обновление сервера недоступно.';
 
 // Настройки чата

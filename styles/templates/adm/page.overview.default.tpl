@@ -23,8 +23,9 @@
 		</tr>
 		<tr>
 			<td colspan="2"><a href="https://github.com/ultimateXnova/ultimateXnova/" target="_blank">Project Homepage</a>
-				<a target="_blank" href="http://2moons.cc/" target="_blank">2moons.cc - {$LNG.ow_forum}</a>
-			</td>
+				<a target="_blank" href="https://github.com/ultimateXnova/ultimateXnova/issues" target="_blank">GitHub Issues - <!--{$LNG.ow_forum}--></a>
+				<a target="_blank" href="https://discord.gg/TUzu8AWPKM" target="_blank">Discord</a>
+				</td>
 		</tr>
 		<tr>
 			<th colspan="2">{$LNG.ow_updates}</th>
@@ -45,7 +46,7 @@
 						<td class="transparent" colspan="3"><h3>{$LNG.ow_proyect_leader}</h3></td>
 					</tr>
 					<tr>
-						<td class="transparent" colspan="3"><h3><a target="_blank" href="https://github.com/jkroepke" style="color:red">Jan</a></h3></td>
+						<td class="transparent" colspan="3"><h3><a target="_blank" href="https://github.com/Pfahli" style="color:red">Pfahli</a></h3></td>
 					</tr>
 				</table>
 				<div style="width:100%">
@@ -56,7 +57,11 @@
 						</tr>
 						<tr>
 							<td class="transparent">
-								<a target="_blank" href="https://github.com/jkroepke" style="color:red">Jan</a><br>
+								<a target="_blank" href="https://github.com/Pfahli" style="color:rgb(0, 179, 255)">Pfahli</a> (ultimateXnova)<br>
+								<a target="_blank" href="https://github.com/koraykarakus" style="color:red">koraykarakus</a> (SteemNova)<br>
+								<a target="_blank" href="https://github.com/IntinteDAO" style="color:red">IntinteDAO</a> (SteemNova)<br>
+								<a target="_blank" href="https://github.com/mys" style="color:red">mys</a> (SteemNova)<br>
+								<a target="_blank" href="https://github.com/jkroepke" style="color:rgb(18, 177, 0)">Jan</a> (2Moons)<br>
 							</td>
 						</tr>
 					</table>
