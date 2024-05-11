@@ -134,7 +134,7 @@ var_dump($USER);
 		if($THEME->isCustomTPL($file))
 		{
 			$template_path = $THEME->getTemplatePath();
-			if (file_exists($template_path)) {
+			if (file_exists($template_path."/". $file)) {
 				// New themes
 				$this->setTemplateDir($THEME->getTemplatePath());
 			} else {
@@ -147,9 +147,10 @@ var_dump($USER);
 		
 
 		if(MODE === 'INSTALL') {
-			$this->setTemplateDir($THEME->getTemplatePath(true));
-			$tplDir	= $this->getTemplateDir();
-			$this->setTemplateDir($tplDir[0].'install/');
+			//$this->setTemplateDir($THEME->getTemplatePath(true));
+			//$tplDir	= $this->getTemplateDir();
+			$this->setTemplateDir('styles/templates/install/');
+			
 		} elseif(MODE === 'ADMIN') {
 			$this->setTemplateDir($THEME->getTemplatePath(true));
 			$tplDir	= $this->getTemplateDir();
