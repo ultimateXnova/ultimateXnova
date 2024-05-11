@@ -52,7 +52,7 @@
 
 	<footer>
 		{foreach $cronjobs as $cronjob}<img src="cronjob.php?cronjobID={$cronjob}" alt="">{/foreach}
-
+			
 		<div style="z-index:9999;" class="dark-blur-bg footer-container box-shadow-large">
 			{if isModuleAvailable($smarty.const.MODULE_SERVER_INFO)}
 			<span class="font-size-12 px-2 border-end hover-underline text-white hover-pointer" data-bs-toggle="tooltip"
@@ -110,7 +110,7 @@
 			{if isModuleAvailable($smarty.const.MODULE_CHAT)}
 			<a class="font-size-12 px-2 border-end text-white hover-underline" href="game.php?page=chat">{$LNG.lm_chat}</a>
 			{/if}
-
+			<a href="https://github.com/Pfahli" target="_blank" class=" font-size-12 text-white">Designed by Pfahli</a>
 
 
 			
