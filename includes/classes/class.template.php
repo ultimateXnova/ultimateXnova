@@ -50,12 +50,24 @@ class template extends Smarty
 		$this->setCaching(Smarty::CACHING_LIFETIME_CURRENT);
 		$this->setCompileDir(is_writable(CACHE_PATH) ? CACHE_PATH : $this->getTempPath());
 		$this->setCacheDir($this->getCompileDir().'templates');
+
+		// Set the default template directory
 		global $LNG, $THEME;
 		if(MODE === 'ADMIN' || MODE === 'INSTALL') {
+			// Admin and Install mode
 			$this->setTemplateDir('styles/templates/');
 		} else {
-			$this->setTemplateDir($THEME->getTemplatePath());
+			$template_path = $THEME->getTemplatePath();
+			if (file_exists($template_path)) {
+				// New themes
+				$this->setTemplateDir($template_path);
+			} else {
+				// Fallback for old themes
+				$this->setTemplateDir('styles/templates/');
+			}
+			
 		}
+		
 		
 	}
 
@@ -120,7 +132,14 @@ class template extends Smarty
 
 		if($THEME->isCustomTPL($file))
 		{
-			$this->setTemplateDir($THEME->getTemplatePath());
+			$template_path = $THEME->getTemplatePath();
+			if (file_exists($template_path)) {
+				// New themes
+				$this->setTemplateDir($THEME->getTemplatePath());
+			} else {
+				// Fallback for old themes
+				$this->setTemplateDir('styles/templates/');
+			}
 		}
 		
 

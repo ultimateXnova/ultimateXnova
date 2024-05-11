@@ -76,7 +76,7 @@ class Theme
 
 	function getTemplatePath($mode = false) {
 		$new_path = ROOT_PATH.'styles/theme/'.$this->skin.'/templates';
-		$legacy_path = ROOT_PATH.'/styles/templates/'.$this->skin.'/';
+		$legacy_path = ROOT_PATH.'styles/templates/theme/'.$this->skin.'/';
 		
 		if(file_exists($new_path) && $mode == false) {
 			return $new_path;
