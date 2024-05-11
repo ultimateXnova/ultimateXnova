@@ -871,6 +871,7 @@ CREATE TABLE `%PREFIX%users` (
   `register_time` int(11) NOT NULL DEFAULT '0',
   `onlinetime` int(11) NOT NULL DEFAULT '0',
   `dpath` varchar(20) NOT NULL DEFAULT 'gow',
+  `bg_img` varchar(55) NOT NULL DEFAULT 'mars',
   `timezone` varchar(32) NOT NULL DEFAULT 'Europe/London',
   `planet_sort` tinyint(1) NOT NULL DEFAULT '0',
   `planet_sort_order` tinyint(1) NOT NULL DEFAULT '0',
