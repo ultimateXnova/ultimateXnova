@@ -32,12 +32,31 @@ The default port is set to 3838. To access the installer, just open http://local
 ## UI-Updates
 
 ###  NextGen UI
-<img style="float: right; padding-left: 25px;" src="screenshots/screenshot-nextgen-ui-login.png" width="30%">
+
+<img style="float: right; padding-left: 15px;" src="screenshots/screenshot-nextgen-ui-dashboard-mars.png" width="30%">
 We are currently working on a sleek and modern design to completely modernize the look and feel of the game by adding animations and haptics.
+<br>
+<img style="float: right; padding-left: 15px;" src="screenshots/screenshot-nextgen-ui-login.png" width="30%">
 One of the target goals is to get rid of the tables and rewrite the templates with better class names and UIkit. This will also simplify mobile optimizations in the future.
 
+#### Current progress
+* New login screen
+* New top navigation
+* New resource panel
+* New main navigation
+* User-selectable background image
 
-<i>Currently, only the login is ready, while the user interface mostly falls back to Galaxy of Wars. To enable the new login theme, set your default theme to NextGen.</i>
+#### Work in progress
+* Mobile optimisation
+* New planet panel
+
+#### Todo (Usable, but currently fallback to GOW theme)
+* New dashboard
+* New buildings, hangar, defense and research panels
+* New galaxy view
+
+
+<i>To enable the new login theme, set your default theme to NextGen in the admin center.</i>
 
 
 ### Brand new "Office"-Theme
