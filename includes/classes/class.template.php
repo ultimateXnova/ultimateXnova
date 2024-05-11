@@ -111,7 +111,7 @@ class template extends Smarty
 		}
 
 		$config	= Config::get();
-
+var_dump($USER);
 		$this->assign_vars(array(
 			'scripts'			=> $this->script,
 			'title'				=> $config->game_name.' - '.$LNG['adm_cp_title'],
@@ -122,7 +122,8 @@ class template extends Smarty
 			'Offset'			=> $dateTimeUser->getOffset() - $dateTimeServer->getOffset(),
 			'VERSION'			=> $config->VERSION,
 			'dpath'				=> 'styles/theme/gow/',
-			'bodyclass'			=> 'full'
+			'bodyclass'			=> 'full',
+			'bg_img'			=> $USER['bg_img']
 		));
 	}
 

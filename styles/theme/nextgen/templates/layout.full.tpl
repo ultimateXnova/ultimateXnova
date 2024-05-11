@@ -6,11 +6,11 @@
 		<div class="uk-container">
 			<div class="tm-grid-expand uk-grid-column-small uk-grid-margin uk-grid">
 				{if $page != "imperium"}
-					<div class="uk-grid-item-match uk-width-1-5@m uk-first-column uk-padding-remove">
+					<div class="uk-width-1-5@m uk-first-column uk-padding-remove">
 						{include file="main.navigation.tpl"}
 					</div>
 					{/if}
-						<div class="uk-grid-item-match {if $page!='imperium'}uk-width-3-5@m{else}uk-width-1-1@m{/if} ">
+						<div class="{if $page!='imperium'}uk-width-3-5@m{else}uk-width-1-1@m{/if} ">
 							<content class="content-wrapper">
 								{if $hasAdminAccess}
 								<div class="alert alert-danger my-2 p-2 fs-12 globalWarning">
@@ -32,7 +32,7 @@
 							</content>
 						</div>
 						{if $page != "imperium"}
-						<div class="uk-grid-item-match uk-width-1-5@m uk-padding-remove">
+						<div class="uk-width-1-5@m uk-padding-remove">
 							{include file="main.planetmenu.tpl"}
 						</div>
 						{/if}

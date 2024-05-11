@@ -968,6 +968,7 @@ $LNG['op_sort_planets_by']					= 'Sortuj planety po:';
 $LNG['op_sort_kind']						= 'Tryb sortowania:';
 $LNG['op_lang']								= 'Język';
 $LNG['op_skin_example']						= 'Ścieżka do skinu (Np. C:/SG/skins/)';
+$LNG['op_background_image']					= 'Obraz tła';
 $LNG['op_show_skin']						= 'Pokaż skin';
 $LNG['op_deactivate_ipcheck']				= 'Wyłącz sprawdzanie IP';
 $LNG['op_galaxy_settings']					= 'Opcje podglądu galaktyki';

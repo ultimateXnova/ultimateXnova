@@ -940,6 +940,7 @@ $LNG['op_sort_planets_by']					= 'Trier Planètes par :';
 $LNG['op_sort_kind']						= 'Ordre :';
 $LNG['op_lang']								= 'Langage';
 $LNG['op_skin_example']						= 'Chemin du Skin';
+$LNG['op_background_image']					= 'Fond d\'écran';
 $LNG['op_show_skin']						= 'Affichage Skin';
 $LNG['op_deactivate_ipcheck']				= 'Désactiver la vérification d\'IP';
 $LNG['op_galaxy_settings']					= 'Paramétrage de la vue de la galaxie ';

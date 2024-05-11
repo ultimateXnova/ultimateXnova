@@ -8,8 +8,39 @@ html, body {
     font-family: var(--main-font-family);
    background-color: rgba(0,0,0,0);
 }
+html {
+	background-image:url("../img/background/mars.webp");
+	background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+	
+	color: #fff;
+}
 
-
+html.mars {
+    background-image:url("../img/background/mars.webp");
+}
+html.light_green {
+    background-image:url("../img/background/light_green.webp");
+}
+html.intense_blue {
+    background-image:url("../img/background/intense_blue.webp");
+}
+html.dark_blue {
+    background-image:url("../img/background/dark_blue.webp");
+}
+html.mountains {
+    background-image:url("../img/background/mountains.webp");
+}
+html.orbit {
+    background-image:url("../img/background/orbit.webp");
+}
+html.supernova {
+    background-image:url("../img/background/supernova.webp");
+}
+html.spaceport {
+    background-image:url("../img/background/spaceport.webp");
+}
 
 .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-3xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6 {
     font-family: "Rajdhani", sans-serif;
@@ -249,4 +280,27 @@ ul.main-menu, .main-menu li {
     text-decoration: none;
    
     font-weight: 700;
+}
+
+/* Settings */
+.settings_bg_img_select label img {
+    opacity: 0.5;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+    border: 3px solid rgba(255,255,255,0);
+}
+.settings_bg_img_select input[type="radio"]:checked+ img {
+    opacity: 1;
+    border: 3px solid rgba(255,255,255,1);
+}
+.settings_bg_img_select label:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.settings_bg_img_select {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.settings_bg_img_select input {
+    display: none;
 }

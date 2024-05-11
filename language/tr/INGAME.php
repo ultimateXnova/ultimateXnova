@@ -974,6 +974,7 @@ $LNG['op_sort_planets_by']					= 'Gezegenleri Sirala';
 $LNG['op_sort_kind']						= 'Siralama Sekli';
 $LNG['op_lang']								= 'Dil';
 $LNG['op_skin_example']						= 'Tema';
+$LNG['op_background_image']					= 'Arka plan görüntüsü';
 $LNG['op_show_skin']						= 'Skin';
 $LNG['op_deactivate_ipcheck']				= 'IP Kontrol Kapat';
 $LNG['op_galaxy_settings']					= 'Galaksi Gorunum Ayarlari';

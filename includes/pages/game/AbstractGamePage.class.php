@@ -344,6 +344,7 @@ abstract class AbstractGamePage
 			'authlevel'			=> $USER['authlevel'],
 			'userID'			=> $USER['id'],
 			'bodyclass'			=> $this->getWindow(),
+			'bg_img'			=> $USER['bg_img'],
 			'game_name'			=> $config->game_name,
 			'uni_name'			=> $config->uni_name,
 			'game_speed' => pretty_number($config->game_speed / 2500),

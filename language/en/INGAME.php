@@ -975,6 +975,7 @@ $LNG['op_sort_planets_by']					= 'Sort by planets';
 $LNG['op_sort_kind']						= 'Order of classification';
 $LNG['op_lang']								= 'Language';
 $LNG['op_skin_example']						= 'Theme';
+$LNG['op_background_image']						= 'Background Image';
 $LNG['op_show_skin']						= 'Display Skin';
 $LNG['op_deactivate_ipcheck']				= 'Verification of IP disabled';
 $LNG['op_galaxy_settings']					= 'Options of Galaxy';

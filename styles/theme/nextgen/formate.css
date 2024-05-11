@@ -65,13 +65,7 @@
 	color:#D20000;
 }
 
-body {
-	background:url("img/background.jpg") no-repeat fixed center center #0d0d0d;
-	background-size: cover;
-	overflow-y: scroll;
-	margin: 0!important;
-	color: #fff;
-}
+
 
 body.mceContentBody,input,button,select,option,textarea, .ui-widget-content{
 	background: #0D1014;

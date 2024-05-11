@@ -928,6 +928,7 @@ $LNG['op_sort_planets_by']                = 'Сортировка планет';
 $LNG['op_sort_kind']                      = 'Порядок сортировки';
 $LNG['op_lang']                           = 'Язык';
 $LNG['op_skin_example']                   = 'Дизайн';
+$LNG['op_background_image']				    = 'Фоновое изображение';
 $LNG['op_show_skin']                      = 'Показывать шаблон дизайна';
 $LNG['op_deactivate_ipcheck']             = 'Отключить проверку IP';
 $LNG['op_galaxy_settings']                = 'Галактика';

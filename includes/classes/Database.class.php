@@ -93,7 +93,7 @@ class Database
 
 	protected function _query($qry, array $params, $type)
 	{
-		if (in_array($type, array("insert", "select", "update", "delete", "replace")) === false)
+		if (in_array($type, array("insert", "select", "update", "delete", "replace", "alter")) === false)
 		{
 			throw new Exception("Unsupported Query Type");
 		}
@@ -249,9 +249,11 @@ class Database
 
 	public function query($qry)
 	{
+		
 		$this->lastInsertId = false;
 		$this->rowCount = false;
 		$this->rowCount = $this->dbHandle->exec($qry);
+		
 		$this->queryCounter++;
 	}
 
@@ -284,5 +286,21 @@ class Database
 	public function quote($str)
 	{
 		return $this->dbHandle->quote($str);
+	}
+	public function columnExists($table, $column)
+	{
+		$qry = "SHOW COLUMNS FROM {$table} LIKE '{$column}';";
+		$stmt = $this->_query($qry, array(), 'select');
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		return $result ? true : false;
+	}
+	public function checkAndCreateColumn($table, $column, $dataType = 'VARCHAR(255)')
+	{
+		$result = $this->columnExists($table, $column);
+
+		if (!$result) {			$qry = "ALTER TABLE {$table} ADD {$column} {$dataType};";
+		$this->_query($qry, array(), 'alter');
+		}
 	}
 }

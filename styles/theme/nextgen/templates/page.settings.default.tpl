@@ -86,7 +86,71 @@
 				</select>
 			</td>
 		</tr>
+		
 		{/if}
+		<tr>
+			<td>{$LNG.op_background_image}</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			<div class="settings_bg_img-container tm-grid-expand uk-grid-column-small uk-grid-margin uk-grid">
+				<div class="settings_bg_img_select uk-width-1-4@m">
+					<label for="mars">
+						<input id="mars" type="radio" name="user_background_image" value="mars" {if $bg_img == 'mars'}checked{/if}>
+						<img src="styles/theme/nextgen/img/background/mars.webp" alt="Orange Mars">
+					</label>
+				</div>
+
+				<div class="settings_bg_img_select uk-width-1-4@m">
+					<label for="light_green">
+						<input id="light_green" type="radio" name="user_background_image" value="light_green" {if $bg_img == 'light_green'}checked{/if}>
+						<img src="styles/theme/nextgen/img/background/light_green.webp" alt="Green Canyon">
+					</label>
+				</div>
+
+				<div class="settings_bg_img_select uk-width-1-4@m">
+					<label for="intense_blue">
+						<input id="intense_blue" type="radio" name="user_background_image" value="intense_blue" {if $bg_img == 'intense_blue'}checked{/if}>
+						<img src="styles/theme/nextgen/img/background/intense_blue.webp" alt="Blue Nightsky">
+					</label>
+				</div>
+
+				<div class="settings_bg_img_select uk-width-1-4@m">
+					<label for="dark_blue">
+						<input id="dark_blue" type="radio" name="user_background_image" value="dark_blue" {if $bg_img == 'dark_blue'}checked{/if}>
+						<img src="styles/theme/nextgen/img/background/dark_blue.webp" alt="Dark Horizon">
+					</label>
+				</div>
+
+				<div class="settings_bg_img_select uk-width-1-4@m">
+					<label for="mountains">
+						<input id="mountains" type="radio" name="user_background_image" value="mountains" {if $bg_img == 'mountains'}checked{/if}>
+						<img src="styles/theme/nextgen/img/background/mountains.webp" alt="Foggy Mountains">
+					</label>
+				</div>
+
+				<div class="settings_bg_img_select uk-width-1-4@m">
+					<label for="orbit">
+						<input id="orbit" type="radio" name="user_background_image" value="orbit" {if $bg_img == 'orbit'}checked{/if}>
+						<img src="styles/theme/nextgen/img/background/orbit.webp" alt="Orbit">
+					</label>
+				</div>
+
+				<div class="settings_bg_img_select uk-width-1-4@m">
+					<label for="supernova">
+						<input id="supernova" type="radio" name="user_background_image" value="supernova" {if $bg_img == 'supernova'}checked{/if}>
+						<img src="styles/theme/nextgen/img/background/supernova.webp" alt="Supernova">
+					</label>
+				</div>
+
+				<div class="settings_bg_img_select uk-width-1-4@m">
+					<label for="spaceport">
+						<input id="spaceport" type="radio" name="user_background_image" value="spaceport" {if $bg_img == 'spaceport'}checked{/if}>
+						<img src="styles/theme/nextgen/img/background/spaceport.webp" alt="Spaceport">
+					</label>
+				</div>
+			</div>
+		</tr>
 		<tr>
 			<td>{$LNG.op_active_build_messages}</td>
 			<td class="text-center"><input name="queueMessages" type="checkbox" value="1" {if $queueMessages == 1}checked="checked"{/if}></td>

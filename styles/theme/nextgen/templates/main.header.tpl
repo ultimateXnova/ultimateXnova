@@ -4,7 +4,7 @@
 <!--[if IE 8 ]>    <html lang="{$lang}" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="{$lang}" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="{$lang}" class="no-js"> <!--<![endif]-->
+<html lang="{$lang}" class="no-js {$bg_img}"> <!--<![endif]-->
 <head>
 	<title>{block name="title"} - {$uni_name} - {$game_name}{/block}</title>
 	<meta charset="utf-8">

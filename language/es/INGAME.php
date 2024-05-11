@@ -950,6 +950,7 @@ $LNG['op_sort_planets_by']					= 'Ordenar planetas por:';
 $LNG['op_sort_kind']						= 'Tipo de ordenación:';
 $LNG['op_lang']								= 'Idioma:';
 $LNG['op_skin_example']						= 'Diseños:';
+$LNG['op_background_image']					= 'Imagen de fondo';
 $LNG['op_show_skin']						= 'Utilizar el diseño';
 $LNG['op_deactivate_ipcheck']				= '<font color="red">Desactivar comprobación de IP</font>';
 $LNG['op_galaxy_settings']					= 'Opciones de visión de Galaxia';

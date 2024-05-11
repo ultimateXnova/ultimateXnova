@@ -232,11 +232,13 @@ class ShowSettingsPage extends AbstractGamePage
 		$language			= array_key_exists($language, $LNG->getAllowedLangs(false)) ? $language : $LNG->getLanguage();
 		$theme = HTTP::_GP('user_theme','');
 
+		// New option to change the background image
+		$background_img = HTTP::_GP('user_background_image','');
 
 		$availableThemes = array_keys(Theme::getAvalibleSkins());
 
 		if (!in_array($theme,$availableThemes)) {
-			$theme = "gow";
+			$theme = "nextgen";
 		}
 
 		if ($config->let_users_change_theme) {
@@ -388,8 +390,12 @@ class ShowSettingsPage extends AbstractGamePage
 			));
 		}
 
+		// 1.8.1.1: Check if bg_img exists in the database, else creates it
+		
+		$db->checkAndCreateColumn('%%USERS%%', 'bg_img');
 		$sql =  "UPDATE %%USERS%% SET
 		dpath = :dpath,
+		bg_img = :bg_img,
 		timezone				= :timezone,
 		planet_sort				= :planetSort,
 		planet_sort_order		= :planetOrder,
@@ -408,6 +414,7 @@ class ShowSettingsPage extends AbstractGamePage
 
 		$db->update($sql, array(
 			':dpath' => $themeName,
+			':bg_img' => $background_img,
 			':timezone'			=> $timezone,
 			':planetSort'		=> $planetSort,
 			':planetOrder'		=> $planetOrder,
@@ -423,6 +430,7 @@ class ShowSettingsPage extends AbstractGamePage
 			':queueMessages'	=> $queueMessages,
 			':spyMessagesMode'	=> $spyMessagesMode,
 			':userID'			=> $USER['id'],
+			
 		));
 
 		$this->printMessage($LNG['op_options_changed'], array(array(

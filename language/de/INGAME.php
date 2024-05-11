@@ -958,6 +958,7 @@ $LNG['op_sort_planets_by']					= 'Planeten sortieren nach';
 $LNG['op_sort_kind']						= 'Sortierungsreihenfolge';
 $LNG['op_lang']							= 'Sprache';
 $LNG['op_skin_example']						= 'Theme';
+$LNG['op_background_image']						= 'Hintergrundbild';
 $LNG['op_show_skin']						= 'Skin anzeigen';
 $LNG['op_deactivate_ipcheck']					= 'IP-Check deaktivieren';
 $LNG['op_galaxy_settings']					= 'Galaxieansicht Einstellungen';
