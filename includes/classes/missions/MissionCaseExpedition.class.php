@@ -113,7 +113,7 @@ class MissionCaseExpedition extends MissionFunctions implements Mission
 		$chances_percent_resources = $config->expedition_chances_percent_resources;
 		$chances_percent_darkmatter = $config->expedition_chances_percent_darkmatter;
 		$chances_percent_ships = $config->expedition_chances_percent_ships;
-		$chances_percent_pirates = $conig->expedition_chances_percent_pirates;
+		$chances_percent_pirates = $config->expedition_chances_percent_pirates;
 
 		$chances_event_resources = $chances_percent_resources * 10;
 		$chances_event_darkmatter = $chances_event_resources + $chances_percent_darkmatter * 10;
