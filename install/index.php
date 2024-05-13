@@ -121,17 +121,20 @@ switch ($mode) {
 		$directoryIterator = new DirectoryIterator(ROOT_PATH . 'install/migrations/');
 
 		// 1.8.1.1: Check if bg_img exists in the database, else creates it
-		$db->checkAndCreateColumn('%%USERS%%', 'bg_img');
+		//$db->checkAndCreateColumn('%%USERS%%', 'bg_img');
 
 
 		/** @var $fileInfo DirectoryIterator */
-		/* foreach ($directoryIterator as $fileInfo) {
+		 foreach ($directoryIterator as $fileInfo) {
 			if (!$fileInfo->isFile() || !preg_match('/^migration_\d+/', $fileInfo->getFilename())) {
 				continue;
 			}
 
-			$fileRevision = substr($fileInfo->getFilename(), 10, -4);
-
+			//$fileRevision = substr($fileInfo->getFilename(), 10, -4);
+			// More robust way to get the revision
+			$explodeRevision = explode('_', str_replace('.sql','',$fileInfo->getFilename()));
+			$fileRevision = $explodeRevision[1];
+			
             if ($fileRevision <= $dbVersion || $fileRevision > DB_VERSION_REQUIRED) {
                 continue;
             }
@@ -146,7 +149,7 @@ switch ($mode) {
 			'header'        => $LNG['menu_upgrade']
 		));
 
-		$template->show('ins_update.tpl');*/
+		$template->show('ins_update.tpl');
 		break;
 	case 'doupgrade':
 		// TODO:Need a rewrite!
@@ -173,8 +176,8 @@ switch ($mode) {
 		$fileName = '2MoonsBackup_' . date('Y_m_d_H_i_s', TIMESTAMP) . '.sql';
 		$filePath = 'includes/backups/' . $fileName;
 		require 'includes/classes/SQLDumper.class.php';
-		$dump = new SQLDumper;
-		$dump->dumpTablesToFile($dbTables, $filePath);
+		// $dump = new SQLDumper;
+		// $dump->dumpTablesToFile($dbTables, $filePath);
 
         try {
             $sql	= "SELECT dbVersion FROM %%SYSTEM%%;";

@@ -17,7 +17,7 @@
  * @link https://github.com/ultimateXnova/ultimateXnova
  */
 
-define('DB_VERSION_REQUIRED', 7);
+define('DB_VERSION_REQUIRED', 8);
 define('DB_NAME'			, $database['databasename']);
 define('DB_PREFIX'			, $database['tableprefix']);
 
