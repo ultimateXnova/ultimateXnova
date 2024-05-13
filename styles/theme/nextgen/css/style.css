@@ -1,4 +1,6 @@
-
+* {
+    box-sizing: border-box;
+}
 :root {
     --main-font-family: "Space Mono", monospace;
     --secondary-font-family: "Rajdhani", sans-serif;
@@ -16,7 +18,7 @@ html {
 	
 	color: #fff;
 }
-
+/* Backgrounds */
 html.mars {
     background-image:url("../img/background/mars.webp");
 }
@@ -41,7 +43,7 @@ html.supernova {
 html.spaceport {
     background-image:url("../img/background/spaceport.webp");
 }
-
+/* Headings */
 .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-3xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6 {
     font-family: "Rajdhani", sans-serif;
   font-weight: 500;
@@ -54,7 +56,7 @@ html.spaceport {
 }
 
 .dark-blur-bg {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: rgba(255,255,255,1);
@@ -63,10 +65,16 @@ html.spaceport {
 .box-border {
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 15px;
-    background-color: rgba(0,0,0,0.5);
+    
     color: rgba(255,255,255,1);
     padding: 20px;
 }
+.blur-bg-danger {
+    background-color: rgba(83, 6, 6, 0.65) !important;
+
+}
+
+
 
 .menu-container {
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -93,8 +101,7 @@ a:hover img.logo {
 opacity: 0.9;
 }
 img.logo {
-    width: 300px;
-    float: left;
+    max-width: 300px;
     transition: all 0.5s ease;
 }
 /* Navbar */
@@ -138,27 +145,18 @@ header {
 /* Resources */
 
 .resources-container {
-   display: block;
-   clear: both;
-   width: 100%;
-   margin-top: 25px;
-   margin-bottom: 25px;
-   height: 52px;
-   z-index: 999;
-    display: block;
-    position: relative;
+  margin-top: 17px;
 }
 .resource {
-    float: left;
-    width: 19%;
-    padding: 5px;
     border-radius: 25px;
     height: 52px;
+    padding: 5px !important;
     border: 1px solid rgba(255,255,255,0.1);
     background-color: rgba(0,0,0,0.3);
     backdrop-filter: blur(10px);
-    margin-left: 1%;
     transition: all 0.5s ease;
+    position: relative;
+ 
     /*background-size: cover;
     background-image: none !important;
     overflow: hidden;*/
@@ -188,6 +186,7 @@ header {
     background-color: rgba(0,0,0,0.7);
     z-index:999;
     height: 95px;
+    margin-bottom: -70px;
     transform: scale(1.1);
    border-radius: 25px 25px 15px 15px
 
@@ -230,16 +229,19 @@ header {
 }
 .resource img {
     transition: all 0.5s ease;
-    transform: scale(2);
+    transform: scale(2); 
 }
 .resource:hover img {
     transform: scale(2.5);
 
 }
 
-/* Planet Box */
-.planet-box {
-    margin-top: 10px;
+/* center-content-box */
+.center-content-box {
+    transition: all 0.5s ease;
+    z-index: 9;
+    padding-top: 40px;
+    padding-bottom: 50px;
 }
 
 /* Main Menu */
@@ -247,8 +249,66 @@ header {
 .main-menu-container {
     border-radius: 0px 0px 25px 25px;
     padding: 5px;
-   width: 100%;
+   
    padding-top: 20px;
+   transition: all 0.5s ease;
+   margin-bottom: 50px;
+   min-width: 150px;
+   z-index: 99;
+    position: relative;
+    
+}
+
+#main-navigation {
+    transition: all 0.5s ease;
+}
+#main-navigation.main-menu-hidden {
+    width: 0% ;
+}
+.main-menu-hidden .main-menu-container {
+    transform:translateY(-100%);
+    opacity: 1;
+}
+.toggle-menu-button-container {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    transition: all 0.5s ease;
+}
+
+.toggle-menu-button:hover {
+    background-color: rgba(0,0,0,0.7);
+
+
+}
+.toggle-menu-button {
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0px 0px 50px 50px;
+    padding: 5px;
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.toggle-menu-button img {
+    max-height: 15px;
+    margin-top: -5px;
+    transform: scaleY(-1);
+    transition: all 0.5s ease;
+}
+.main-menu-hidden .toggle-menu-button {
+    margin-left: 50px;
+}
+
+.main-menu-hidden .toggle-menu-button img {
+    transform: scaleY(1);
+}
+.main-menu-hidden .main-menu {
+    display: none;
+
 }
 ul.main-menu, .main-menu li {
     list-style-type: none;
@@ -283,6 +343,8 @@ ul.main-menu, .main-menu li {
     font-weight: 700;
 }
 
+
+
 /* Settings */
 .settings_bg_img_select label img {
     opacity: 0.5;
@@ -304,4 +366,322 @@ ul.main-menu, .main-menu li {
 }
 .settings_bg_img_select input {
     display: none;
+}
+
+/* Planets Box */
+.planet-box {
+    background-size: cover;
+    min-height: 200px;
+    overflow: hidden;
+    z-index: 99;
+    transition: all 0.5s ease;
+    opacity: 1;
+    border: none;
+    position: relative;
+    text-decoration: none !important;
+    
+}
+a:hover .planet-box {
+    text-decoration: none;
+}
+.planet-box-small {
+  min-height: 100px !important;
+}
+
+.planet-inactive {
+  filter: grayscale(100%);
+}
+.planet-inactive:hover {
+  filter: grayscale(0%);
+
+}
+.planet-box:hover {
+    transform: scale(2);
+    z-index: 9999;
+    opacity: 1;
+}
+
+.planet-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%);
+   border-radius: 15px;
+}
+
+.planet-box * {
+    transition: all 0.5s ease;
+    text-decoration: none !important;
+    text-shadow: 0px 0px 12px #000000;
+    color: rgba(255,255,255,1);
+} 
+.planet-box .planet-moon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 0px solid rgba(255,255,255,0);
+  box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+-webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+position: relative;
+}
+.planet-box-small .planet-moon img {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+.planet-box .planet-moon:hover img {
+  transform: scale(1.5);
+  border: 1px solid rgba(255,255,255,1);
+}
+.planet-box .planet-moons {
+  padding-bottom: 5px;
+}
+.planet-box .planet-moon-active img {
+  border: 2px solid rgba(255,255,255,1);
+}
+.planet-url {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+.planet-moons-url {
+  position: relative;
+  z-index: 9999;
+}
+.planet-details, .planet-moon-details {
+  width: 100%;
+  padding: 10px;
+  font-family: var(--secondary-font-family);
+  font-size: 0.9em;
+  font-weight: 700;
+  margin-top: -100%;
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+}
+
+.planet-moon:hover .planet-moon-details, .planet-box:hover .planet-details {
+  margin-top: -50%;
+  opacity: 1;
+}
+.planet-moons:hover ~ .planet-details {
+  margin-top: -100%;
+  opacity: 0;
+}
+
+.planet-info {
+    bottom: 5px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+   
+    line-height: 1em;
+    
+    
+}
+.planet-coords {
+  font-size: 0.7em;
+}
+
+.planet-box:hover .planet-name {
+  font-weight: 700;
+}
+
+.planet-name {
+    font-family: var(--secondary-font-family);
+    font-size: 1.2em;
+    transition: all 0.5s ease;
+}
+.planet-box-small:hover .planet-info {
+    font-size: 0.7em;
+}
+
+/* ToolTip Notify */
+#tooltipNotify {
+    
+    bottom: 1vh;
+    z-index: 99999;
+    top: auto;
+    right: 1vw;
+    left: auto !important;
+}
+
+/* Buttons */
+
+  .uk-button {
+    
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.545);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 5px 25px;
+  margin-bottom: 5px;
+ 
+  color: rgba(255,255,255,1);
+  font-family: var(--secondary-font-family);
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.5s ease;
+  font-size: 1.2em;
+  }
+  a.uk-button {
+    color: rgba(255,255,255,1);
+  }
+  .uk-button:hover {
+    background-color: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,1);
+    transform: scale(1.1);
+  }
+
+  .uk-button-submit {
+    background-color: rgba(21, 166, 31, 0.545);
+  }
+
+  /* Loading Screen */
+  .spinner-box {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+  /* KEYFRAMES */
+
+@keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+  }
+  
+  @keyframes spin3D {
+    from {
+      transform: rotate3d(.5,.5,.5, 360deg);
+    }
+    to{
+      transform: rotate3d(0deg);
+    }
+  }
+  
+  @keyframes configure-clockwise {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes configure-xclockwise {
+    0% {
+      transform: rotate(45deg);
+    }
+    25% {
+      transform: rotate(-45deg);
+    }
+    50% {
+      transform: rotate(-135deg);
+    }
+    75% {
+      transform: rotate(-225deg);
+    }
+    100% {
+      transform: rotate(-315deg);
+    }
+  }
+  
+  @keyframes pulse {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: .25;
+      transform: scale(.75);
+    }
+  }
+  
+  /* GRID STYLING */
+ 
+
+  .leo {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+  }
+  
+  .blue-orbit {
+      width: 165px;
+      height: 165px;
+    border: 1px solid #91daffa5;
+    -webkit-animation: spin3D 3s linear .2s infinite;
+  }
+  
+  .green-orbit {
+      width: 120px;
+      height: 120px;
+    border: 1px solid #91ffbfa5;
+    -webkit-animation: spin3D 2s linear 0s infinite;
+  }
+  
+  .red-orbit {
+      width: 90px;
+      height: 90px;
+    border: 1px solid #ffca91a5;
+    -webkit-animation: spin3D 1s linear 0s infinite;
+  }
+  
+  .white-orbit {
+      width: 60px;
+      height: 60px;
+    border: 2px solid #ffffff;
+    -webkit-animation: spin3D 10s linear 0s infinite;
+  }
+  
+  .w1 {
+    transform: rotate3D(1, 1, 1, 90deg);
+  }
+  
+  .w2 {
+    transform: rotate3D(1, 2, .5, 90deg);
+  }
+  
+  .w3 {
+    transform: rotate3D(.5, 1, 2, 90deg);
+  }
+  
+  .three-quarter-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #fb5b53;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin .5s linear 0s infinite;
+  }
+
+  .uk-grid-small > * {
+    padding: 5px;
+    margin-top: 0px;
+  }
+  .uk-grid-small,
+.uk-grid-column-small {
+  margin-left: -5px;
 }

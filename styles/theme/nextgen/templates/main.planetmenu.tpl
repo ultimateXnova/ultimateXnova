@@ -1,97 +1,80 @@
 {if $AllPlanets}
+  <div class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m planets-container" uk-grid="">
   {foreach $AllPlanets as $PlanetRow}
-  <div class="dark-blur-bg box-border box-shadow-large planet-box
-  {if isset($PlanetRow.moonInfo)}
-    {if $PlanetRow.moonInfo[0].selected || $PlanetRow.selected}
-    border-danger
-    {else}
-    border-secondary
-    {/if}
-  {else}
-    {if $PlanetRow.selected}
-    border-danger
-    {else}
-    border-secondary
-    {/if}
-  {/if} w-75">
-    <a class="d-flex  hover-pointer text-decoration-none" href="game.php?page={$page}&amp;cp={$PlanetRow.id}" data-bs-toggle="tooltip"
-    data-bs-placement="left"
-    data-bs-html="true"
-    title="
-    <table class='table-tooltip fs-11'>
-      <thead>
-        <tr>
-          <th class='text-start color-yellow' colspan='2'>{$PlanetRow.name}&nbsp;[{$PlanetRow.galaxy}:{$PlanetRow.system}:{$PlanetRow.planet}]</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class='text-start color-blue fw-bold'>{$LNG.pm_fields}:</td>
-          <td class='text-end'>({$PlanetRow.field_current}&nbsp;/&nbsp;{$PlanetRow.field_max})</td>
-        </tr>
-        <tr>
-          <td class='text-start color-blue fw-bold'>{$LNG.pm_diameter}:</td>
-          <td class='text-end'>{$PlanetRow.diameter}</td>
-        </tr>
-        <tr>
-          <td class='text-start color-blue fw-bold'>{$LNG.pm_min_temperature}:</td>
-          <td class='text-end'>{$PlanetRow.temp_min}</td>
-        </tr>
-        <tr>
-          <td class='text-start color-blue fw-bold'>{$LNG.pm_max_temperature}:</td>
-          <td class='text-end'>{$PlanetRow.temp_max}</td>
-        </tr>
-      </tbody>
-    </table>
-    ">
-    {if !empty($PlanetRow)}
-      <img class="mx-2
-      {if $PlanetRow.selected}
-      border-yellow
-      {else}
-      hover-border-yellow
+
+      {if (isset($PlanetRow.moonInfo) && $PlanetRow.moonInfo[0].selected) || $PlanetRow.selected}
+        <div class="uk-width-1-1 uk-margin-remove-top">
+          
+            <div class=" uk-padding-remove box-border box-shadow-large planet-box planet-active" style="background-image: url('{$dpath}planeten/{$PlanetRow.image}.jpg');">
+            <a class="planet-url" href="game.php?page={$page}&amp;cp={$PlanetRow.id}">
+            &nbsp; </a>  
+           
+              <div class="planet-info">
+                <div class="planet-moons">
+                  {if isset($PlanetRow.moonInfo)}
+                    {foreach $PlanetRow.moonInfo as $MoonRow}
+                      
+                      <div class="planet-moon
+                    {if $MoonRow.selected} planet-moon-active{/if}
+                    ">
+                    
+                        <div class="planet-moon-details">
+                        {$LNG.pm_fields}: {$MoonRow.field_current}&nbsp;/&nbsp;{$MoonRow.field_max}<br>
+                        {$LNG.pm_diameter}: {$MoonRow.diameter}<br>
+                        {$LNG.pm_min_temperature}: {$MoonRow.temp_min}<br>
+                        {$LNG.pm_max_temperature}: {$MoonRow.temp_max}
+                        </div>
+                        <a class="planet-moons-url" href="game.php?page={$page}&amp;cp={$MoonRow.id}">
+                          <img  src="{$dpath}planeten/{$MoonRow.image}_small.webp" alt="{$MoonRow.name}">
+                        </a>
+                      </div>
+                    {/foreach}
+                  {/if}
+                </div>
+                <div class="planet-details">
+                    {$LNG.pm_fields}: {$PlanetRow.field_current}&nbsp;/&nbsp;{$PlanetRow.field_max}<br>
+                    {$LNG.pm_diameter}: {$PlanetRow.diameter}<br>
+                    {$LNG.pm_min_temperature}: {$PlanetRow.temp_min}<br>
+                    {$LNG.pm_max_temperature}: {$PlanetRow.temp_max}
+                    </div>
+                <div class="planet-name">{$PlanetRow.name}</div>
+                <div class="planet-coords">[{$PlanetRow.galaxy}:{$PlanetRow.system}:{$PlanetRow.planet}]</div>
+              </div>
+            </div>
+          
+      </div>
       {/if}
-      " src="{$dpath}planeten/{$PlanetRow.image}.jpg" width="50" height="50" alt="{$PlanetRow.name}">
-    <div class="d-flex flex-column text-yellow align-items-start justify-content-start fs-11">
-      <span>{$PlanetRow.name}</span>
-      <span>[{$PlanetRow.galaxy}:{$PlanetRow.system}:{$PlanetRow.planet}]</span>
-    </div>
-    {/if}
-  </a>
-    {if isset($PlanetRow.moonInfo)}
-    <a class="hover-pointer" href="game.php?page={$page}&amp;cp={$PlanetRow.moonInfo[0].id}" data-bs-toggle="tooltip"
-    data-bs-placement="left"
-    data-bs-html="true"
-    title="
-    <table class='table-tooltip fs-11'>
-      <thead>
-        <tr>
-          <th class='text-start color-yellow' colspan='2'>{$PlanetRow.moonInfo[0].name}&nbsp;[{$PlanetRow.moonInfo[0].galaxy}:{$PlanetRow.moonInfo[0].system}:{$PlanetRow.moonInfo[0].planet}]</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class='text-start color-blue fw-bold'>{$LNG.pm_fields}:</td>
-          <td class='text-end'>({$PlanetRow.moonInfo[0].field_current}&nbsp;/&nbsp;{$PlanetRow.moonInfo[0].field_max})</td>
-        </tr>
-        <tr>
-          <td class='text-start color-blue fw-bold'>{$LNG.pm_diameter}:</td>
-          <td class='text-end'>{$PlanetRow.moonInfo[0].diameter}</td>
-        </tr>
-        <tr>
-          <td class='text-start color-blue fw-bold'>{$LNG.pm_min_temperature}:</td>
-          <td class='text-end'>{$PlanetRow.moonInfo[0].temp_min}</td>
-        </tr>
-        <tr>
-          <td class='text-start color-blue fw-bold'>{$LNG.pm_max_temperature}:</td>
-          <td class='text-end'>{$PlanetRow.moonInfo[0].temp_max}</td>
-        </tr>
-      </tbody>
-    </table>
-    ">
-      <img class="mx-2 {if $PlanetRow.moonInfo[0].selected}border-yellow{else}hover-border-yellow{/if}" src="{$dpath}planeten/{$PlanetRow.moonInfo[0].image}.jpg" width="25" height="25" alt="{$PlanetRow.moonInfo[0].name}">
-    </a>
-    {/if}
-    </div>
+    
   {/foreach}
+  {foreach $AllPlanets as $PlanetRow}
+
+    {if !(isset($PlanetRow.moonInfo) && $PlanetRow.moonInfo[0].selected) && !$PlanetRow.selected}
+      <div class="uk-width-1-2 uk-margin-remove-top">
+      
+        <div class=" uk-padding-remove box-border box-shadow-large planet-box planet-box-small planet-inactive" style="background-image: url('{$dpath}planeten/{$PlanetRow.image}.jpg');">
+        <a class="planet-url" href="game.php?page={$page}&amp;cp={$PlanetRow.id}">
+        &nbsp; </a>   
+        <div class="planet-info">
+        <div class="planet-moons">
+        {if isset($PlanetRow.moonInfo)}
+          {foreach $PlanetRow.moonInfo as $MoonRow}
+            
+            <div class="planet-moon">
+              <a class="planet-moons-url" href="game.php?page={$page}&amp;cp={$MoonRow.id}">
+                <img  src="{$dpath}planeten/{$MoonRow.image}_small.webp" alt="{$MoonRow.name}">
+              </a>
+            </div>
+          {/foreach}
+        {/if}
+      </div>
+            <div class="planet-name">{$PlanetRow.name}</div>
+            <div class="planet-coords">[{$PlanetRow.galaxy}:{$PlanetRow.system}:{$PlanetRow.planet}]</div>
+          </div>
+        </div>
+      
+    </div>
+    {/if}
+  
+{/foreach}
+  </div>
 {/if}
