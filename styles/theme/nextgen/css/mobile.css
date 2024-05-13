@@ -1,0 +1,13 @@
+@media (max-width: 960px) {
+    #main-navigation {
+      width: 100% !important;
+    }
+    .main-menu-container, .toggle-menu-button-container  {
+      min-width: 100% !important;
+      width: 100% !important;
+    }
+    .toggle-menu-button, .toggle-menu-button-container {
+      margin: 0 auto !important;
+      
+    }
+  }
