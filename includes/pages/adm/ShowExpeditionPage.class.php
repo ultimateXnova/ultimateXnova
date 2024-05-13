@@ -23,6 +23,10 @@ class ShowExpeditionPage extends AbstractAdminPage
       'expedition_allow_resources_find' => $config->expedition_allow_resources_find,
       'expedition_allow_ships_find' => $config->expedition_allow_ships_find,
       'expedition_consider_holdtime' => $config->expedition_consider_holdtime,
+      'expedition_chances_percent_resources' => $config->expedition_chances_percent_resources,
+      'expedition_chances_percent_darkmatter' => $config->expedition_chances_percent_darkmatter,
+      'expedition_chances_percent_ships' => $config->expedition_chances_percent_ships,
+      'expedition_chances_percent_pirates' => $config->expedition_chances_percent_pirates,
       'expedition_consider_same_coordinate' => $config->expedition_consider_same_coordinate,
       'expedition_min_darkmatter_small_min' => $config->expedition_min_darkmatter_small_min,
       'expedition_min_darkmatter_small_max' => $config->expedition_min_darkmatter_small_max,
@@ -48,6 +52,10 @@ class ShowExpeditionPage extends AbstractAdminPage
       'expedition_allow_ships_find' => $config->expedition_allow_ships_find,
       'expedition_consider_holdtime' => $config->expedition_consider_holdtime,
       'expedition_consider_same_coordinate' => $config->expedition_consider_same_coordinate,
+      'expedition_chances_percent_resources' => $config->expedition_chances_percent_resources,
+      'expedition_chances_percent_darkmatter' => $config->expedition_chances_percent_darkmatter,
+      'expedition_chances_percent_ships' => $config->expedition_chances_percent_ships,
+      'expedition_chances_percent_pirates' => $config->expedition_chances_percent_pirates,
       'expedition_min_darkmatter_small_min' => $config->expedition_min_darkmatter_small_min,
       'expedition_min_darkmatter_small_max' => $config->expedition_min_darkmatter_small_max,
       'expedition_min_darkmatter_large_min' => $config->expedition_min_darkmatter_large_min,
@@ -66,6 +74,12 @@ class ShowExpeditionPage extends AbstractAdminPage
     $expedition_consider_holdtime = (HTTP::_GP('expedition_consider_holdtime', 'off') == 'on') ? 1 : 0;
     $expedition_consider_same_coordinate = (HTTP::_GP('expedition_consider_same_coordinate', 'off') == 'on') ? 1 : 0;
 
+    $chances_percent_resources = HTTP::_GP('expedition_chances_percent_resources',32.5);
+    $chances_percent_darkmatter = HTTP::_GP('expedition_chances_percent_darkmatter',9);
+    $chances_percent_ships = HTTP::_GP('expedition_chances_percent_ships',22);
+    $chances_percent_pirates = HTTP::_GP('expedition_chances_percent_pirates',8.4);
+    
+
     $expedition_min_darkmatter_small_min = HTTP::_GP('expedition_min_darkmatter_small_min',100);
     $expedition_min_darkmatter_small_max = HTTP::_GP('expedition_min_darkmatter_small_max',300);
     $expedition_min_darkmatter_large_min = HTTP::_GP('expedition_min_darkmatter_large_min',301);
@@ -83,6 +97,10 @@ class ShowExpeditionPage extends AbstractAdminPage
       'expedition_allow_ships_find' => $expedition_allow_ships_find,
       'expedition_consider_holdtime' => $expedition_consider_holdtime,
       'expedition_consider_same_coordinate' => $expedition_consider_same_coordinate,
+      'expedition_chances_percent_resources' => $chances_percent_resources,
+      'expedition_chances_percent_darkmatter' => $chances_percent_darkmatter,
+      'expedition_chances_percent_ships' => $chances_percent_ships,
+      'expedition_chances_percent_pirates' => $chances_percent_pirates,
       'expedition_min_darkmatter_small_min' => $expedition_min_darkmatter_small_min,
       'expedition_min_darkmatter_small_max' => $expedition_min_darkmatter_small_max,
       'expedition_min_darkmatter_large_min' => $expedition_min_darkmatter_large_min,
@@ -128,6 +146,11 @@ class ShowExpeditionPage extends AbstractAdminPage
     $expedition_consider_holdtime = 1;
     $expedition_consider_same_coordinate = 1;
 
+    $chances_percent_resources = 32.5;
+		$chances_percent_darkmatter = 9;
+		$chances_percent_ships = 22;
+		$chances_percent_pirates = 8.4;
+
     $expedition_min_darkmatter_small_min = 100;
     $expedition_min_darkmatter_small_max = 300;
     $expedition_min_darkmatter_large_min = 301;
@@ -145,6 +168,10 @@ class ShowExpeditionPage extends AbstractAdminPage
       'expedition_allow_ships_find' => $expedition_allow_ships_find,
       'expedition_consider_holdtime' => $expedition_consider_holdtime,
       'expedition_consider_same_coordinate' => $expedition_consider_same_coordinate,
+      'expedition_chances_percent_resources' => $chances_percent_resources,
+      'expedition_chances_percent_darkmatter' => $chances_percent_darkmatter,
+      'expedition_chances_percent_ships' => $chances_percent_ships,
+      'expedition_chances_percent_pirates' => $chances_percent_pirates,
       'expedition_min_darkmatter_small_min' => $expedition_min_darkmatter_small_min,
       'expedition_min_darkmatter_small_max' => $expedition_min_darkmatter_small_max,
       'expedition_min_darkmatter_large_min' => $expedition_min_darkmatter_large_min,

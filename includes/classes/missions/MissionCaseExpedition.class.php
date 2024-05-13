@@ -109,12 +109,22 @@ class MissionCaseExpedition extends MissionFunctions implements Mission
 		}
 
 
+		// New vars for easier changing of chances
+		$chances_percent_resources = $config->expedition_chances_percent_resources;
+		$chances_percent_darkmatter = $config->expedition_chances_percent_darkmatter;
+		$chances_percent_ships = $config->expedition_chances_percent_ships;
+		$chances_percent_pirates = $conig->expedition_chances_percent_pirates;
+
+		$chances_event_resources = $chances_percent_resources * 10;
+		$chances_event_darkmatter = $chances_event_resources + $chances_percent_darkmatter * 10;
+		$chances_event_ships = $chances_event_darkmatter + $chances_percent_ships * 10;
+		$chances_event_pirates = $chances_event_ships + $chances_percent_pirates * 10;
 
 
 		do {
 
 			// Find resources: 32,5%. Values from http://owiki.de/Expedition
-			if ($GetEvent < 325)
+			if ($GetEvent < $chances_event_resources)
 			{
 
 				if (!$config->expedition_allow_resources_find) { break; }
@@ -207,14 +217,14 @@ class MissionCaseExpedition extends MissionFunctions implements Mission
 			}
 
 			// Find Dark Matter: 9%. Values from 2Moons
-			elseif ($GetEvent < 415)
+			elseif ($GetEvent < $chances_event_darkmatter)
 			{
 
 				if (!$config->expedition_allow_darkmatter_find) { break; }
 
 				$eventSize   = mt_rand(0, 100);
 				$Size       = 0;
-
+				
 				// normal (89%)
 				if(10 < $eventSize) {
 					$Size		= mt_rand($config->expedition_min_darkmatter_small_min, $config->expedition_min_darkmatter_small_max);
@@ -236,7 +246,7 @@ class MissionCaseExpedition extends MissionFunctions implements Mission
 			}
 
 			// Find abandoned ships: 22%. Values from http://owiki.de/Expedition
-			elseif ($GetEvent < 635)
+			elseif ($GetEvent < $chances_percent_ships)
 			{
 
 				if (!$config->expedition_allow_ships_find) { break; }
@@ -400,7 +410,7 @@ class MissionCaseExpedition extends MissionFunctions implements Mission
 			}
 
 			// Find pirates or aliens: 8,4% - 5.8% pirates or 2.6% aliens.
-			elseif ($GetEvent < 719)
+			elseif ($GetEvent < $chances_event_pirates)
 			{
 
 				if (!$config->expedition_allow_expedition_war) { break; }
