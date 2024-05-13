@@ -1,0 +1,3 @@
+src export-ignore /screenshots
+src export-ignore /Dockerfile
+src export-ignore /docker-compose.yml
