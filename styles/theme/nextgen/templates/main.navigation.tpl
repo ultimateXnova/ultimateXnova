@@ -85,14 +85,16 @@
     <div class="toggle-menu-button dark-blur-bg" onclick="document.getElementById('main-navigation').classList.toggle('main-menu-hidden'); saveMenuStateToSession();">
       <div class="toggle-menu-button-icon"><img src="styles/theme/nextgen/img/menu-button.svg" alt="menu"></div>
       <script>
-      window.addEventListener('resize', function() {
+       function checkMobileScreen() {
         var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         var mainNavigation = document.getElementById('main-navigation');
         
         if (screenWidth < 960) {
           mainNavigation.classList.add('main-menu-hidden');
         }
-      });
+      }
+      checkMobileScreen();
+     
       // Function to save the last state of menu hidden to the session
       function saveMenuStateToSession() {
         var mainNavigation = document.getElementById('main-navigation');
