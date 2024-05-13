@@ -126,3 +126,34 @@ select#universe {
     display: inline-block;
     border-radius: 5px;
   }
+  .logo {
+   
+    width: 300px;
+ }
+
+  @media (max-width: 750px) {
+    .uk-navbar-nav {
+        display: none;
+    }
+
+    .login-container, .description-container{
+        padding: 20px;
+        margin-top: 0vh;
+        width: 100%;
+        float: none;
+        max-width: none !important;
+        margin-bottom: 25px;
+    }
+    .description-container {
+        float:none;
+        text-align: center;
+    }
+    .logo {
+   
+        width: 200px;
+     }
+     .main-menu {
+        padding: 30px !important;
+       
+      }
+}
