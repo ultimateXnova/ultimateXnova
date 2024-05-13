@@ -88,62 +88,68 @@
 </div>
 <div class="dark-blur-bg menu-container box-shadow-large">
 	<div class="uk-container">
-    <nav id="navbar" class="uk-navbar">
-      <div class="uk-navbar-left"><a href="game.php?page=overview"><img class="logo" src="styles/resource/images/ultimatexnova.svg"/></a></div>
-      <div class="uk-navbar-right">
+    <div class="uk-grid" uk-grid>
+      <div class="uk-width-1-1 uk-width-1-5@m uk-text-center"><a href="game.php?page=overview"><img class="logo" src="styles/resource/images/ultimatexnova.svg"/></a></div>
+      <div class="uk-width-1-1 uk-flex-middle uk-flex-center uk-width-4-5@m uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m uk-grid-small uk-grid-row-collapse uk-padding-top-remove uk-margin-remove-top " uk-grid>
+        <!-- New Resource panel -->
        
-      </div> 
-      <!-- New Resource panel -->
-      <div class="resources-container">
-      {foreach $resourceTable as $resourceID => $resourceData}
-        {if !isset($resourceData.current)}
-          {$resourceData.currentt = $resourceData.max + $resourceData.used}
-        {else}
-          {$resourceData.currentt = 1}
-        {/if}
-        <div class="resource {$resourceData.name} {if $resourceData.currentt > 0}resource-positive{else}resource-negative{/if}">
-          <!-- Picture -->
-          <div class="resource-picture">
-            <img onclick="return Dialog.info({$resourceID});" src="{$dpath}img/resources/{$resourceData.name}.webp">
-          </div>
-          <!-- Text -->
-          <div class="resource-content">
-            <div class="resource-name">
-            {$LNG.tech.$resourceID}
-            </div>
-          
-            {if !isset($resourceData.current)}
+        {foreach $resourceTable as $resourceID => $resourceData}
+          {if !isset($resourceData.current)}
             {$resourceData.currentt = $resourceData.max + $resourceData.used}
-              <div class="res_current fs-10 {if $resourceData.currentt > 0}color-green{else}color-red{/if}">
-                {$resourceData.currentt|number}
-              </div>
-            {else}
-              <div class="res_current fs-10" id="current_{$resourceData.name}" data-real="{$resourceData.current}">{$resourceData.current|number}</div>
-            {/if}
-          </div>
-          <!-- Tooltip -->
-          <div class="resource-tooltip">
-          {if in_array($resourceID,array(901,902,903))}
-            <!--{$LNG.resource_available}: {$resourceData.current|number}<br>-->
-            {$LNG.resource_capacity}: {$resourceData.max|number}<br>
-            {$LNG.resource_production}: <span class="{if $resourceData.current < $resourceData.max}color-green{else}color-red{/if}">
-              {if $resourceData.current < $resourceData.max}
-              {$resourceData.production|number}&nbsp;/&nbsp;{$LNG.short_hour}
-              {else}
-              0
-              {/if}
-          {elseif $resourceID == 911}
-           
-            {$LNG.energy_used}: {$resourceData.used|number}&nbsp;/&nbsp;{$LNG.short_hour}<br>
-            {$LNG.energy_produced}: {$resourceData.max|number}&nbsp;/&nbsp;{$LNG.short_hour}<br>
-          {elseif $resourceID == 921}
-            
+          {else}
+            {$resourceData.currentt = 1}
           {/if}
+          <div class="">
+            <div class="uk-flex-middle resource {$resourceData.name} {if $resourceData.currentt > 0}resource-positive{else}resource-negative{/if} 
+              {if in_array($resourceID,array(901,902,903))}  {$resourceData.production}
+                {if $resourceData.current >= $resourceData.max }resource-negative{/if}
+              {/if}
+                ">
+          
+              <!-- Picture -->
+              <div class="resource-picture">
+                <img onclick="return Dialog.info({$resourceID});" src="{$dpath}img/resources/{$resourceData.name}.webp">
+              </div>
+              <!-- Text -->
+              <div class="resource-content">
+                <div class="resource-name">
+                {$LNG.tech.$resourceID}
+                </div>
+              
+                {if !isset($resourceData.current)}
+                {$resourceData.currentt = $resourceData.max + $resourceData.used}
+                  <div class="res_current fs-10 {if $resourceData.currentt > 0}color-green{else}color-red{/if}">
+                    {$resourceData.currentt|number}
+                  </div>
+                {else}
+                  <div class="res_current fs-10" id="current_{$resourceData.name}" data-real="{$resourceData.current}">{$resourceData.current|number}</div>
+                {/if}
+              </div>
+              <!-- Tooltip -->
+              <div class="resource-tooltip">
+              {if in_array($resourceID,array(901,902,903))}
+                <!--{$LNG.resource_available}: {$resourceData.current|number}<br>-->
+                {$LNG.resource_capacity}: {$resourceData.max|number}<br>
+                {$LNG.resource_production}: <span class="{if $resourceData.current < $resourceData.max}color-green{else}color-red{/if}">
+                  {if $resourceData.current < $resourceData.max}
+                  {$resourceData.production|number}&nbsp;/&nbsp;{$LNG.short_hour}
+                  {else}
+                  0
+                  {/if}
+              {elseif $resourceID == 911}
+              
+                {$LNG.energy_used}: {$resourceData.used|number}&nbsp;/&nbsp;{$LNG.short_hour}<br>
+                {$LNG.energy_produced}: {$resourceData.max|number}&nbsp;/&nbsp;{$LNG.short_hour}<br>
+              {elseif $resourceID == 921}
+                
+              {/if}
+              </div>
+            </div>
           </div>
-        </div>
-      {/foreach}
+        {/foreach}
+        
       </div>
-    </nav>
+    </div>
    
   </div>
 </div>
