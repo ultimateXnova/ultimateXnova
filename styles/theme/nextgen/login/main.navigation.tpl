@@ -71,21 +71,24 @@
 		</div>
 	</div>
 
-	<div class="offcanvas offcanvas-start" id="phoneMenu">
-	  <div class="offcanvas-header bg-dark">
+	<div class="offcanvas offcanvas-start dark-blur-bg box-shadow" id="phoneMenu">
+	  <div class="offcanvas-header">
 	    <span class="offcanvas-title fs-2">{$gameName}</span>
 	    <button type="button" class="btn-close btn-close-white" aria-label="Close" data-bs-dismiss="offcanvas"></button>
 	  </div>
-	  <div class="offcanvas-body p-0 bg-dark">
+	  <div class="offcanvas-body p-0" >
 
-	    <ul style="list-style:none;" class="p-0 m-0 bg-dark p-0 m-0">
+	    <ul style="list-style:none;" class="main-menu p-0 m-0" p-0 m-0">
 					<li class="menu-item">
 	  				<a class="fs-6 w-100 hover-color-yellow text-decoration-none py-2 border-light {if $page == 'index'}active{/if}" href="index.php?page=index">{$LNG.siteTitleIndex}</a>
 	  			</li>
 	  			<li class="menu-item">
 	  				<a class="fs-6 w-100 hover-color-yellow text-decoration-none py-2 border-light {if $page == 'news'}active{/if}" href="index.php?page=news">{$LNG.siteTitleNews}</a>
 	  			</li>
-	  			<li class="menu-item">
+				<li class="menu-item">
+					<a class="fs-6 w-100 hover-color-yellow text-decoration-none py-2 border-light {if $page == 'register'}active{/if}" href="index.php?page=register">{$LNG.siteTitleRegister}</a>
+				</li>
+	  			<!-- <li class="menu-item">
 	  				<a class="fs-6 w-100 hover-color-yellow text-decoration-none py-2 border-light {if $page == 'screens'}active{/if}" href="index.php?page=screens">{$LNG.siteTitleScreens}</a>
 	  			</li>
 	  			<li class="menu-item">
@@ -93,7 +96,7 @@
 	  			</li>
 	  			<li class="menu-item">
 	  				<a class="fs-6 w-100 hover-color-yellow text-decoration-none py-2 border-light {if $page == 'battleHall'}active{/if}" href="index.php?page=battleHall">{$LNG.siteTitleBattleHall}</a>
-	  			</li>
+	  			</li> -->
 	  			<li class="menu-item">
 	  				<a class="fs-6 w-100 hover-color-yellow text-decoration-none py-2 border-light {if $page == 'rules'}active{/if}" href="index.php?page=rules">{$LNG.siteTitleRules}</a>
 	  			</li>
