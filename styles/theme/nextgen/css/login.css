@@ -143,6 +143,11 @@ select#universe {
         float: none;
         max-width: none !important;
         margin-bottom: 25px;
+        display: block;
+    }
+
+    .login-container {
+        margin-bottom: 105px !important;
     }
     .description-container {
         float:none;
