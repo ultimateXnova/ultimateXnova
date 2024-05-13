@@ -4,17 +4,35 @@
 	
 		{include file="main.topnav.tpl"}
 		<div class="uk-container">
-			<div class="tm-grid-expand uk-grid-column-small uk-grid-margin uk-grid">
-				{if $page != "imperium"}
-					<div class="uk-width-1-5@m uk-first-column uk-padding-remove">
+			<div class="uk-margin uk-grid" uk-grid>
+				
+					<div class="uk-width-1-5@m uk-text-center" id="main-navigation">
 						{include file="main.navigation.tpl"}
 					</div>
-					{/if}
-						<div class="{if $page!='imperium'}uk-width-3-5@m{else}uk-width-1-1@m{/if} ">
-							<content class="content-wrapper">
+					
+						<div class="uk-width-expand@m center-content-box">
+							
+							<div class="loading dark-blur-bg box-border" style="display: none;">
+								<div class="spinner-box">
+								<div class="blue-orbit leo">
+								</div>
+
+								<div class="green-orbit leo">
+								</div>
+								
+								<div class="red-orbit leo">
+								</div>
+								
+								<div class="white-orbit w1 leo">
+								</div><div class="white-orbit w2 leo">
+								</div><div class="white-orbit w3 leo">
+								</div>
+								</div>
+							</div>
+							<content class="content-wrapper" if="content">
 								{if $hasAdminAccess}
-								<div class="alert alert-danger my-2 p-2 fs-12 globalWarning">
-								{$LNG.admin_access_1} <a class="fw-bold hover-underline hover-pointer text-danger" id="drop-admin">{$LNG.admin_access_link}</a>{$LNG.admin_access_2}
+								<div class="dark-blur-bg box-border blur-bg-danger">
+								{$LNG.admin_access_1} <a class="fw-bold hover-underline hover-pointer" id="drop-admin">{$LNG.admin_access_link}</a>{$LNG.admin_access_2}
 								</div>
 								{/if}
 								{if $closed}
@@ -27,12 +45,14 @@
 								{if $page != "imperium"}
 								{include file="fleetTable.tpl"}
 								{/if}
-								{block name="content"}{/block}
+								<div class="dark-blur-bg box-border">
+									{block name="content"}{/block}
+								</div>
 								<table class="hack"></table>
 							</content>
 						</div>
 						{if $page != "imperium"}
-						<div class="uk-width-1-5@m uk-padding-remove">
+						<div class="uk-width-1-5@m uk-margin">
 							{include file="main.planetmenu.tpl"}
 						</div>
 						{/if}
@@ -120,6 +140,6 @@
 	</footer>
 
 </div>
-
+	
 </body>
 </html>
