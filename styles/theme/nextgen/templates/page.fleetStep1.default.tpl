@@ -63,10 +63,10 @@
 	</tr>
 	<tr style="height:20px;">
 		<td>
-			<a href="javascript:setTarget({$galaxy},{$system},16,1);updateVars();">{$LNG.type_mission_15}[{$galaxy}:{$system}:16]</a>
+			<a class="uk-button uk-button-default uk-button-small" href="javascript:setTarget({$galaxy},{$system},16,1);updateVars();">{$LNG.type_mission_15}[{$galaxy}:{$system}:16]</a>
 		</td>
 		<td>
-			<a href="javascript:setTarget({$galaxy},{$system},17,1);updateVars();">{$LNG.type_mission_16}[{$galaxy}:{$system}:17]</a>
+			<a class="uk-button uk-button-default uk-button-small" href="javascript:setTarget({$galaxy},{$system},17,1);updateVars();">{$LNG.type_mission_16}[{$galaxy}:{$system}:17]</a>
 		</td>
 	</tr>
 </table>
@@ -170,7 +170,7 @@
 	{/if}
 	<table class="table table-gow table-sm fs-12" style="table-layout: fixed;">
 		<tr style="height:20px;">
-			<td class="text-center"><input class="button-upgrade" type="submit" value="{$LNG.fl_continue}"></td>
+			<td class="text-center"><input class="uk-button uk-button-submit uk-button-small" type="submit" value="{$LNG.fl_continue}"></td>
 		</tr>
 	</table>
 </form>
