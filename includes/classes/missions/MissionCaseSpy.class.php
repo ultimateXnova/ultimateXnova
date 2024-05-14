@@ -161,8 +161,12 @@ class MissionCaseSpy extends MissionFunctions implements Mission
 			'LNG'			=> $LNG
 		), false);
 
-
-		$spyReport	= $template->fetch('styles/templates/theme/'. $senderUser['dpath'] . '/shared.mission.spyReport.tpl');
+		if(file_exists('styles/templates/theme/'. $senderUser['dpath'] . '/shared.mission.spyReport.tpl')) {
+			$template_path_spyReport = 'styles/templates/theme/'. $senderUser['dpath'] . '/shared.mission.spyReport.tpl';
+		} else {
+			$template_path_spyReport = 'styles/theme/'. $senderUser['dpath'] . '/templates/shared.mission.spyReport.tpl';
+		}
+		$spyReport	= $template->fetch($template_path_spyReport);
 
 		PlayerUtil::sendMessage($this->_fleet['fleet_owner'], 0, $LNG['sys_mess_qg'], 0, $LNG['sys_mess_spy_report'],
 			$spyReport, $this->_fleet['fleet_start_time'], NULL, 1, $this->_fleet['fleet_universe']);
