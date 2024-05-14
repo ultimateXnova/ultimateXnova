@@ -46,6 +46,7 @@ class ShowActivePage extends AbstractAdminPage
 			$users[]	= array(
 				'id'			=> $currentUser['validationID'],
 				'name'			=> $currentUser['userName'],
+				'username'		=> $currentUser['userName'],
 				'date'			=> _date($LNG['php_tdformat'], $currentUser['date'], $USER['timezone']),
 				'email'			=> $currentUser['email'],
 				'ip'			=> $currentUser['ip'],
