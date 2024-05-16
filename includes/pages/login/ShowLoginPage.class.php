@@ -77,24 +77,30 @@ class ShowLoginPage extends AbstractLoginPage
 
 		if (!empty($password) && !empty($userEmail)) {
 			$sql = "SELECT id, password FROM %%USERS%% WHERE email = :email AND universe = :universe;";
-
-
-
+	
 			$loginData = $db->selectSingle($sql, array(
 				':email'	=> $userEmail,
 				':universe'	=> $universe,
 			));
 
-
 			if (!$loginData) {
-				$error[] = $LNG['login_error_3'];
+				// Check with username
+				$sql = "SELECT id, password FROM %%USERS%% WHERE username = :email AND universe = :universe;";
+	
+				$loginData = $db->selectSingle($sql, array(
+					':email'	=> $userEmail,
+					':universe'	=> $universe,
+				));
+				if (!$loginData) {
+					$error[] = $LNG['login_error_3'];
+				}
 			}
-
 		}
 
 		if (empty($rememberedTokenValidator) || empty($rememberedTokenSelector) || $rememberedEmail != $userEmail || $password != 'password') { //verify with password
-
+			
 			if (isset($loginData['password'])) {
+				
 				if (!password_verify($password,$loginData['password'])) {
 					$error[] = $LNG['login_error_5'];
 				}
@@ -103,7 +109,7 @@ class ShowLoginPage extends AbstractLoginPage
 
 
 
-		}else { //verify with token
+		} else { //verify with token
 
 			//if user type a random password
 
