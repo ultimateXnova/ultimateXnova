@@ -15,6 +15,20 @@
 			</td>
 		</tr>
 		{/if}
+		{if $isMultiUniverse}
+		<tr>
+			<th class="text-center" colspan="2">{$LNG.multiUniverse}</th>
+		</tr>
+		<tr>
+			<td class="text-center" colspan="2">
+				{foreach $availableUniverses as $universe}
+					Test {$universe}
+				{/foreach}
+			</td>
+
+		</tr>
+		{/if}
+		
 		<tr>
 			<th class="text-center" colspan="2">{$LNG.op_user_data}</th>
 		</tr>

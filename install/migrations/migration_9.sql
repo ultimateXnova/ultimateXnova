@@ -1,0 +1,1 @@
+ALTER TABLE `%PREFIX%users` ADD `child_of` int(11) NOT NULL DEFAULT '0',

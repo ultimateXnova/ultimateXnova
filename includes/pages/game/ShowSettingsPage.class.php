@@ -76,15 +76,38 @@ class ShowSettingsPage extends AbstractGamePage
 				'galaxyMessage' 	=> $USER['settings_wri'],
 				'blockPM' 			=> $USER['settings_blockPM'],
 				'userid'		 	=> $USER['id'],
+				'availableUniverses' => $this->getFreeUniverses($USER['id']),
+				'isMultiUniverse'	=> count(Universe::availableUniverses()) > 1,
 				'ref_active'		=> $config->ref_active,
 				'SELF_URL'          => PROTOCOL.HTTP_HOST.HTTP_ROOT,
 				'let_users_change_theme' => $config->let_users_change_theme,
 			));
 
+		
+
 			$this->display('page.settings.default.tpl');
 		}
 	}
+	private function getFreeUniverses($playerID) {
+		global $USER;
+		$universes_original = Universe::availableUniverses();
+		$universe = $USER['universe'];
 
+		// Get parent ID and the parent universe of player
+
+		// Get all childs from the player
+
+		// List all universes and then check if the player already has an account or child account in that universe
+		// If not, add it to the list of available universes
+		foreach($universes_original as $universe) {
+			if($universe != $USER['universe']) {
+				$universes[] = $universe;
+			} else {
+				//$universes[] = $universe;
+			}
+		}
+		return $universes;
+	}
 	private function CheckVMode()
 	{
 		global $USER, $PLANET;

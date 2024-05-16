@@ -860,6 +860,7 @@ CREATE TABLE `%PREFIX%users` (
   `password` varchar(60) NOT NULL DEFAULT '',
   `email` varchar(64) NOT NULL DEFAULT '',
   `email_2` varchar(64) NOT NULL DEFAULT '',
+  `child_of` int(11) NOT NULL DEFAULT '0',
   `lang` varchar(2) NOT NULL DEFAULT 'de',
   `authattack` tinyint(1) NOT NULL DEFAULT '0',
   `authlevel` tinyint(1) NOT NULL DEFAULT '0',

@@ -76,7 +76,7 @@ class PlayerUtil
 			|| $config->max_planets < $position);
 	}
 
-	static public function createPlayer($universe, $userName, $userPassword, $userMail, $userLanguage = NULL, $galaxy = NULL, $system = NULL, $position = NULL, $name = NULL, $authlevel = 0, $userIpAddress = NULL, $user_secret_question_id = 0, $user_secret_question_answer = '')
+	static public function createPlayer($universe, $userName, $userPassword, $userMail, $userLanguage = NULL, $galaxy = NULL, $system = NULL, $position = NULL, $name = NULL, $authlevel = 0, $userIpAddress = NULL, $user_secret_question_id = 0, $user_secret_question_answer = '', $child_of = false)
 	{
 		$config	= Config::get($universe);
 
@@ -130,11 +130,33 @@ class PlayerUtil
 
 
 
-
-		$params			= array(
+		if($child_of != "0") {
+			// If the user is a child of another user, we need to set the most parameters to 0
+			$params			= array(
+				':username'				=> $userName,
+				':email'				=> "0",
+				':email2'				=> "0",
+				':child_of'				=> $child_of,
+				':user_secret_question_id' => "0",
+				':user_secret_question_answer' => "0",
+				':authlevel'			=> "0",
+				':universe'				=> $universe,
+				':language'				=> "0",
+				':registerAddress'		=> !empty($userIpAddress) ? $userIpAddress : Session::getClientIp(),
+				':onlinetime'			=> TIMESTAMP,
+				':registerTimestamp'	=> TIMESTAMP,
+				':password'				=> "0",
+				':dpath'				=> "0",
+				':timezone'				=> "0",
+				':nameLastChanged'		=> 0,
+				':darkmatter_start'		=> $config->darkmatter_start,
+			);
+		} else {
+			$params			= array(
 			':username'				=> $userName,
 			':email'				=> $userMail,
 			':email2'				=> $userMail,
+			':child_of'				=> $child_of,
 			':user_secret_question_id' => $user_secret_question_id,
 			':user_secret_question_answer' => $user_secret_question_answer,
 			':authlevel'			=> $authlevel,
@@ -149,11 +171,14 @@ class PlayerUtil
 			':nameLastChanged'		=> 0,
 			':darkmatter_start'		=> $config->darkmatter_start,
 		);
+		}
+		
 
 		$sql = 'INSERT INTO %%USERS%% SET
 		`username`		= :username,
 		`email`			= :email,
 		`email_2`			= :email2,
+		`child_of`		= :child_of,
 		`user_secret_question_id` = :user_secret_question_id,
 		`user_secret_question_answer` = :user_secret_question_answer,
 		`authlevel`		= :authlevel,
@@ -217,6 +242,50 @@ class PlayerUtil
 		$config->save();
 
 		return array($userId, $planetId);
+	}
+
+	 public function duplicatePlayer($player_id, $universe) {
+		// This function is used to clone a player account to a different universe
+		// It will write the original player_id into the child_of column of the new player
+		// The password and the e-mail will be empty, as they will be fetched from the original player
+
+		$db = Database::get();
+
+		
+		// Check if user already has a child account in this universe
+		$sql = "SELECT id FROM %%USERS%% WHERE child_of = :player_id AND universe = :universe;";
+		$child = $db->selectSingle($sql, array(':player_id' => $player_id, ':universe' => $universe));
+
+		if($child) {
+			// If the user already has a child account in this universe, return the child account id
+			return $child['id'];
+		} else {
+			// Get the parent id of the player
+			$parent = $this->getParentPlayer($player_id);
+			$sql = "SELECT * FROM %%USERS%% WHERE id = :player_id;";
+			$player = $db->selectSingle($sql, array(':player_id' => $parent["id"]));
+
+			$this->createPlayer($universe, $player['username'], "", $player['email'], $player['lang'], $player['galaxy'], $player['system'], $player['planet'], $player['username'], 0, $player['ip_at_reg'], $player['user_secret_question_id'], $player['user_secret_question_answer'], $player_id);
+			
+		}
+
+	}
+
+	 public function getParentPlayer($player_id) {
+		// This function is used to get the parent player of a child account
+		// It will return the player_id of the parent account, or 0 if the account is not a child account
+
+		$db = Database::get();
+
+		$sql = "SELECT child_of FROM %%USERS%% WHERE id = :player_id;";
+		$child = $db->selectSingle($sql, array(':player_id' => $player_id));
+		if($child['child_of'] == $player_id) {
+			$child_of = 0;
+		} else {
+			$child_of = $child['child_of'];
+		}
+
+		return $child_of;
 	}
 
 	static public function updateColonyWithStartValues($planetID){
