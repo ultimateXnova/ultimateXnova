@@ -75,11 +75,17 @@ function loginSubmit(activeRecaptcha,use_recaptcha_on_login){
 					<input id="rememberedTokenSelector" type="hidden" name="rememberedTokenSelector" value="{$rememberedTokenSelector}">
 					<input id="rememberedTokenValidator" type="hidden" name="rememberedTokenValidator" value="{$rememberedTokenValidator}">
 					<div class="d-flex flex-column form-group">
+						
+						{if $isMultiUniverse}
 						<select class="form-select my-2 w-100" name="uni" id="universe" >
 							{foreach $universeSelect as $universeID => $currentUniverse}
 								<option class="fs-6" {if $currentUniverse == $rememberedUniverseID}selected{/if} value="{$universeID}">{$currentUniverse}</option>
 							{/foreach}
 						</select>
+						{else}
+							<input type="hidden" name="uni" value="{$universeID}">
+						{/if}
+						
 						<input class="form-control fs-6 my-2 w-100" id="userEmail" type="text" name="userEmail" placeholder="{$LNG.login_email}" value="{if !empty($rememberedEmail) && $rememberedEmail}{$rememberedEmail}{/if}">
 						<input class="form-control fs-6 my-2 w-100" id="password" type="password" name="password" placeholder="{$LNG.loginPassword}" value="{if $rememberedPassword}password{/if}">
 						{if $recaptchaEnable && $use_recaptcha_on_login}

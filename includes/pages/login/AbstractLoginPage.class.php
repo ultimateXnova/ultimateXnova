@@ -62,6 +62,11 @@ abstract class AbstractLoginPage
 		return $universeSelect;
 	}
 
+	protected function isMultiverse()
+	{
+		return count(Universe::availableUniverses()) > 1;
+	}
+
 	protected function initTemplate()
 	{
 		if(isset($this->tplObj))
@@ -136,6 +141,7 @@ abstract class AbstractLoginPage
 			'languages'				=> Language::getAllowedLangs(false),
 			'loginInfo'				=> sprintf($LNG['loginInfo'], '<a href="index.php?page=rules">'.$LNG['menu_rules'].'</a>'),
 			'universeSelect'		=> $universeSelect,
+			'isMultiUniverse'		=> $this->isMultiverse(),
 			'page' => HTTP::_GP('page',''),
 		));
 	}

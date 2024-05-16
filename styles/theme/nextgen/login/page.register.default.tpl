@@ -65,10 +65,16 @@
 		<input type="hidden" value="{$externalAuth.account}" name="externalAuth[account]">
 		<input type="hidden" value="{$externalAuth.method}" name="externalAuth[method]">
 		<input id="referralID" type="hidden" value="{$referralData.id}" name="referralID">
+		{if $isMultiUniverse}
 		<div class="form-group d-flex flex-md-row flex-column justify-content-md-between align-items-center my-2">
 			<label class="fs-6 my-2 text-start w-100" for="universe">{$LNG.universe}</label>
-			<select style="text-indent:5px;" class="bg-dark text-white form-select d-flex align-items-center my-2 fs-6 w-100 mx-0 px-0" name="uni" id="universe" class="changeAction">{html_options options=$universeSelect selected=$UNI}</select>
+			<select style="text-indent:5px;" class="bg-dark text-white form-select d-flex align-items-center my-2 fs-6 w-100 mx-0 px-0" name="uni" id="universe" class="changeAction">
+			{html_options options=$universeSelect selected=$UNI}
+			</select>
 		</div>
+		{else}
+			<input type="hidden" name="uni" value="{$UNI}">
+		{/if}
 		{if !empty($error.uni)}
 			<span class="error errorUni"></span>
 		{/if}
