@@ -46,7 +46,7 @@ $LNG['universe']					= 'Universe';
 $LNG['uni_closed']					= ' (closed)';
 
 // Button
-$LNG['buttonRegister']				= 'Regist Now!';
+$LNG['buttonRegister']				= 'Register Now!';
 $LNG['buttonScreenshot']			= 'Screenshots';
 $LNG['buttonLostPassword']			= 'Lost Password?';
 
@@ -67,7 +67,7 @@ $LNG['loginPassword']				= 'Password';
 $LNG['loginButton']					= 'Login';
 $LNG['loginInfo']					= 'With the login I accept the %s.';
 $LNG['loginWelcome']				= 'Welcome to %s';
-$LNG['loginServerDesc']				= '%s s a text-based space strategy game. Conquer planets, build your fleet, and fight against other players. <br><b>OpenSource and Free2Play!</b>';
+$LNG['loginServerDesc']				= '%s is a text-based space strategy game. Conquer planets, build your fleet, and fight against other players. <br><b>OpenSource and Free2Play!</b>';
 
 // Register
 $LNG['registerFacebookAccount']		= 'Facebook Account';
