@@ -83,7 +83,9 @@ function loginSubmit(activeRecaptcha,use_recaptcha_on_login){
 							{/foreach}
 						</select>
 						{else}
-							<input type="hidden" name="uni" value="{$universeID}">
+							{foreach $universeSelect as $universeID => $currentUniverse}
+								<input type="hidden" name="uni" value="{$universeID}">
+							{/foreach}
 						{/if}
 						
 						<input class="form-control fs-6 my-2 w-100" id="userEmail" type="text" name="userEmail" placeholder="{$LNG.login_email}" value="{if !empty($rememberedEmail) && $rememberedEmail}{$rememberedEmail}{/if}">
