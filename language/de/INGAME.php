@@ -1002,6 +1002,10 @@ $LNG['op_dst_mode_sel'][2]					= 'Automatisch';
 $LNG['op_timezone']						= 'Zeitzone';
 $LNG['op_block_pm']						= 'Private Nachrichten blockieren';
 
+$LNG['multiUniverse']                       = 'Multi Universe';
+$LNG['multiUniverseDescription']             = 'Du kannst mit deinem Account weitere Universen betreten, indem du auf den Button klickst. Die Universen sind nicht miteinander verbunden.';
+$LNG['startInMultiUniverse']                 = 'Starte in ';
+
 //----------------------------------------------------------------------------//
 //BANNED
 $LNG['bn_no_players_banned']					= 'Zurzeit ist kein Spieler gesperrt';

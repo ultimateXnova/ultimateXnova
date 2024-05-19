@@ -214,8 +214,11 @@ abstract class AbstractGamePage
 				$avatar = json_decode(Session::load()->data->account->json_metadata)->profile->profile_image;
 			}catch(Exception $e){}
 		}
-
-
+		if($themeSettings == NULL)
+		{
+			$themeSettings['TOPNAV_SHORTLY_NUMBER'] = 0;
+		}
+		
 		$this->assign(array(
 			'PlanetSelect'		=> $PlanetSelect,
 			'new_message' 		=> $USER['messages'],

@@ -20,10 +20,16 @@
 			<th class="text-center" colspan="2">{$LNG.multiUniverse}</th>
 		</tr>
 		<tr>
+			<th class="text-center" colspan="2">{$newUniMsg}</th>
+		</tr>
+		<tr>
+			<th class="text-center" colspan="2">{$LNG.multiUniverseDescription}</th>
+		</tr>
+		<tr>
 			<td class="text-center" colspan="2">
-				{foreach $availableUniverses as $universe}
-					Test {$universe}
-				{/foreach}
+			{foreach $availableUniverses as $universeID => $universeName}
+				<a href="game.php?page=settings&startinuni={$universeID}" class="uk-button">{$LNG.startInMultiUniverse} {$universeName}</a>
+			{/foreach}
 			</td>
 
 		</tr>

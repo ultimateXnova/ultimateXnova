@@ -43,6 +43,11 @@ class Universe {
 		self::$availableUniverses[]	= $universe;
 	}
 
+	static public function getName($universeID)
+	{
+		return Config::get($universeID)->uni_name;
+	}
+
 	static public function getEmulated()
 	{
 		if(is_null(self::$emulatedUniverse))

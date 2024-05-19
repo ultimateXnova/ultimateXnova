@@ -1019,6 +1019,10 @@ $LNG['op_dst_mode_sel'][2]					= 'Automatic';
 $LNG['op_timezone']							= 'Time zone';
 $LNG['op_block_pm']							= 'Block private messages';
 
+$LNG['multiUniverse']                       = 'Multi Universe';
+$LNG['multiUniverseDescription']             = 'You can start in a new universe. The universes are independent of each other. You can play in all universes with the same account.';
+$LNG['startInMultiUniverse']                 = 'Start in ';
+
 //----------------------------------------------------------------------------//
 // Lista de Jogadores Banidos
 $LNG['bn_no_players_banned']				= 'No banned players';

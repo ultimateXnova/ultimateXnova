@@ -128,35 +128,11 @@ class PlayerUtil
 			$config->LastSettedPlanetPos = $planet;
 		}
 
-
-
-		if($child_of != "0") {
-			// If the user is a child of another user, we need to set the most parameters to 0
-			$params			= array(
-				':username'				=> $userName,
-				':email'				=> "0",
-				':email2'				=> "0",
-				':child_of'				=> $child_of,
-				':user_secret_question_id' => "0",
-				':user_secret_question_answer' => "0",
-				':authlevel'			=> "0",
-				':universe'				=> $universe,
-				':language'				=> "0",
-				':registerAddress'		=> !empty($userIpAddress) ? $userIpAddress : Session::getClientIp(),
-				':onlinetime'			=> TIMESTAMP,
-				':registerTimestamp'	=> TIMESTAMP,
-				':password'				=> "0",
-				':dpath'				=> "0",
-				':timezone'				=> "0",
-				':nameLastChanged'		=> 0,
-				':darkmatter_start'		=> $config->darkmatter_start,
-			);
-		} else {
-			$params			= array(
+		$params			= array(
 			':username'				=> $userName,
 			':email'				=> $userMail,
 			':email2'				=> $userMail,
-			':child_of'				=> 0,
+			':child_of'				=> $child_of,
 			':user_secret_question_id' => $user_secret_question_id,
 			':user_secret_question_answer' => $user_secret_question_answer,
 			':authlevel'			=> $authlevel,
@@ -171,8 +147,6 @@ class PlayerUtil
 			':nameLastChanged'		=> 0,
 			':darkmatter_start'		=> $config->darkmatter_start,
 		);
-		}
-		
 
 		$sql = 'INSERT INTO %%USERS%% SET
 		`username`		= :username,
@@ -263,9 +237,9 @@ class PlayerUtil
 			// Get the parent id of the player
 			$parent = $this->getParentPlayer($player_id);
 			$sql = "SELECT * FROM %%USERS%% WHERE id = :player_id;";
-			$player = $db->selectSingle($sql, array(':player_id' => $parent["id"]));
+			$player = $db->selectSingle($sql, array(':player_id' => $parent));
 
-			$this->createPlayer($universe, $player['username'], "", $player['email'], $player['lang'], $player['galaxy'], $player['system'], $player['planet'], $player['username'], 0, $player['ip_at_reg'], $player['user_secret_question_id'], $player['user_secret_question_answer'], $player_id);
+			$this->createPlayer($universe, $player['username'], $player['password'], $player['email'], $player['lang'],NULL,NULL,NULL, NULL, 0, $player['ip_at_reg'], $player['user_secret_question_id'], $player['user_secret_question_answer'], $player_id);
 			
 		}
 
@@ -279,13 +253,77 @@ class PlayerUtil
 
 		$sql = "SELECT child_of FROM %%USERS%% WHERE id = :player_id;";
 		$child = $db->selectSingle($sql, array(':player_id' => $player_id));
-		if($child['child_of'] == $player_id) {
-			$child_of = 0;
+		if($child['child_of'] == 0) {
+			$child_of = $player_id;
 		} else {
 			$child_of = $child['child_of'];
 		}
 
 		return $child_of;
+	}
+
+	public function getChildPlayers($player_id, $mode = "all", $include_parent = true) {
+		// This function is used to get the child players of a parent account
+		// It will return an array with the player_id of the child accounts
+
+		$db = Database::get();
+
+		$sql = "SELECT * FROM %%USERS%% WHERE child_of = :player_id;";
+		$children = $db->select($sql, array(':player_id' => $player_id));
+		$sql = "SELECT * FROM %%USERS%% WHERE id = :player_id;";
+		$parent = $db->selectSingle($sql, array(':player_id' => $player_id));
+		
+		$child_ids = array();
+		foreach($children as $child) {
+			if($mode == "all") {
+				$child_ids[] = $child;
+			}
+			if($mode == "id") {
+				$child_ids[] = $child['player_id'];
+			}
+			if($mode == "uni") {
+				$child_ids[] = $child['universe'];
+			}
+		
+		}
+		if($include_parent) {
+			if($mode == "all") {
+				$child_ids[] = $parent;
+			}
+			if($mode == "id") {
+				$child_ids[] = $parent['player_id'];
+			}
+			if($mode == "uni") {
+				$child_ids[] = $parent['universe'];
+			}
+		}
+
+		return $child_ids;
+	}
+	public function getFreeUniverses($player_id) {
+		$parent_id = $this->getParentPlayer($player_id);
+		$universes_original = Universe::availableUniverses();
+
+		$child_universes = $this->getChildPlayers($parent_id, "uni");
+		$universes = array();
+		
+		// var_dump($universes_original);
+		// echo "<br>";
+		// var_dump($child_universes);
+		// echo "<br>";
+
+		// Get all childs from the player
+
+		// List all universes and then check if the player already has an account or child account in that universe
+		// If not, add it to the list of available universes
+		foreach($universes_original as $universe) {
+			if(!in_array($universe,$child_universes)) {
+				$universes[$universe] = Universe::getName($universe);
+			} else {
+				//$universes[] = $universe;
+			}
+		}
+		return $universes;
 	}
 
 	static public function updateColonyWithStartValues($planetID){

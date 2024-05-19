@@ -28,7 +28,9 @@ class ShowSettingsPage extends AbstractGamePage
 
 	public function show()
 	{
+		
 		global $USER, $LNG, $config;
+		
 		if($USER['urlaubs_modus'] == 1)
 		{
 			$this->assign(array(
@@ -41,6 +43,22 @@ class ShowSettingsPage extends AbstractGamePage
 		}
 		else
 		{
+		// CREATE A NEW ACCOUNT IN A NEW UNIVERSE
+		$newUniMsg = false;
+		if(isset($_GET["startinuni"])) {
+			if(is_numeric($_GET["startinuni"])) {
+				$playerUtil = new PlayerUtil();
+				$createPlayer = $playerUtil->duplicatePlayer($USER['id'], $_GET["startinuni"]);
+				if($createPlayer) {
+					$newUniMsg = "Your account has been created in the new universe.";
+				} else {
+					$newUniMsg = "An error occurred while creating your account in the new universe.";
+				}
+			} else {
+				$newUniMsg = "An error occurred while creating your account in the new universe.";
+			}
+		}
+		
 			$this->assign(array(
 				'Selectors'			=> array(
 					'timezones' => get_timezone_selector(),
@@ -78,35 +96,24 @@ class ShowSettingsPage extends AbstractGamePage
 				'userid'		 	=> $USER['id'],
 				'availableUniverses' => $this->getFreeUniverses($USER['id']),
 				'isMultiUniverse'	=> count(Universe::availableUniverses()) > 1,
+				'newUniMsg'			=> $newUniMsg,
 				'ref_active'		=> $config->ref_active,
 				'SELF_URL'          => PROTOCOL.HTTP_HOST.HTTP_ROOT,
 				'let_users_change_theme' => $config->let_users_change_theme,
 			));
-
 		
 
 			$this->display('page.settings.default.tpl');
 		}
 	}
 	private function getFreeUniverses($playerID) {
-		global $USER;
-		$universes_original = Universe::availableUniverses();
-		$universe = $USER['universe'];
-
-		// Get parent ID and the parent universe of player
-
-		// Get all childs from the player
-
-		// List all universes and then check if the player already has an account or child account in that universe
-		// If not, add it to the list of available universes
-		foreach($universes_original as $universe) {
-			if($universe != $USER['universe']) {
-				$universes[] = $universe;
-			} else {
-				//$universes[] = $universe;
-			}
-		}
-		return $universes;
+		$playerUtil = new PlayerUtil();
+		$free_universes = $playerUtil->getFreeUniverses($playerID);
+		if(count($free_universes) == 0) {
+			$free_universes == false;
+		} 
+		
+		return $free_universes;
 	}
 	private function CheckVMode()
 	{
