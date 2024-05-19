@@ -32,13 +32,9 @@
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 
 	<!-- NG Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/theme/nextgen/css/fonts.css">
 	<!-- NG Libraries -->
 	<link rel="stylesheet" href="styles/theme/nextgen/css/uikit.min.css">
-
 	<script src="styles/theme/nextgen/js/uikit.min.js	"></script>
 	<script src="styles/theme/nextgen/js/uikit-icons.min.js"></script>
 	<!-- NG CSS -->
