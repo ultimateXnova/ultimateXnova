@@ -388,6 +388,8 @@ CREATE TABLE `%PREFIX%config` (
   `expedition_allow_ships_find` BOOLEAN NOT NULL DEFAULT 1,
   `expedition_allow_darkmatter_find` BOOLEAN NOT NULL DEFAULT 1,
   `expedition_allow_resources_find` BOOLEAN NOT NULL DEFAULT 1,
+  `expedition_factor_resources` DECIMAL(4,1) unsigned NOT NULL DEFAULT 1,
+  `expedition_factor_ships` DECIMAL(4,1) unsigned NOT NULL DEFAULT 1,
   `expedition_chances_percent_resources` DECIMAL(4,1) unsigned NOT NULL DEFAULT 32.5,
   `expedition_chances_percent_darkmatter` DECIMAL(4,1) unsigned NOT NULL DEFAULT 9,
   `expedition_chances_percent_ships` DECIMAL(4,1) unsigned NOT NULL DEFAULT 22,

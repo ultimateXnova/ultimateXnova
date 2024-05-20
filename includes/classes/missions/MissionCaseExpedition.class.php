@@ -120,6 +120,8 @@ class MissionCaseExpedition extends MissionFunctions implements Mission
 		$chances_event_ships = $chances_event_darkmatter + $chances_percent_ships * 10;
 		$chances_event_pirates = $chances_event_ships + $chances_percent_pirates * 10;
 
+		$chances_factor_resources = $config->expedition_factor_resources;
+		$chances_factor_ships = $config->expedition_factor_ships;
 
 		do {
 
@@ -150,6 +152,8 @@ class MissionCaseExpedition extends MissionFunctions implements Mission
 					$Message	= $LNG['sys_expe_found_ress_3_'.mt_rand(1,2)];
 					$factor		= mt_rand(100, 200);
 				}
+
+				$factor = $factor * $chances_factor_resources;
 
 				$chanceToFound	= mt_rand(1, 6);
 				if($chanceToFound > 3)
@@ -311,8 +315,9 @@ class MissionCaseExpedition extends MissionFunctions implements Mission
 					$MaxPoints		= 1250;
 				}
 
+				$MaxPoints		= $MaxPoints * $chances_factor_ships;
 				$FoundShips		= max(round($Size * min($fleetPoints, $MaxPoints)), 10000);
-
+				
 				if ($fleetPoints < $MaxPoints)
 					$logbook = $LNG['sys_expe_found_ships_logbook_'.mt_rand(1,3)].'<br>'.$logbook;
 

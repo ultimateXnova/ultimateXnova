@@ -23,6 +23,8 @@ class ShowExpeditionPage extends AbstractAdminPage
       'expedition_allow_resources_find' => $config->expedition_allow_resources_find,
       'expedition_allow_ships_find' => $config->expedition_allow_ships_find,
       'expedition_consider_holdtime' => $config->expedition_consider_holdtime,
+      'expedition_factor_resources' => $config->expedition_factor_resources,
+      'expedition_factor_ships' => $config->expedition_factor_ships,
       'expedition_chances_percent_resources' => $config->expedition_chances_percent_resources,
       'expedition_chances_percent_darkmatter' => $config->expedition_chances_percent_darkmatter,
       'expedition_chances_percent_ships' => $config->expedition_chances_percent_ships,
@@ -74,6 +76,8 @@ class ShowExpeditionPage extends AbstractAdminPage
     $expedition_consider_holdtime = (HTTP::_GP('expedition_consider_holdtime', 'off') == 'on') ? 1 : 0;
     $expedition_consider_same_coordinate = (HTTP::_GP('expedition_consider_same_coordinate', 'off') == 'on') ? 1 : 0;
 
+    $expedition_factor_resources = HTTP::_GP('expedition_factor_resources',1);
+    $expedition_factor_ships = HTTP::_GP('expedition_factor_ships',1);
     $chances_percent_resources = HTTP::_GP('expedition_chances_percent_resources',32.5);
     $chances_percent_darkmatter = HTTP::_GP('expedition_chances_percent_darkmatter',9);
     $chances_percent_ships = HTTP::_GP('expedition_chances_percent_ships',22);
@@ -97,6 +101,8 @@ class ShowExpeditionPage extends AbstractAdminPage
       'expedition_allow_ships_find' => $expedition_allow_ships_find,
       'expedition_consider_holdtime' => $expedition_consider_holdtime,
       'expedition_consider_same_coordinate' => $expedition_consider_same_coordinate,
+      'expedition_factor_resources' => $expedition_factor_resources,
+      'expedition_factor_ships' => $expedition_factor_ships,
       'expedition_chances_percent_resources' => $chances_percent_resources,
       'expedition_chances_percent_darkmatter' => $chances_percent_darkmatter,
       'expedition_chances_percent_ships' => $chances_percent_ships,
@@ -146,6 +152,8 @@ class ShowExpeditionPage extends AbstractAdminPage
     $expedition_consider_holdtime = 1;
     $expedition_consider_same_coordinate = 1;
 
+    $expedition_factor_resources = 1;
+    $expedition_factor_ships = 1;
     $chances_percent_resources = 32.5;
 		$chances_percent_darkmatter = 9;
 		$chances_percent_ships = 22;
@@ -168,6 +176,8 @@ class ShowExpeditionPage extends AbstractAdminPage
       'expedition_allow_ships_find' => $expedition_allow_ships_find,
       'expedition_consider_holdtime' => $expedition_consider_holdtime,
       'expedition_consider_same_coordinate' => $expedition_consider_same_coordinate,
+      'expedition_factor_resources' => $expedition_factor_resources,
+      'expedition_factor_ships' => $expedition_factor_ships,
       'expedition_chances_percent_resources' => $chances_percent_resources,
       'expedition_chances_percent_darkmatter' => $chances_percent_darkmatter,
       'expedition_chances_percent_ships' => $chances_percent_ships,

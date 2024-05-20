@@ -38,8 +38,16 @@
     <label class="text-start my-1 cursor-pointer hover-underline" for="expedition_consider_same_coordinate">Consider same coordinate for expeditions</label>
     <input class="mx-2" id="expedition_consider_same_coordinate" name="expedition_consider_same_coordinate" {if $expedition_consider_same_coordinate} checked="checked"{/if} type="checkbox">
   </div>
-
-  <h3>Probabilties</h3>
+  <h3>Factors</h3>
+  <div class="form-group d-flex flex-column my-1 p-2">
+      <label class="text-start my-1 cursor-pointer hover-underline" for="expedition_factor_resources">Factor of how much resources the player gets (1 = Standard, 2 = Twice, 0.5 = Half)</label>
+      <input class="form-control py-1 bg-dark text-white my-1 border border-secondary" id="expedition_factor_resources" name="expedition_factor_resources" value="{$expedition_factor_resources}" type="number" min="0" max="1000" step="0.1">
+  </div>
+  <div class="form-group d-flex flex-column my-1 p-2">
+      <label class="text-start my-1 cursor-pointer hover-underline" for="expedition_factor_ships">Factor of how much ships the player gets (1 = Standard, 2 = Twice, 0.5 = Half)</label>
+      <input class="form-control py-1 bg-dark text-white my-1 border border-secondary" id="expedition_factor_ships" name="expedition_factor_ships" value="{$expedition_factor_ships}" type="number" min="0" max="1000" step="0.1">
+  </div>
+  <h3>Probabilities</h3>
   <div class="form-group d-flex flex-column my-1 p-2">
       <label class="text-start my-1 cursor-pointer hover-underline" for="expedition_chances_percent_resources">Chances of finding resources (Percentage)</label>
       <input class="form-control py-1 bg-dark text-white my-1 border border-secondary" id="expedition_chances_percent_resources" name="expedition_chances_percent_resources" value="{$expedition_chances_percent_resources}" type="number" min="0" max="100" step="0.1">
