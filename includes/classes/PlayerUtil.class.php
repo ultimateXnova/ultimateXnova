@@ -270,8 +270,10 @@ class PlayerUtil
 
 		$sql = "SELECT * FROM %%USERS%% WHERE child_of = :player_id;";
 		$children = $db->select($sql, array(':player_id' => $player_id));
+
+		$parent_id = $this->getParentPlayer($player_id);
 		$sql = "SELECT * FROM %%USERS%% WHERE id = :player_id;";
-		$parent = $db->selectSingle($sql, array(':player_id' => $player_id));
+		$parent = $db->selectSingle($sql, array(':player_id' => $parent_id));
 		
 		$child_ids = array();
 		foreach($children as $child) {
@@ -324,6 +326,19 @@ class PlayerUtil
 			}
 		}
 		return $universes;
+	}
+
+	public function getChildPlayerUniverse($playerID, $universeID) {
+		// Fetches a connected account of a player in a specific universe
+		$childs = $this->getChildPlayers($playerID);
+		foreach($childs as $child) {
+			if($child['universe'] == $universeID) {
+				return $child['id'];
+			}
+		}
+		return false;
+
+		// return new Player ID
 	}
 
 	static public function updateColonyWithStartValues($planetID){

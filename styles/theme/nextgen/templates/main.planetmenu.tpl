@@ -78,3 +78,10 @@
 {/foreach}
   </div>
 {/if}
+{if $hasMultiUniverseAccounts}
+  {foreach $mu_unis as $universe_id => $universe_name}
+    <div class="universes" uk-grid="">
+      <a href="game.php?page=overview&switch_universe={$universe_id }" class="uk-button">Switch to {$universe_name}</a>
+    </div>
+  {/foreach}
+{/if}

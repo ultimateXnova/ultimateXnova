@@ -32,6 +32,7 @@ abstract class AbstractGamePage
 	protected $ecoObj;
 	protected $window;
 	protected $disableEcoSystem = false;
+	
 
 	protected function __construct() {
 
@@ -47,6 +48,10 @@ abstract class AbstractGamePage
 		} else {
 			$this->setWindow('ajax');
 		}
+		
+		if(isset($_GET['switch_universe']) && is_numeric($_GET['switch_universe'])) {
+			$this->switchAccount($_GET['switch_universe']);
+		}
 	}
 
 	protected function GetFleets() {
@@ -56,6 +61,19 @@ abstract class AbstractGamePage
 		$fleetTableObj->setUser($USER['id']);
 		$fleetTableObj->setPlanet($PLANET['id']);
 		return $fleetTableObj->renderTable();
+	}
+
+	public function switchAccount($universeID) {
+		global $USER;
+		$playerUtil = new PlayerUtil();
+		$newPlayerID =  $playerUtil->getChildPlayerUniverse($USER['id'], $universeID);
+		if($newPlayerID !== false) {
+			$session	= Session::create();
+			$session->userId		= (int) $newPlayerID;
+			$session->adminAccess	= 0;
+			$session->save();
+			HTTP::redirectTo('game.php?page=overview');
+		}
 	}
 
 	function getAttack(){
@@ -340,8 +358,20 @@ abstract class AbstractGamePage
 		unset($currentPlanet);
 
 
-
-
+		// MultiUniverse Support
+		// Get all available user ids, that the current user can access
+		$playerUtil = new PlayerUtil();
+		$childs = $playerUtil->getChildPlayers($USER['id'],"all");
+		$mu_unis = array();
+		foreach($childs as $child)
+		{
+			if($child['id'] != $USER['id'])
+			{
+				$mu_unis[$child['universe']] = Universe::getName($child['universe']);
+				
+			}
+		}
+		
 		$this->assign(array(
 			'vmode'				=> $USER['urlaubs_modus'],
 			'authlevel'			=> $USER['authlevel'],
@@ -364,6 +394,8 @@ abstract class AbstractGamePage
 			'Offset'			=> $dateTimeUser->getOffset() - $dateTimeServer->getOffset(),
 			'queryString'		=> $this->getQueryString(),
 			'themeSettings'		=> $THEME->getStyleSettings(),
+			'hasMultiUniverseAccounts'	=> count($mu_unis) >= 0,
+			'mu_unis'			=> $mu_unis,
 			'page' => HTTP::_GP('page',''),
 			'mode' => HTTP::_GP('mode',''),
 			'servertime' => _date("M D d H:i:s", TIMESTAMP, $USER['timezone']),
