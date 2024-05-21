@@ -125,7 +125,7 @@ class MissionCaseTransport extends MissionFunctions implements Mission
 		 * If is a player destroyed moon, redirect the fleet to the main planet.
 		 */
 		if (!$startPlanetName) {
-			$originUser = Database::get()->selectSingle("SELECT id_planet, galaxy, system, planet FROM %%USERS%% WHERE id = :id", array(
+			$originUser = Database::get()->selectSingle("SELECT id_planet, galaxy, `system`, planet FROM %%USERS%% WHERE id = :id", array(
 				':id'	=> $this->_fleet['fleet_owner']
 			));
 

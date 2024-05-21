@@ -194,7 +194,7 @@ class ShowBotsPage extends AbstractAdminPage
 
 
 
-    $sql_user = $save_sql_user = "INSERT INTO %%USERS%% (username, password, email, email_2, lang, universe, galaxy, system, planet, darkmatter,register_time,onlinetime, is_bot) VALUES ";
+    $sql_user = $save_sql_user = "INSERT INTO %%USERS%% (username, `password`, email, email_2, lang, universe, galaxy, `system`, planet, darkmatter,register_time,onlinetime, is_bot) VALUES ";
 
     $bots_password = PlayerUtil::cryptPassword($bots_password);
 
@@ -223,7 +223,7 @@ class ShowBotsPage extends AbstractAdminPage
       $sql_user = $save_sql_user;
     }
 
-    $sql_planets = $save_sql_planets = "INSERT INTO %%PLANETS%% (name, universe, galaxy, system, planet, last_update, planet_type, image, field_max, temp_min, temp_max, metal, crystal, deuterium, is_bot) VALUES ";
+    $sql_planets = $save_sql_planets = "INSERT INTO %%PLANETS%% (`name`, universe, galaxy, `system`, planet, last_update, planet_type, `image`, field_max, temp_min, temp_max, metal, crystal, deuterium, is_bot) VALUES ";
 
     $planetData	= array();
     require 'includes/PlanetData.php';

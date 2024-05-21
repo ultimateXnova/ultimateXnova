@@ -183,7 +183,7 @@ class ShowCreatePage extends AbstractAdminPage
 		$MoonName  	= HTTP::_GP('name', '', UTF8_SUPPORT);
 		$Diameter	= HTTP::_GP('diameter', 0);
 
-		$sql = "SELECT temp_max, temp_min, id_luna, galaxy, system, planet, planet_type, destruyed, id_owner FROM %%PLANETS%% WHERE id = :PlanetID AND universe = :universe AND planet_type = '1' AND destruyed = '0';";
+		$sql = "SELECT temp_max, temp_min, id_luna, galaxy, `system`, planet, planet_type, destruyed, id_owner FROM %%PLANETS%% WHERE id = :PlanetID AND universe = :universe AND planet_type = '1' AND destruyed = '0';";
 
 		$MoonPlanet = Database::get()->selectSingle($sql,array(
 			':PlanetID' => $PlanetID,

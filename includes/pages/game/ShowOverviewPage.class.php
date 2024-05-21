@@ -127,7 +127,7 @@ class ShowOverviewPage extends AbstractGamePage
 
 		if ($PLANET['id_luna'] != 0) {
 
-				$sql = "SELECT id, name, planet_type, image FROM %%PLANETS%% WHERE id = :moonID;";
+				$sql = "SELECT id, `name`, planet_type, `image` FROM %%PLANETS%% WHERE id = :moonID;";
 
 				$Moon = $db->selectSingle($sql, array(
             ':moonID'   => $PLANET['id_luna']
@@ -135,7 +135,7 @@ class ShowOverviewPage extends AbstractGamePage
 
     }elseif ($PLANET['planet_type'] == 3) {
 
-				$sql = "SELECT id, name, planet_type, image FROM %%PLANETS%% WHERE id_luna = :moonID;";
+				$sql = "SELECT id, `name`, planet_type, `image` FROM %%PLANETS%% WHERE id_luna = :moonID;";
 
 				$Moon = $db->selectSingle($sql, array(
 						':moonID'   => $PLANET['id']

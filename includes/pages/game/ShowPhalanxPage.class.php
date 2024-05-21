@@ -75,8 +75,8 @@ class ShowPhalanxPage extends AbstractGamePage
 			':planetID'			=> $PLANET['id']
 		));
 
-		$sql = "SELECT id, name, id_owner FROM %%PLANETS%% WHERE universe = :universe
-		AND galaxy = :galaxy AND system = :system AND planet = :planet AND :type;";
+		$sql = "SELECT id, `name`, id_owner FROM %%PLANETS%% WHERE universe = :universe
+		AND galaxy = :galaxy AND `system` = :system AND planet = :planet AND :type;";
 
 		$TargetInfo = $db->selectSingle($sql, array(
 			':universe'	=> Universe::current(),

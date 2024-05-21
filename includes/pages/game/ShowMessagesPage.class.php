@@ -381,7 +381,7 @@ class ShowMessagesPage extends AbstractGamePage
         $maxPage	= max(1, ceil($MessageCount / MESSAGES_PER_PAGE));
         $messagePage		= max(1, min($messagePage, $maxPage));
 
-        $sql = "SELECT message_id, message_time, CONCAT(username, ' [',galaxy, ':', system, ':', planet,']')
+        $sql = "SELECT message_id, message_time, CONCAT(username, ' [',galaxy, ':', `system`, ':', planet,']')
         as message_from, message_subject, message_sender, message_type, message_unread, message_text
   			FROM %%MESSAGES%% INNER JOIN %%USERS%% ON id = message_owner
   			WHERE message_sender = :userId AND message_type != 50 AND message_deleted IS NULL
