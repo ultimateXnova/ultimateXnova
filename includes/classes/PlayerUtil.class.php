@@ -230,7 +230,7 @@ class PlayerUtil
 			':userId'	=> $userId,
 			':rank'		=> 1,
 			));
-		} */
+		} 
 		$config->save();
 
 		return array($userId, $planetId);
