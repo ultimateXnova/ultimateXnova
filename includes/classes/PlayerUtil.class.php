@@ -127,6 +127,9 @@ class PlayerUtil
 			$config->LastSettedSystemPos = $system;
 			$config->LastSettedPlanetPos = $planet;
 		}
+		if(!isset($child_of) || $child_of == false) {
+			$child_of = 0;
+		}
 
 		$params			= array(
 			':username'				=> $userName,
@@ -253,7 +256,7 @@ class PlayerUtil
 
 		$sql = "SELECT child_of FROM %%USERS%% WHERE id = :player_id;";
 		$child = $db->selectSingle($sql, array(':player_id' => $player_id));
-		if($child['child_of'] == 0) {
+		if($child['child_of'] == 0 && is_numeric($player_id)) {
 			$child_of = $player_id;
 		} else {
 			$child_of = $child['child_of'];
