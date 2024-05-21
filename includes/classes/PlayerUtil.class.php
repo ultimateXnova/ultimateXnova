@@ -195,27 +195,42 @@ class PlayerUtil
 			':userId'	=> $userId,
 		));
 
-		$sql 	= "SELECT MAX(total_rank) as rank FROM %%USER_POINTS%% WHERE universe = :universe;";
+		$sql 	= "SELECT MAX(`total_rank`) as `rank` FROM %%USER_POINTS%% WHERE universe = :universe;";
 
 		$rank	= $db->selectSingle($sql, array(
 			':universe'	=> $universe,
 		), 'rank');
+		if($rank != NULL) {
+			$sql = "INSERT INTO %%USER_POINTS%% SET
+					`id_owner`	= :userId,
+					`universe`	= :universe,
+					`tech_rank`	= :rank,
+					`build_rank`	= :rank,
+					`defs_rank`	= :rank,
+					`fleet_rank`	= :rank,
+					`total_rank`	= :rank;";
 
-		$sql = "INSERT INTO %%USER_POINTS%% SET
-				`id_owner`	= :userId,
-				`universe`	= :universe,
-				`tech_rank`	= :rank,
-				`build_rank`	= :rank,
-				`defs_rank`	= :rank,
-				`fleet_rank`	= :rank,
-				`total_rank`	= :rank;";
+			$db->insert($sql, array(
+			':universe'	=> $universe,
+			':userId'	=> $userId,
+			':rank'		=> $rank + 1,
+			));
+		} else {
+			$sql = "INSERT INTO %%USER_POINTS%% SET
+			`id_owner`	= :userId,
+			`universe`	= :universe,
+			`tech_rank`	= :rank,
+			`build_rank`	= :rank,
+			`defs_rank`	= :rank,
+			`fleet_rank`	= :rank,
+			`total_rank`	= :rank;";
 
-		$db->insert($sql, array(
-		   ':universe'	=> $universe,
-		   ':userId'	=> $userId,
-		   ':rank'		=> $rank + 1,
-		));
-
+			$db->insert($sql, array(
+			':universe'	=> $universe,
+			':userId'	=> $userId,
+			':rank'		=> 1,
+			));
+		} */
 		$config->save();
 
 		return array($userId, $planetId);
