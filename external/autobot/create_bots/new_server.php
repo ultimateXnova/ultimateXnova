@@ -37,14 +37,14 @@ while($created!=1) {
 
 			$planet_name = trim($nickname_db[rand(1, count($nickname_db)-1)]);
 			do {
-				mysqli_query($connection, "INSERT INTO uni1_planets (id_owner, name, universe, last_update, galaxy, system, planet, image) VALUES (9999999, '$planet_name', 1, 1, '$galaxy', '$system', '$planet', '$image')");
+				mysqli_query($connection, "INSERT INTO uni1_planets (id_owner, `name`, universe, last_update, galaxy, `system`, planet, `image`) VALUES (9999999, '$planet_name', 1, 1, '$galaxy', '$system', '$planet', '$image')");
 				$id = mysqli_fetch_array(mysqli_query($connection, "SELECT id FROM uni1_planets WHERE id_owner = 9999999 LIMIT 1"))[0];
 			} while (empty($id));
 			$created=1;
 
 			// Create User
 			$time = time();
-			mysqli_query($connection, "INSERT INTO uni1_users (username, password, email, email_2, universe, galaxy, system, planet, register_time, onlinetime) VALUES ('$nick', 'bot', 'bot', 'bot', 1, $galaxy, $system, $planet, $time, $time)");
+			mysqli_query($connection, "INSERT INTO uni1_users (username, `password`, email, email_2, universe, galaxy, `system`, planet, register_time, onlinetime) VALUES ('$nick', 'bot', 'bot', 'bot', 1, $galaxy, $system, $planet, $time, $time)");
 			$botid = (mysqli_fetch_array(mysqli_query($connection, "SELECT id FROM uni1_users ORDER by ID desc LIMIT 1")))[0];
 			mysqli_query($connection, "UPDATE uni1_planets SET id_owner=$botid WHERE id=$id");
 			mysqli_query($connection, "UPDATE uni1_users SET id_planet=$id WHERE id=$botid");

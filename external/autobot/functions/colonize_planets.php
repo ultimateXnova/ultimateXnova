@@ -68,7 +68,7 @@ for ($i = 0;$i <= count($bots) - 1;$i++)
                 }
 
                 $planet_name = trim($database[rand(1, count($database) - 1) ]);
-                echo mysqli_query($connection, "INSERT INTO uni1_planets (id_owner, name, universe, last_update, galaxy, system, planet, image, metal, crystal) VALUES ($id_bots, '$planet_name', 1, 1, '$galaxy', '$system', '$planet', '$image', 500, 500)");
+                echo mysqli_query($connection, "INSERT INTO uni1_planets (id_owner, `name`, universe, last_update, galaxy, `system`, planet, `image`, metal, crystal) VALUES ($id_bots, '$planet_name', 1, 1, '$galaxy', '$system', '$planet', '$image', 500, 500)");
                 mysqli_query($connection, "UPDATE uni1_planets SET metal = metal - 10000 WHERE id = $id_mother_planet");
                 mysqli_query($connection, "UPDATE uni1_planets SET crystal = crystal - 20000 WHERE id = $id_mother_planet");
                 mysqli_query($connection, "UPDATE uni1_planets SET deuterium = deuterium - 10000 WHERE id = $id_mother_planet");
