@@ -122,6 +122,14 @@
 												romansmac
 											</td>
 										</tr>
+										<tr>
+											<td class="transparent">
+												<img src="styles/resource/images/login/flags/it.png" alt="(italian)">
+											</td>
+											<td class="transparent left">
+												Dany92
+											</td>
+										</tr>
 									</table>
 								</td>
 							</tr>

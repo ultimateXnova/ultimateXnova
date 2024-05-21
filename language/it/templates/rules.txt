@@ -1,0 +1,64 @@
+<ul id="rules">
+<li>
+<h1>1. Account </h1>
+<p>Ogni giocatore può controllare un singolo account. Ogni account può essere giocato da un singolo giocatore alla volta, l'account sitting è l'unica eccezione.
+L'account sitting dà diritto a un dato giocatore di avere il suo account sorvegliato secondo i seguenti regolamenti:
+<br />
+<br />- Il supporto dovrà essere informato prima dello svolgimento della seduta, mediante l'apertura di un ticket.
+<br />- Non sono consentiti movimenti della flotta mentre l'account è attivo, a meno che non sia in arrivo un attacco che potrebbe razziare o mandare in crash l'account, nel qual caso puoi salvare la tua flotta(i) schierando o trasportando su un pianeta o su un luna di proprietà dell'account in fase di sat. Non puoi ninjare un attacco in arrivo nei casi in cui avresti bisogno di muovere una flotta per farlo.
+<br />- Un account può essere utilizzato solo per un periodo massimo di 48 ore continue (è necessario ottenere l'autorizzazione dell'amministratore nei casi in cui è necessaria un'estensione temporale).
+<br /><br />Il sitter può, per il conto in cui si trova seduto e per tutta la durata del periodo di seduta:
+
+<br />- Spendi risorse in edifici o ricerche.
+<br />- Flotte salva qualsiasi nave che è imminentemente messa in pericolo da una flotta attaccante in arrivo, solo con una missione di schieramento o trasporto su uno dei pianeti dell'account.
+<br />- Metti un account in modalità vacanza.
+
+<br /><br />Il sitter non può:
+
+<br />- Trasporta risorse, né tra i pianeti/lune dell'account sat, né verso qualsiasi altro pianeta/luna.
+<br />- Spendi risorse su strutture difensive o navi.
+<br />- Siediti a un account se ne ha seduto un altro nei 7 giorni precedenti.
+<br />- Siediti con un account registrato nei 7 giorni precedenti.
+<br />- Rimuovi un account dalla modalità vacanza.</p>
+</li>
+<li>
+<h1>2. Spingendo</h1>
+<p>Non è consentito a nessun account ottenere profitti ingiusti da un account di livello inferiore in una questione di risorse.
+Ciò include ma non è limitato a:
+
+<br />- Risorse inviate da un account di livello inferiore a uno di livello superiore senza nulla di tangibile in cambio.
+<br />- Un giocatore fa schiantare la sua flotta contro una di rango più alto affinché quella di rango più alto mantenga il campo di detriti, traendone così profitto.
+<br />- Prestiti che non vengono restituiti entro 48 ore.
+<br />- Commerci in cui il giocatore con il punteggio più alto non restituisce le risorse entro 48 ore.
+<br />- I giocatori rispondono all'estorsione di un giocatore di livello più alto pagando risorse.
+<br />- Operazioni che comportano un profitto ingiusto per il giocatore con il punteggio più alto non rientrando nel seguente intervallo di rapporti:
+<br />
+<br />3:2:1 Dove ogni unità di deuterio vale 2 unità di cristallo o 3 unità di metallo.
+<br />2:1:1 Dove ogni unità di deuterio vale 1 unità di cristallo o 2 unità di metallo.</p>
+</li>
+<li>
+<h1>3. Colpire</h1>
+<p>Non è consentito attaccare un pianeta o una luna posseduti da un giocatore più di 6 volte in un singolo periodo di 24 ore.
+Il colpo è consentito solo quando la tua Alleanza è in guerra con un'altra Alleanza. La guerra deve essere annunciata nel forum ed entrambi i leader devono concordarne i termini.
+La regola del bashing si applica solo agli utenti attivi ed esclude attacchi missilistici e missioni di spionaggio.</p>
+</li>
+<li>
+<h1>4. Utilizzo di bug</h1>
+<p>È severamente vietato utilizzare intenzionalmente un bug a scopo di lucro o non segnalare intenzionalmente un bug.</p>
+</li>
+<li>
+<h1>5. Contenuti vietati</h1>
+<p>È vietato lasciare intendere che si intende individuare e danneggiare un altro giocatore.
+<br />Non sono consentiti inoltre spam, invio di massa di messaggi e pubblicità di giochi/prodotti stranieri.</p>
+</li>
+<li>
+<h1>6. Guerre</h1>
+<p>Dopo che entrambi i leader delle alleanze hanno concordato la guerra, questa è ufficialmente iniziata. E continuerà finché una delle alleanze non lo annullerà. Per annullare ufficialmente la guerra devono annullare il patto di guerra dal gioco e annunciarlo nel thread avviato inizialmente.
+Mentre la guerra è in corso, le regole contrastanti tra le alleanze coinvolte non contano. Ciò significa che qualsiasi membro appartenente alle alleanze in detta guerra può essere attaccato un numero infinito di volte senza punizione.
+Se una delle alleanze si arrende e annulla la guerra, la regola del bashing avrà nuovamente effetto e tutti i membri che la infrangono dopo la fine della guerra saranno puniti con un ban di 1 giorno, o anche di più se il grado di attacco è estremamente elevato.
+<br />
+Se l'alleanza avversaria ha una flotta in volo. E la guerra viene cancellata prima del loro arrivo. NON saranno puniti per quell'attacco. Ma qualsiasi flotta inviata dopo la cancellazione della guerra conterà ai fini della regola del bashing.
+<br /><br />Per New Wars uno dei leader deve creare un nuovo thread nella sezione guerra/diplomazia.
+Lì possono stabilire qualsiasi regola o termine specifico che desiderano per la guerra. Qualsiasi regola stabilita e concordata dall'alleanza avversaria deve essere rispettata e non deve contraddire alcuna regola qui stabilita.</p>
+</li>
+</ul>

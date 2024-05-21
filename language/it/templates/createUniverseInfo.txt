@@ -1,0 +1,12 @@
+<div class="left">
+<h2>Supporto informativo al multi-universo</h2>
+<p>2Moons può supportare multiuniversi sani, è necessario configurare il server Web in base alla richiesta.</p>
+<p>Puoi scoprire cosa può supportare il tuo server nel pulsante "Informazioni". Se non sei sicuro, è meglio chiedere agli amici della tua società di hosting.</p>
+<h3>Apache</h3>
+<p>Se esegui un server Apache, devi ritirare solo le righe 48-51 nel file .htacces nei caratteri di spedizione principali (rimuovere il percorso).<br>
+Inoltre, è richiesto mod_rewrite.</p>
+<h3>nginx</h3>
+<p>Se eseguirà un server nginx, la configurazione di vhost consiste nel riscrivere direttamente la regola per espandersi:</p>
+<p><code>{NGINX-CODE}</code></p>
+<p>Incolla facilmente lo snippet di codice sotto la riga con "nome_server".</p>
+</div>

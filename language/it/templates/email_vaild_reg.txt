@@ -1,0 +1,26 @@
+Ciao {USERNAME},
+
+
+Grazie per esserti registrato su {GAMENAME}
+
+Prima di poter attivare il tuo account, è necessario un ulteriore passaggio.
+Tieni presente che questo passaggio è obbligatorio per diventare a
+utente registrato. È necessario premere il collegamento sottostante solo una volta
+verifica la tua identità.
+
+Per completare la registrazione clicca su
+seguente link di attivazione:
+
+{VERTIFYURL}
+
+I tuoi dati di accesso:
+
+Nome utente: {NOMEUTENTE}
+Password: {PASSWORD}
+
+Se riscontri problemi con la registrazione automatizzata,
+si prega di contattare il webmaster utilizzando la seguente email:
+{GAMEMAIL}
+
+Saluti,
+Team {GAMENAME}

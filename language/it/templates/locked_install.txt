@@ -1,0 +1,7 @@
+<h1>Lo strumento di installazione è bloccato</h1>
+<p>Per abilitare lo strumento di installazione, è necessario creare il file ENABLE_INSTALL_TOOL.</p>
+<ul>
+ <li>Nella cartella includes/, creare un file denominato ENABLE_INSTALL_TOOL. Il nome del file fa distinzione tra maiuscole e minuscole, ma il file stesso può essere semplicemente un file vuoto.</li>
+</ul>
+<p>Per motivi di sicurezza, si consiglia vivamente di rinominare o eliminare il file al termine dell'operazione.</p>
+<p>Come misura di sicurezza aggiuntiva, se il file è più vecchio di un'ora, 2Moons lo eliminerà automaticamente.</p>
