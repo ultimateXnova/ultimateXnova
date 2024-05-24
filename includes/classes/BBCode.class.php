@@ -28,7 +28,21 @@ class BBCode
 		$sText = str_replace("\r", "\n", $sText);
 		$sText = str_replace("\n", '<br />', $sText);
 
-	    	$config = parse_ini_file('BBCodeParser2.ini', true);
+			if(function_exists('parse_ini_file')) {
+	    		$config = parse_ini_file('BBCodeParser2.ini', true);
+			} else {
+				// Pfahli: Added default array in case parse_ini_file is not available
+			$config = [
+				'HTML_BBCodeParser2' => [
+					'quotestyle' => 'single',
+					'quotewhat' => 'all',
+					'open' => '[',
+					'close' => ']',
+					'xmlclose' => true,
+					'filters' => 'Basic,Extended,Images,Links,Lists,Email'
+				]
+			];
+			}
 
 				$options = $config['HTML_BBCodeParser2'];
 

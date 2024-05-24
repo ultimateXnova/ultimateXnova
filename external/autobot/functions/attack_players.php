@@ -114,11 +114,11 @@ foreach($get_users as $get_user) {
 // Gets all bots ready
 for($i=0; $i<=count($get_bots)-1; $i++) {
 	$id_bot = $get_bots[$i][0];
-	$get_planets_data = mysqli_fetch_all(mysqli_query($connection, "SELECT id_owner, destructor, dearth_star, id, galaxy, system, planet FROM uni1_planets WHERE id_owner=$id_bot AND (destructor > 0 OR dearth_star > 0)"));
+	$get_planets_data = mysqli_fetch_all(mysqli_query($connection, "SELECT id_owner, destructor, dearth_star, id, galaxy, `system`, planet FROM uni1_planets WHERE id_owner=$id_bot AND (destructor > 0 OR dearth_star > 0)"));
 
 	if(!empty($get_planets_data[0])) {
 		$random_target = $planets[array_rand($planets)];
-		$get_target_stats = mysqli_fetch_array(mysqli_query($connection, "SELECT id_owner, galaxy, system, planet FROM uni1_planets WHERE id = $random_target"));
+		$get_target_stats = mysqli_fetch_array(mysqli_query($connection, "SELECT id_owner, galaxy, `system`, planet FROM uni1_planets WHERE id = $random_target"));
 		echo 'Attack '.$random_target.PHP_EOL;
 		echo attack($id_bot, $get_planets_data[0][3], $get_planets_data[0][4], $get_planets_data[0][5], $get_planets_data[0][6], $random_target, $get_target_stats[0], $get_target_stats[1], $get_target_stats[2], $get_target_stats[3], $get_planets_data[0][1], $get_planets_data[0][2]);
 	}

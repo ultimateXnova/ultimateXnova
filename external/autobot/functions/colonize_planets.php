@@ -33,7 +33,7 @@ for ($i = 0;$i <= count($bots) - 1;$i++)
             $galaxy = rand(1, $max_galaxy);
             $system = rand(1, $max_system);
             $planet = rand(4, 12);
-            $is_empty = mysqli_fetch_all(mysqli_query($connection, "SELECT id FROM uni1_planets WHERE galaxy=$galaxy AND system=$system AND planet=$planet"));
+            $is_empty = mysqli_fetch_all(mysqli_query($connection, "SELECT id FROM uni1_planets WHERE galaxy=$galaxy AND `system`=$system AND planet=$planet"));
             if (empty($is_empty))
             {
 

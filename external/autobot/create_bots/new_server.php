@@ -25,7 +25,7 @@ while($created!=1) {
 	$galaxy = rand(1, $max_galaxy);
 	$system = rand(1, $max_system);
 	$planet = rand(1, 15);
-	$is_empty = mysqli_fetch_all(mysqli_query($connection, "SELECT id FROM uni1_planets WHERE galaxy=$galaxy AND system=$system AND planet=$planet"));
+	$is_empty = mysqli_fetch_all(mysqli_query($connection, "SELECT id FROM uni1_planets WHERE galaxy=$galaxy AND `system`=$system AND planet=$planet"));
 		if(empty($is_empty)) {
 
 			// Image

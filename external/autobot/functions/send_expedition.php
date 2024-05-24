@@ -12,7 +12,7 @@ for ($i = 0;$i <= count($get_bots_techs) - 1;$i++) {
     $max_expedition_fleets = min(floor($get_bots_techs[$i][1] + 1) - $count_fleets, floor(($get_bots_techs[$i][2] / 2) - $count_fleets_on_expedition));
     while ($max_expedition_fleets > 0) {
 	// Check how many Small Cargo Bot have, also receive info about resources needed to build it
-	$planet_resources = mysqli_fetch_all(mysqli_query($connection, "SELECT small_ship_cargo, floor(metal), floor(crystal), hangar, id, galaxy, system, planet FROM uni1_planets WHERE id_owner=$id_owner")) [0];
+	$planet_resources = mysqli_fetch_all(mysqli_query($connection, "SELECT small_ship_cargo, floor(metal), floor(crystal), hangar, id, galaxy, `system`, planet FROM uni1_planets WHERE id_owner=$id_owner")) [0];
 	$id_planet = $planet_resources[4];
 	if ($planet_resources[0] == 0 && $get_bots_techs[$i][3] >= 2 && $planet_resources[1] >= 2000 && $planet_resources[2] >= 2000 && $planet_resources[3] >= 2) {
 	    mysqli_query($connection, "UPDATE uni1_planets SET metal = metal - 2000 WHERE id=$id_planet");

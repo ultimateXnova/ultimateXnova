@@ -52,7 +52,7 @@ while($created!=1) {
 $galaxy = rand(1, $max_galaxy);
 $system = rand(1, $max_system);
 $planet = rand(1, 15);
-$is_empty = mysqli_fetch_all(mysqli_query($connection, "SELECT id FROM uni1_planets WHERE galaxy=$galaxy AND system=$system AND planet=$planet"));
+$is_empty = mysqli_fetch_all(mysqli_query($connection, "SELECT id FROM uni1_planets WHERE galaxy=$galaxy AND `system`=$system AND planet=$planet"));
 if(empty($is_empty)) {
 // Image
 if($planet>=13) { $image = 'eisplanet'.sprintf('%02d', mt_rand(1,10)); }
@@ -126,7 +126,7 @@ mysqli_query($connection, "UPDATE uni1_planets SET interplanetary_misil=$user_pl
 
 // Create User
 $time = time();
-mysqli_query($connection, "INSERT INTO uni1_users (username, password, email, email_2, universe, galaxy, system, planet, register_time, onlinetime) VALUES ('$nick', 'bot', 'bot', 'bot', 1, $galaxy, $system, $planet, $time, $time)");
+mysqli_query($connection, "INSERT INTO uni1_users (username, password, email, email_2, universe, galaxy, `system`, planet, register_time, onlinetime) VALUES ('$nick', 'bot', 'bot', 'bot', 1, $galaxy, $system, $planet, $time, $time)");
 $botid = (mysqli_fetch_array(mysqli_query($connection, "SELECT id FROM uni1_users ORDER by ID desc LIMIT 1")))[0];
 mysqli_query($connection, "UPDATE uni1_planets SET id_owner=$botid WHERE id=$id");
 mysqli_query($connection, "UPDATE uni1_users SET id_planet=$id WHERE id=$botid");

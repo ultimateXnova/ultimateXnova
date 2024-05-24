@@ -234,8 +234,8 @@ class ShowRelocatePage extends AbstractGamePage
 		$imageName			.= $planetData[$dataIndex]['image'][$imageNameType];
 
 
-		$sql = "UPDATE %%PLANETS%% SET galaxy = :galaxy, system = :system, planet = :planet,
-		temp_min = :temp_min, temp_max = :temp_max, image = :imageName, last_relocate = :relocateTime
+		$sql = "UPDATE %%PLANETS%% SET galaxy = :galaxy, `system` = :system, planet = :planet,
+		temp_min = :temp_min, temp_max = :temp_max, `image` = :imageName, last_relocate = :relocateTime
 		WHERE id = :planetId;";
 
 
@@ -255,7 +255,7 @@ class ShowRelocatePage extends AbstractGamePage
 			// NOTE: divided to fleet speed ? no info ?
 			$next_jump_time = TIMESTAMP + ($config->relocate_jump_gate_active * 60 * 60) / ($config->fleet_speed / 2500);
 
-			$sql = "UPDATE %%PLANETS%% SET galaxy = :galaxy, system = :system, planet = :planet,last_jump_time =:relocateTime WHERE id = :moonId;";
+			$sql = "UPDATE %%PLANETS%% SET galaxy = :galaxy, `system` = :system, planet = :planet,last_jump_time =:relocateTime WHERE id = :moonId;";
 			$db->update($sql,array(
 				':galaxy' => $galaxy,
 				':system' => $system,
@@ -268,7 +268,7 @@ class ShowRelocatePage extends AbstractGamePage
 		$USER['darkmatter'] -= $config->relocate_price;
 
 		if ($PLANET['id'] == $USER['id_planet']) {
-			$sql = "UPDATE %%USERS%% SET galaxy = :galaxy, system = :system, planet = :planet WHERE id = :userId;";
+			$sql = "UPDATE %%USERS%% SET galaxy = :galaxy, `system` = :system, planet = :planet WHERE id = :userId;";
 			$db->update($sql,array(
 				':galaxy' => $galaxy,
 				':system' => $system,

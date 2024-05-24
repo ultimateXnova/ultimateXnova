@@ -124,7 +124,7 @@ class ShowFleetStep1Page extends AbstractGamePage
 					continue;
 				}
 
-                $sql = "INSERT INTO %%SHORTCUTS%% SET ownerID = :userID, name = :name, galaxy = :galaxy, system = :system, planet = :planet, type = :type;";
+                $sql = "INSERT INTO %%SHORTCUTS%% SET ownerID = :userID, name = :name, galaxy = :galaxy, `system` = :system, planet = :planet, type = :type;";
                 $db->insert($sql, array(
                     ':userID'   => $USER['id'],
                     ':name'     => $planetData['name'],
@@ -143,7 +143,7 @@ class ShowFleetStep1Page extends AbstractGamePage
 				$planetData['ownerID']		= $USER['id'];
 				$planetData['shortcutID']		= $ID;
 				if($planetData != $ShortcutUser[$ID]) {
-                    $sql = "UPDATE %%SHORTCUTS%% SET name = :name, galaxy = :galaxy, system = :system, planet = :planet, type = :type WHERE shortcutID = :shortcutID AND ownerID = :userID;";
+                    $sql = "UPDATE %%SHORTCUTS%% SET name = :name, galaxy = :galaxy, `system` = :system, planet = :planet, type = :type WHERE shortcutID = :shortcutID AND ownerID = :userID;";
                     $db->update($sql, array(
                         ':userID'   => $USER['id'],
                         ':name'     => $planetData['name'],

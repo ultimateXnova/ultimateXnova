@@ -130,7 +130,7 @@ class ShowFleetAjaxPage extends AbstractGamePage
 
 		$sql = "SELECT planet.id_owner as id_owner,
 		planet.galaxy as galaxy,
-		planet.system as system,
+		planet.system as `system`,
 		planet.planet as planet,
 		planet.planet_type as planet_type,
 		total_points, onlinetime, urlaubs_modus, banaday, authattack
