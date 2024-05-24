@@ -37,7 +37,7 @@
 	<tr>
 		<td colspan="2"><input class="btn btn-primary text-white btn-block w-100 p-0 m-0" type="submit" value="{$LNG.ti_submit}"></td>
 	</tr>
-	{/if}
+	
 	{/foreach}
 </table>
 </form>
