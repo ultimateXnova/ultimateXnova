@@ -267,12 +267,12 @@ class ShowBotsPage extends AbstractAdminPage
       $sql_planets = $save_sql_planets;
     }
 
-    $sql = "SELECT id,galaxy,system,planet FROM %%USERS%% WHERE is_bot = 1 AND id_planet = 0 AND universe = :universe ORDER BY id ASC;";
+    $sql = "SELECT id,galaxy,`system`,planet FROM %%USERS%% WHERE is_bot = 1 AND id_planet = 0 AND universe = :universe ORDER BY id ASC;";
     $newBots = $db->select($sql,array(
       ':universe' => Universe::getEmulated()
     ));
 
-    $sql = "SELECT id,galaxy,system,planet FROM %%PLANETS%% WHERE is_bot = 1 AND id_owner IS NULL AND universe = :universe ORDER BY id ASC;";
+    $sql = "SELECT id,galaxy,`system`,planet FROM %%PLANETS%% WHERE is_bot = 1 AND id_owner IS NULL AND universe = :universe ORDER BY id ASC;";
 
     $newBotPlanets = $db->select($sql,array(
       ':universe' => Universe::getEmulated()
