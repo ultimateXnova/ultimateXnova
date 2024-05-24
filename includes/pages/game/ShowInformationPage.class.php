@@ -168,11 +168,11 @@ class ShowInformationPage extends AbstractGamePage
 		$order = $USER['planet_sort_order'] == 1 ? "DESC" : "ASC" ;
 		$sort  = $USER['planet_sort'];
 
-		$sql = "SELECT id, name, galaxy, system, planet, last_jump_time, ".$resource[43]." FROM %%PLANETS%% WHERE id != :planetID AND id_owner = :userID AND planet_type = '3' AND ".$resource[43]." > 0 ORDER BY ";
+		$sql = "SELECT id, name, galaxy, `system`, planet, last_jump_time, ".$resource[43]." FROM %%PLANETS%% WHERE id != :planetID AND id_owner = :userID AND planet_type = '3' AND ".$resource[43]." > 0 ORDER BY ";
 
 		switch($sort) {
 			case 1:
-				$sql .= 'galaxy '.$order.', system '.$order.', planet '.$order.', planet_type '.$order;
+				$sql .= 'galaxy '.$order.', `system` '.$order.', planet '.$order.', planet_type '.$order;
 				break;
 			case 2:
 				$sql .= 'name '.$order;

@@ -41,7 +41,7 @@ class ShowFleetMissilePage extends AbstractGamePage
 
     $sql = "SELECT id, id_owner FROM %%PLANETS%%
     WHERE universe = :universe AND galaxy = :targetGalaxy
-    AND system = :targetSystem AND planet = :targetPlanet AND planet_type = :targetType;";
+    AND `system` = :targetSystem AND planet = :targetPlanet AND planet_type = :targetType;";
 
     $target = $db->selectSingle($sql, array(
         ':universe' => Universe::current(),

@@ -140,7 +140,7 @@ class ShowBotsPage extends AbstractAdminPage
     }
 
 
-    $sql = "SELECT galaxy,system,planet FROM %%PLANETS%% WHERE universe = :universe AND galaxy = :target_galaxy";
+    $sql = "SELECT galaxy,`system`,planet FROM %%PLANETS%% WHERE universe = :universe AND galaxy = :target_galaxy";
 
     $currentPlanets = $db->select($sql,array(
       ':universe' => Universe::getEmulated(),

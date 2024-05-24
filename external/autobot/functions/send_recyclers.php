@@ -5,7 +5,7 @@ $connection = mysqli_connect(trim($config[0]), trim($config[1]), trim($config[2]
 $fleet_speed = mysqli_fetch_all(mysqli_query($connection, "SELECT FLOOR(fleet_speed/2500) FROM uni1_config")) [0][0];
 $get_bots_techs = mysqli_fetch_all(mysqli_query($connection, "SELECT id, computer_tech, combustion_tech, shield_tech FROM uni1_users WHERE email='bot'"));
 for ($i = 0;$i <= count($get_bots_techs) - 1;$i++) {
-    $random_planet = mysqli_fetch_all(mysqli_query($connection, "SELECT galaxy, system, planet, id, id_owner FROM uni1_planets WHERE (der_metal!=0 || der_crystal!=0) ORDER BY RAND() LIMIT 1")) [0];
+    $random_planet = mysqli_fetch_all(mysqli_query($connection, "SELECT galaxy, `system`, planet, id, id_owner FROM uni1_planets WHERE (der_metal!=0 || der_crystal!=0) ORDER BY RAND() LIMIT 1")) [0];
     if (empty($random_planet)) {
 	continue;
     } else {
@@ -19,7 +19,7 @@ for ($i = 0;$i <= count($get_bots_techs) - 1;$i++) {
     $max_fleets = min(($get_bots_techs[$i][1] + 1) - $count_fleets, 3);
     if ($max_fleets > 0) {
 	// Check how many Recyclers Bot have, also receive info about resources needed to build it
-	$planet_resources = mysqli_fetch_all(mysqli_query($connection, "SELECT recycler, floor(metal), floor(crystal), floor(deuterium), hangar, id, galaxy, system, planet FROM uni1_planets WHERE id_owner=$id_owner")) [0];
+	$planet_resources = mysqli_fetch_all(mysqli_query($connection, "SELECT recycler, floor(metal), floor(crystal), floor(deuterium), hangar, id, galaxy, `system`, planet FROM uni1_planets WHERE id_owner=$id_owner")) [0];
 	$id_planet = $planet_resources[5];
 	if ($planet_resources[0] == 0 && $get_bots_techs[$i][2] >= 6 && $get_bots_techs[$i][3] >= 2 && $planet_resources[1] >= 10000 && $planet_resources[2] >= 6000 && $planet_resources[3] >= 2000 && $planet_resources[4] >= 4) {
 	    mysqli_query($connection, "UPDATE uni1_planets SET metal = metal - 10000 WHERE id=$id_planet");

@@ -10,7 +10,7 @@ for ($i = 0;$i <= count($get_bots_techs) - 1;$i++) {
     if (empty($random_player)) {
     continue;
     } else {
-    $random_planet = mysqli_fetch_all(mysqli_query($connection, "SELECT galaxy, system, planet, id, id_owner FROM uni1_planets WHERE id_owner = $random_player ORDER BY RAND() LIMIT 1"))[0];
+    $random_planet = mysqli_fetch_all(mysqli_query($connection, "SELECT galaxy, `system`, planet, id, id_owner FROM uni1_planets WHERE id_owner = $random_player ORDER BY RAND() LIMIT 1"))[0];
     $x = $random_planet[0];
     $y = $random_planet[1];
     $z = $random_planet[2];
@@ -21,7 +21,7 @@ for ($i = 0;$i <= count($get_bots_techs) - 1;$i++) {
     $max_fleets = min(($get_bots_techs[$i][1] + 1) - $count_fleets, 3);
     if ($max_fleets > 0) {
     // Check how many Big Cargos Bot have, also receive info about resources needed to build it
-    $planet_resources = mysqli_fetch_all(mysqli_query($connection, "SELECT big_ship_cargo, floor(metal), floor(crystal), hangar, id, galaxy, system, planet FROM uni1_planets WHERE id_owner=$id_owner")) [0];
+    $planet_resources = mysqli_fetch_all(mysqli_query($connection, "SELECT big_ship_cargo, floor(metal), floor(crystal), hangar, id, galaxy, `system`, planet FROM uni1_planets WHERE id_owner=$id_owner")) [0];
     $id_planet = $planet_resources[4];
 
     if ($planet_resources[0] == 0 && $planet_resources[1] >= 6000 && $planet_resources[2] >= 6000 && $planet_resources[3] >= 4 && $get_bots_techs[$i][2] >= 6) {

@@ -43,7 +43,7 @@ class ShowImperiumPage extends AbstractGamePage
 				$sql .= 'name '.$order;
 				break;
 			case 1:
-				$sql .= 'galaxy '.$order.', system '.$order.', planet '.$order.', planet_type '.$order;
+				$sql .= 'galaxy '.$order.', `system` '.$order.', planet '.$order.', planet_type '.$order;
 				break;
 			default:
 				$sql .= 'id '.$order;

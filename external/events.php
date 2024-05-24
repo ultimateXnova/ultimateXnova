@@ -57,13 +57,13 @@ if($random_event==1) {
 	mysqli_query($connection, "INSERT INTO uni1_messages (message_owner, message_sender, message_time, message_type, message_from, message_subject, message_text, message_unread, message_universe) VALUES ($id, 1, $time, 50, '$nickname', '$subject', '$text', 1, 1)");
 	$metal = rand(1, 1000);
 	$crystal = rand(1, 500);
-	$mother_planet = mysqli_fetch_all(mysqli_query($connection, "SELECT galaxy, system, planet FROM uni1_users"));
+	$mother_planet = mysqli_fetch_all(mysqli_query($connection, "SELECT galaxy, `system`, planet FROM uni1_users"));
 	for($i=0; $i<=(count($mother_planet)-1); $i++) {
 	$galaxy = $mother_planet[$i][0];
 	$system = $mother_planet[$i][1];
 	$planet = $mother_planet[$i][2];
-	mysqli_query($connection, "UPDATE uni1_planets SET der_metal=der_metal+$metal WHERE (galaxy=$galaxy AND system=$system AND planet=$planet)");
-	mysqli_query($connection, "UPDATE uni1_planets SET der_crystal=der_crystal+$crystal WHERE (galaxy=$galaxy AND system=$system AND planet=$planet)");
+	mysqli_query($connection, "UPDATE uni1_planets SET der_metal=der_metal+$metal WHERE (galaxy=$galaxy AND `system`=$system AND planet=$planet)");
+	mysqli_query($connection, "UPDATE uni1_planets SET der_crystal=der_crystal+$crystal WHERE (galaxy=$galaxy AND `system`=$system AND planet=$planet)");
 	}
 } else if($random_event==7) {
 	$text = '<span class="admin">Strange thing. It turned out that one of the citizens detained by the police had small amounts of dark matter in his trouser pocket. Of course, we seized it.</span>';

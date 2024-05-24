@@ -123,7 +123,7 @@ class ShowAccountsPage extends AbstractAdminPage
 				}else {
 					$sql  = "UPDATE %%PLANETS%% SET `metal` = `metal` + :metal,
 					 `crystal` = `crystal` + :crystal,
-					 `deuterium` = `deuterium` + :deut WHERE galaxy = :galaxy AND system = :system AND planet = :planet AND planet_type = :planet_type AND `universe` = :universe;";
+					 `deuterium` = `deuterium` + :deut WHERE galaxy = :galaxy AND `system` = :system AND planet = :planet AND planet_type = :planet_type AND `universe` = :universe;";
 
 					$db->update($sql,array(
 						':metal' => $metal,
@@ -165,7 +165,7 @@ class ShowAccountsPage extends AbstractAdminPage
 
 					$sql  = "UPDATE %%PLANETS%% SET `metal` = GREATEST(0, `metal` - :metal),
 					`crystal` = GREATEST(0, `crystal` - :crystal), `deuterium` = GREATEST(0, `deuterium` - :deut)
-					WHERE `galaxy` = :galaxy AND system = :system AND planet = :planet AND planet_type = :planet_type AND `universe` = :universe;";
+					WHERE `galaxy` = :galaxy AND `system` = :system AND planet = :planet AND planet_type = :planet_type AND `universe` = :universe;";
 
 					$db->update($sql,array(
 						':metal' => $metal,

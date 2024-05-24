@@ -37,7 +37,7 @@ for ($j = 0;$j <= count($bots) - 1;$j++)
 	// Get user planet
         $id_planet = $bot_planet[0];
         $planet_buildings = mysqli_fetch_array(mysqli_query($connection, "SELECT metal_mine, crystal_mine, deuterium_sintetizer, solar_plant, fusion_plant, robot_factory, nano_factory, hangar, metal_store, crystal_store, deuterium_store, laboratory ,terraformer, university, ally_deposit, silo FROM uni1_planets WHERE (id=$id_planet AND b_building = '')"));
-        $planet_position = mysqli_fetch_array(mysqli_query($connection, "SELECT galaxy, system, planet FROM uni1_planets WHERE (id=$id_planet AND b_building = '')"));
+        $planet_position = mysqli_fetch_array(mysqli_query($connection, "SELECT galaxy, `system`, planet FROM uni1_planets WHERE (id=$id_planet AND b_building = '')"));
         $bot_resources = mysqli_fetch_array(mysqli_query($connection, "SELECT metal, crystal, deuterium FROM uni1_planets WHERE (id=$id_planet AND b_building = '')"));
 
         if (empty($planet_buildings) || !empty($bot_data[4]))

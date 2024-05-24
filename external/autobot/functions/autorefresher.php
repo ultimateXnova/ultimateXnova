@@ -23,7 +23,7 @@ $get_all_bots = mysqli_fetch_all(mysqli_query($connection, "SELECT id FROM uni1_
 
 for($i=0; $i<=count($get_all_bots)-1; $i++) {
 	$id_bot = $get_all_bots[$i][0];
-	$get_planets = mysqli_fetch_all(mysqli_query($connection, "SELECT id, galaxy, system, planet, metal, crystal, deuterium FROM uni1_planets WHERE id_owner = $id_bot"));
+	$get_planets = mysqli_fetch_all(mysqli_query($connection, "SELECT id, galaxy, `system`, planet, metal, crystal, deuterium FROM uni1_planets WHERE id_owner = $id_bot"));
 	for($j=0; $j<=count($get_planets)-1; $j++) {
 		attack($id_bot, $get_planets[$j][0], $get_planets[$j][1], $get_planets[$j][2], $get_planets[$j][3]);
 	}
