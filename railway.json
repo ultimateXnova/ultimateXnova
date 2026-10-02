@@ -1,0 +1,10 @@
+{
+  "$schema": "https://railway.app",
+  "build": {
+    "builder": "NIXPACKS",
+    "exclude": ["chat/js/lang/**"]
+  },
+  "deploy": {
+    "startCommand": "php-fpm -D && nginx -g 'daemon off;'"
+  }
+}

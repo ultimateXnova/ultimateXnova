@@ -1,20 +1,23 @@
-# Author: Pfahli
-# Version: 0.2
-# Project: ultimateXnova
+FROM php:8.2-fpm-alpine
 
-# Use the PHP image with Apache
-FROM php:8.3-apache
+# Instalar extensiones de PHP necesarias para el juego
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Install PDO MySQL extension
-RUN docker-php-ext-install pdo_mysql mysqli
+# Instalar Nginx para servir la web
+RUN apk add --no-cache nginx
 
-# Install GD library
-RUN apt-get update && apt-get install -y \
-        libfreetype6-dev \
-        libjpeg62-turbo-dev \
-        libpng-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd
+# Copiar los archivos del juego al servidor web
+COPY . /var/www/html/
 
-# Enable mod_rewrite
-RUN a2enmod rewrite
+# Configurar permisos para el instalador
+RUN chown -R www-data:www-data /var/www/html/
+
+# Configurar Nginx de forma interna rápida
+RUN mkdir -p /run/nginx && \
+    echo 'server { listen 80; root /var/www/html; index index.php index.html; location / { try_files $uri $uri/ /index.php?$query_string; } location ~ \.php$ { include fastcgi_params; fastcgi_pass 127.0.0.1:9000; fastcgi_index index.php; fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; } }' > /etc/nginx/http.d/default.conf
+
+# Exponer el puerto 80
+EXPOSE 80
+
+# Comando para encender PHP y Nginx al mismo tiempo
+CMD ["sh", "-c", "php-fpm -D && nginx -g 'daemon off;'"]
